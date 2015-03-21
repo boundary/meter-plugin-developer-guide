@@ -1,0 +1,5 @@
+site_name: Plugin Developer Guide
+pages:
+- [index.md, Home]
+- [about.md, About]
+- [about.md, Development]
