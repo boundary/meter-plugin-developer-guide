@@ -1,4 +1,5 @@
-# Welcome to MkDocs
+Boundary Plugin Development Guide
+=================================
 
 For full documentation visit [mkdocs.org](http://mkdocs.org).
 

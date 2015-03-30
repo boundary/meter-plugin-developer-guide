@@ -1,5 +1,5 @@
 site_name: Plugin Developer Guide
+theme: bootstrap
 pages:
 - [index.md, Home]
-- [about.md, About]
-- [about.md, Development]
+- [user_guide.md,User Guide]
