@@ -1,4 +1,28 @@
-# Tarda sucos si scitanti auctor
+# Meter Plugin Protocol
+As mentioned previously meter plugins can be programmed using any language that can write to standard out.
+
+The Boundary Meter delegates the management of all meter plugins to the plugin manager
+
+Boundary Plugin Shell is a generic plugin that allows the use of any program or scripting language to produce metrics for the Boundary Premium product. The plugin relay expects a script or program to send metrics via standard output with the given format:
+
+```
+<METRIC_IDENTIFIER> <METRIC_VALUE> <METRIC_SOURCE> <METRIC_TIMESTAMP>\n
+```
+
+where
+
+**METRIC_IDENTIFIER** is a previously defined metric
+**METRIC_VALUE** is the current value of the metric
+METRIC_SOURCE is the source of the metric
+
+Here is one-liner example which outputs the current number of running processes:
+
+$echo BOUNDARY_PROCESS_COUNT $(ps -e | egrep '^.*\d+' | wc -l \
+| tr -d ' ') (hostname)"
+
+BOUNDARY_PROCESS_COUNT 205 boundary-plugin-shell-demo
+
+We can take this one-liner and then configure the Plugin-Shell to periodically report and display these metrics:
 
 ## Remansit trepidum paternam
 

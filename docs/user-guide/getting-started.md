@@ -1,59 +1,46 @@
-# Est tamen faciemque morari membris sententia terebrata
+Getting Started
+===============
 
-## Cornua alter harpen quoscumque fraterque et tulit
+Plugins are open source and are submitted via a pull request to the Boundary github plugin repository. Once a plugin is accepted into the repository it appears in the Plugins tab of the Settings dialog. After a plugin is installed into your account you will need to go to Relays tab in order to install plugin instances on corresponding host(s).
 
-Lorem markdownum Idaque strepitus stolidae est arbore nullius nemus, caesosque,
-est tonitrus. Sacrum [primum](http://twitter.com/search?q=haskell) habetque, in
-relinquit caelebs promunturiumque longius. Cecidit amans sideraque oblita,
-quibus lingua Taygetenque responde spectat Aeacideia vellet penetratque flagrat.
-*Tamen cum*: e Pomona iuncta omnem sub se potentior Verque non dextera cognita
-sorore. Nepoti quoque quidque, **nec certa** possideat, vocem motu.
+Plugin Development Tasks
+------------------------
 
-    domain.nasExpressAd(pda, exif + ipPiracyPmu / phreaking(pptpDesktopVram,
-            documentGif, default), virtual + compression.format_path_manet(
-            scrapingManetTruncate));
-    suffixHot += printer;
-    var keyloggerNull = drop - hypertext + opengl_passive_wheel - modifier(
-            cursorThunderboltManet) + modem_architecture_wddm - click_queue;
-    prebinding = dv / memoryZettabyte + volume / parity(pup_dns_impact);
-    if (menu < surfaceWww) {
-        dfs -= png_ospf(cycleDeviceUtf(cookie_firewall_byte),
-                dragMirroredBacklink * file_matrix);
-    } else {
-        token(card);
-        storage_word.requirements_access(fios_blu_requirements, file_modem,
-                162446);
-        thin_qwerty_commerce(3 + 28);
-    }
+Creation of meter plugin consists of the following steps:
 
-Verba hoc utere versasse tendentem ille ulciscere amicitiae: voluptas lugubris
-animosa facti, fertque mea: nexis amat! **Et Erectheus** te enim validosque
-mediis titulis casusve aegra scitabere illo raptam nec vocibus enim, inque.
-Sacra cum: et de aliquid testor ter **et steterat** miserrima stabat
-detractavitque hoc mirum litusque novissima culpavit *signa*.
+1. Creating a public GitHub repository
+2. Develop and test a script that polls the entity or system to be monitored and outpus metric values
+3. Design an `icon.png` to be displayed with your plugin
+4. Define a  `plugin.json` file that describes your meter plugin
 
-## Sustinui et tanto cornibus
+## Example Plugin
 
-In patria, medicamina sola. Dea ora non purpureo robora sua et similis recepta
-mensura ponere? Nomina umbra conscia, vocibus non caede, templis condiderat.
-Curas considere opaci conplent: ablata, misceri simulantis terrore, prosit.
+To get started we are going to walk through the contents of an existing plugin and deploy a meter plugin into a Boundary account.
 
-    supply.veronicaSdkPretest(rubyRpmOverclocking);
-    w = exbibyteAscii(gigabyte_bounce_soap(yahoo, snmpMashup, numDataHandle),
-            whitelist_win_fi, warmMiniBackup) + 3;
-    interpreter += 5 - 2 + cybersquatter_pum_port;
-    uriMouseIcmp -= parity_extension + megapixelTrinitronPng;
-    mail += active_io(session_clock(1, aclDtdStack, computing_function) -
-            fi_broadband, agpDriver, officeDesignService *
-            computingAtmComputer);
+The steps are as follows
+1. Make a copy of an existing plugin repository which contains a complete plugin
+2. Stage the plugin into a Boundary account
+3. Add the plugin into a Boundary account.
+4. View metric values on Dashboard
 
-Aris dum ex truncis mente dicebat timentem movet illi et digitis, invitum
-succedit? Laetabitur illi Finierat pluma protinus si notavi idque ad silentia
-[odoratas](http://www.lipsum.com/). Ea loco occiduo utero Achivos: ergo at, est
-nondum, sed habere? Posuit sit verentur procumbit mihi color gener, bis obruta
-vulnerat, superantque poena.
+Before proceeding with the steps outlined above the following prerequisites must be satisfied:
+1. [GitHub](https://github.com/) account
+2. Command line installation of Git, [download]()
+2. Administrative login for a Boundary account. You can create a free account [here]()
+3. A meter deployed on a Linux system.
 
-Et Iovis exuvias omnia? Uno et conscia collige rependatur patrem pro semel
-ignavo **fecit cumque**, aera vides alternaque colebat **pater**. Parrhasio
-contra: **quem** non; potae acta nonne, oculos
-[petentes](http://www.raynelongboards.com/) mortis mirabile, his velit, quem.
+#### Copying an Existing Meter Plugin Repository
+
+
+#### Stage Plugin Into Boundary Account
+
+
+#### Add Plugin Into a Boundary Account
+
+
+#### Deploy the Plugin into a Meter
+
+
+### Observe Metric Values on Dashboard
+
+

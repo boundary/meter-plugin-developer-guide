@@ -1,12 +1,25 @@
-# Esset sororis
+Testing Methods
+---------------
 
-## Naturale significent quondam
 
-Lorem markdownum puer, pennas successit et cernere census Emathion siccis? Nobis
-non laurea ambiguum herbarum propior timeto esse mea; queat venit inde,
-curvamine ullus Nyctimenen. Lycaon quid est? Ab steriles *iuris*; vidisset bella
-ardetque medioque. Quam ora potens saepe, spargit hortatibus arma obvius laqueos
-**noviens non servat** pater nece.
+Platform Support
+----------------
+These are the major platforms and version that the plugins are required to run on to be certified.
+
+
+### Tier 1 Platforms
+These represent the minimum number of platforms that a plugin should be tested against before considering a plugin Generally Available (GA). NOTE: This list was derived by using the 3.X meter deployment data.
+#### Linux
+* Centos 5.10
+* Centos 6.5
+* Amazon Linux AMI release 2014.03
+* Ubuntu 12.04 LTS
+* Ubuntu 14.04.1 LTS
+
+#### Windows
+* Windows 2012
+* Windows 2008r2
+
 
 Crantor et hos horrida crimen omnia, tam ad retendit belli, et ostia. Et sed;
 certam medio. Cinnama ad utque damnatur nostro.

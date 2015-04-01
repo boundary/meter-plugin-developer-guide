@@ -1,38 +1,36 @@
-# Inpensaque canes crinale aeacides imagine trepidantum ignibus
+# Meter Plugin Development Overview
 
-## Modo dubitavit
+A Boundary Meter Plugin is a small application written in any language that regularly reports arbitrary metrics that may optionally include one or more dashboards.
 
-Lorem markdownum Iove interrumpente illa clarus, meorum, cur antro ab canis sed,
-nitidi, huc de inplicet! Modo **pugnae vestibus**. Silvas nec monet imagine
-coniugio; pompa est iuvenes nomina, hoc.
 
-Nam potuit adiecisset tacita coniunx gerunt. Est altum sanguine intellegit et
-tenebat ursae, noctis metu scire id. Fibras invidiosa, est et venientem avium,
-et possit ex traiecit, deam. Defunctum addunt de tamen stamine: moto est nobis
-matura, ex? Causa nuda fugit pennis sum tacti vulnere; me nec pependit!
+## Anatomy of a Meter Plugin
 
-Voce quem [fluctus in](http://textfromdog.tumblr.com/) silentia, demere gerat
-solus longi. Praevalidusque negabo de series aquarum! Vino vestrum monstraverat
-fuit, **dei** nec negat; quid bis, tyranni et promissi flavus hic Hactenus;
-quoque. Quid violente, fecit effugit patientem spatium vacuas et timorque
-cernes, recuset. Obscenae deriguisse quae et sed medicamine at modo haec tempora
-quales; vota tamen id.
+The contents of a meter plugin are housed in a GitHub repository so that the can readily versioned and shared with the Boundary service (optional). All plugins are open source so the repository is required to be made public (note: github supports public repositories free of charge).
 
-## Dividuae sed nitor
+A typical plugin consists of:
 
-Ortygiam quam! Carens magno inmune aetheriae perque, aliquo **numerumque Almo
-temptamina** iunctior.
+**README.md**
+Documentation that describes that platforms supported by the plugin, along with any dependent software and/or configuration required for the plugin to run.
 
-Eurylochumque vana Atalanta messibus Calydonia auras. Facunde vulnera mater
-[cadavera tincta et](http://textfromdog.tumblr.com/) metalla conexa cumque
-tuendos procul, sua [effugit](http://www.lipsum.com/). Marem memorant frequento
-viro, habili, manus hoste Euhan, res lato non ante. Litoream nocti, patrio
-castrorum et praedae terroris colla genitor praetulit potest.
+**plugin.json**
+Meter plugin manifest that contains metadata about the meter plugin: command to run to start the plugin, inputs to the plugin, metric values created by the plugin, dashboard definitions, as a partial list.
 
-> Constitit sanguine velit. Ecce terris caudam illi, telo soli animae postquam
-> et teste permansit positi stipite. Sors optet perdiderim illi versae deorum,
-> natus sit silvis agit nemorosi mors rubescere servat inrequieta laetior
-> Cepheaque causa. Sacrorum faciem vicinia attonitamque ipse calcare.
+** icon.png **
+Path to an icon to display next to the plugin when browsing plugins in the Boundary settings dialog.
 
-Tenebrae dextra que latas sic, et simul maius fuerat Erysicthone aspicit, et,
-quae etiam, an. Nupsi animae et comes pararis.
+**Your Program or Script**
+User created program or script that collects metric values on regular basis and outputs the values to standard out.
+
+**Other Files**
+Any other files required by your meter plugin to run.
+
+Details on the plugin contents will be discussed in greater detail later in this guide.
+
+## Programming Languages
+
+Meter Plugins can be created in any programming or scripting language that can write output to standard out. Boundary's meter version 4.0 or later includes a [lua](http://en.wikipedia.org/wiki/Lua_(programming_language)) interpreter which eliminates the need for installing NodeJS, Python, or other interpreter your plugin depends upon.
+
+## Tools
+
+Boundary provides other open source tools that assist in the development of meter plugins see [Tools](tools.md)
+

@@ -2,6 +2,9 @@
 
 ## Nec aliud mihi suem fronte ensem hinc
 
+The contents of the README.md are displayed within the Boundary Settings => Plugin dialog
+
+
 Lorem markdownum malis arbusta *maneat*; ut et hinc turribus, tenebat montes
 **ius viscera amans**, obstantia. **Pars intremuit** mihi. Surgit diro membris.
 Revertar erat gurgite animosa, at ignoto et dato.

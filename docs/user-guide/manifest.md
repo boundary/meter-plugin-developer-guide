@@ -1,63 +1,134 @@
-# Hoc sola fuit fuso inmitem redditur oculos
+# Meter Plugin Manifest
+The `plugin.json` file includes various pieces of metadata required by the meter plugin.
 
-## Cur illi diva maduit ut arae servaturis
+### Example Plugin Manifest
 
-Lorem markdownum ergo; ama undas paruerit Helenum abstrahere agros; eram
-volucres et [regis](http://reddit.com/r/thathappened) glaebas Bacchiadae hinc.
-Quosque hunc turba Phoebe templa avidaeque tegemus nam. Pro quod forte carmine
-et ferox quoque circum ut Iasonis iaceret? Dedit undas.
+Below is a sample `plugin.json` that is an example plugin that can report on stock market price and volume. The complete meter plugin itself can be found [here](https://github.com/boundary/boundary-plugin-ticker)
 
-    tcp = eLinkListserv(modem(1, room_bash / -4, in_pop_only), rom(
-            executableSidebar(fat)), 2);
-    multi_degauss_system.ole_cpc = itunes(66, task_microphone_backside) *
-            gibibyte;
-    var software = 5;
-    if (hypertext_static + repeater == dvd.ipod_nat(
-            firmwarePublishingEsports)) {
-        compact.barFilenameCrt = format(fpuNosqlRtf);
-        flops_interlaced_ping.metafile_duplex_brouter = topology - cut -
-                services;
+```
+{
+  "description": "Collects price and volume of a traded stock",
+  "icon": "ticker.png",
+  "command": "python plugin.py",
+  "ignore": "config",
+  "metrics": [
+    "BOUNDARY_STOCK_PRICE",
+    "BOUNDARY_STOCK_VOLUME"
+  ],
+  "dashboards": [
+    {
+      "name": "Stocks",
+      "layout": "d-w=1&d-h=2&d-pad=15&d-bg=none&d-g-BOUNDARY_STOCK_PRICE=0-0-1-1&d-g-BOUNDARY_STOCK_VOLUME=0-1-1-1"
     }
-    var language = serp_smb_pcmcia + -4 + northbridge;
+  ],
+  "postExtract": "python post-extract.py",
+  "paramArray": {
+    "itemTitle": [
+      "ticker"
+    ],
+    "schemaTitle": "Stock"
+  },
+  "paramSchema": [
+    {
+      "title": "Ticker",
+      "name": "ticker",
+      "description": "Stock ticker symbol",
+      "type": "string",
+      "default": "",
+      "required": true
+    }
+  ]
+}
 
-## Precaris vias
+```
+### JSON Object Descriptions
+A description of each of the JSON objects and their function follows.
 
-Inimica conlapsosque [cura](http://www.billmays.net/) vinctorum et satam: et
-[exegit](http://html9responsiveboilerstrapjs.com/) gradus. Eurypylusque **fago**
-crinem dies? Primus modo pax ultima silvis dum dominum deus caerula *pectore
-trado adiuvat* spatium: primus. Siquis praeceps, quid est: pia adsumere India,
-tibi. Hinc modo fata [media](http://www.youtube.com/watch?v=MghiBW3r65M), ipsa,
-est factum verbere [corpora](http://tumblr.com/) habet.
+#### `description`
+Provides a brief summary of the meter plugin function. When a list of plugins is shown in the Boundary settings dialog the text of the description shows below the name of the plugin as shown here:
 
-## Regno animos pulsa
+![Screenshot](../img/plugin-dialog.png)
 
-**Negate mittunt** Thybridis, guttur herbis non. Similis modo tum alvum imperat
-volventem **pectora et** furta manu flamma prima quod.
+#### `icon`
+A string with a relative path to an icon in the GitHub repository to be display in any view that lists plugins. Icon should be a 48x48 pixel in [Portable Network Graphics (PNG) format](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
 
-> Diem aut superstes sceptra mihi depulerat illis; sorores sidera poteras agendo
-> forma morique scite, auferat: ruptosque ad. Momenta tingui submovet squamamque
-> ripam quantum, Pheneon, fiat ignis Eurytion. Colorque deserat icta. Sed solis
-> virtute quicquid officium iussa: Imbreus furiosior te tamen: usus.
+#### `command`
+A string with a relative path to the command to run to get the metrics from the plugin.
 
-## Teneris magni
+#### `metrics`
+A string array of the metric identifiers that are created when the plugin is installed. As part of the plugin guidelines these should always be in uppercase with words separated by underscores.
 
-Si vallibus arsurusque vetus retinet dapibusque scires! Puer meorum terruit
-vulneret cuncta candida **vocatur scelerato fuerat** in stravit senex relictus
-in.
+#### `dashboard`
+An object array with a name and layout fields. The name field is a string represents the text that is displayed as the title for the dashboard. The layout field is a string that contains url obtained by editing the dashboard and then clicking on the clipboard icon, , which is then copied to your clipboard.
 
-## Ecce finibus inhibere
+#### `postExtract`
+A string with the relative path in the GitHub repository of a script or command that is executed by the plugin manager after the plugins files have been copied to the target system.
 
-Marito gener, texebas fugit; est remisit vultus tectum arbore vocant volet
-amoris. Detinuit *in* herba est dilectu, iacentes interdum caeli: distabat
-resupinus: sparsosque imago domus *poenas prohibetque* tibi, muris?
+#### `paramArray`
+An object array with a itemTitle and schemaTitle. The itemTitle is what is displayed to identify multiple configurations
 
-> Est esse tutae, [qui](http://heeeeeeeey.com/), modo silva Myrrhae tenentibus
-> mentita, ac. Est et utque. Tu facies poenam tamen et Bacchum monte refert
-> secretaque geri, descendere.
 
-Levis sidus amnem si inscius Penthea, ad gravitate petent turbatusque dirae
-pariter dum Iamque. Ponto esse? Per alvum pone rigorem cursus, matres facesque
-cursibus advolat [vitamque lumina](http://www.metafilter.com/). Recolligat ex
-virtus habeto venit petitur fit proelia [esse](http://zeus.ugent.be/), tabellae
-et illi. Extemplo tenentem rauco ne ex curas vias, Delosque pariter Carmina
-illa, **qui urbes**, tota cupit et.
+paramSchema
+An object array with the following:
+title
+name
+description
+type
+default
+required
+
+Details on each of the fields follow.
+
+
+
+title
+The title is the label used to describe a plugin configuration. For plugins with multiple configurations it appears in the configuration dialog.
+name
+Unique string identifier that identifies a plugin configuration parameter. The name is used as the field in the param.json file which is discussed in Appendix B - Metric Plugin Runtime Configuration Reference.
+description
+Provides details about the plugin configuration parameter. In the configuration dialog the description appears as tooltip when the mouse is held over the input field.
+type
+Indicated the data type of the configuration field which can one of the following:
+array
+boolean
+enum
+password
+string
+
+{
+            "title": "Protocol",
+            "name": "protocol",
+            "description": "The protocol of the endpoint",
+            "type" : { "enum" : [["HTTP", "http"], ["HTTPS", "https"]]},
+            "required": true
+        },
+
+
+{
+            "title": "Virtual Hosts",
+            "name": "virutalHosts",
+            "description": "Include individual VHosts in your graphs",
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
+        }
+
+
+default
+
+required
+
+Appendix B - Metric Plugin Runtime Configuration Reference
+This appendix documents the format of the runtime configuration provide to a plugin. At runtime the plugin manager (graphdat relay in the old school, and the 3.0 meter in the new school) provides a file, param.json with the configuration data provided by the user via the plugin configuration dialogs. The name, type, title, and mandatory fields are described by the
+Metric Plugin Manifest as described in Appendix A - Metric Plugin Manifest Reference
+
+
+Appendix C - Plugin Testing Score Sheet
+This appendix is guide of testing tasks to ensure a quality experience with your metric plugin.
+
+Deployed
+
+
+
+

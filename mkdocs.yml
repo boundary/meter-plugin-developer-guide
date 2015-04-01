@@ -1,5 +1,14 @@
-site_name: Plugin Developer Guide
-theme: bootstrap
+site_name: Plugin Development
+#theme: bootstrap
 pages:
 - [index.md, Home]
-- [user_guide.md,User Guide]
+- ['user-guide/overview.md', 'Guide', 'Overview']
+- ['user-guide/protocol.md', 'Guide', 'Protocol']
+- ['user-guide/metrics.md', 'Guide', 'Metrics']
+- ['user-guide/manifest.md', 'Guide', 'Manifest']
+- ['user-guide/parameters.md', 'Guide', 'Parameters']
+- ['user-guide/documentation.md', 'Guide', 'Documentation']
+- ['user-guide/testing.md', 'Guide', 'Testing Methods']
+- ['user-guide/checklist.md', 'Guide', 'Testing Checklist']
+- ['user-guide/tools.md', 'Guide', 'Development Tools']
+
