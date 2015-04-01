@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>Plugin Development</title>
+        <title>Development Tools - Plugin Development</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -25,7 +25,7 @@
         
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -43,7 +43,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">Plugin Development</a>
+            <a class="navbar-brand" href="../..">Plugin Development</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -53,44 +53,44 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guide <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             <li >
-                                <a href="user-guide/overview/">Overview</a>
+                                <a href="../overview">Overview</a>
                             </li>
                         
                             <li >
-                                <a href="user-guide/protocol/">Protocol</a>
+                                <a href="../protocol">Protocol</a>
                             </li>
                         
                             <li >
-                                <a href="user-guide/metrics/">Metrics</a>
+                                <a href="../metrics">Metrics</a>
                             </li>
                         
                             <li >
-                                <a href="user-guide/manifest/">Manifest</a>
+                                <a href="../manifest">Manifest</a>
                             </li>
                         
                             <li >
-                                <a href="user-guide/parameters/">Parameters</a>
+                                <a href="../parameters">Parameters</a>
                             </li>
                         
                             <li >
-                                <a href="user-guide/documentation/">Documentation</a>
+                                <a href="../documentation">Documentation</a>
                             </li>
                         
                             <li >
-                                <a href="user-guide/testing/">Testing Methods</a>
+                                <a href="../testing">Testing Methods</a>
                             </li>
                         
                             <li >
-                                <a href="user-guide/checklist/">Testing Checklist</a>
+                                <a href="../checklist">Testing Checklist</a>
                             </li>
                         
-                            <li >
-                                <a href="user-guide/tools/">Development Tools</a>
+                            <li class="active">
+                                <a href=".">Development Tools</a>
                             </li>
                         
                         </ul>
@@ -105,13 +105,13 @@
             <ul class="nav navbar-nav navbar-right">
                 
                 
-                <li class="disabled">
-                    <a rel="next" >
+                <li >
+                    <a rel="next" href="../checklist">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="user-guide/overview/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -128,17 +128,25 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#boundary-plugin-development-guide">Boundary Plugin Development Guide</a></li>
+        <li class="main active"><a href="#meter-plugin-development-tools">Meter Plugin Development Tools</a></li>
+        
+            <li><a href="#jsonlint">jsonlint</a></li>
+        
+            <li><a href="#boundary-api-cli">Boundary API CLI</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="boundary-plugin-development-guide">Boundary Plugin Development Guide</h1>
-<p>Boundary offers an API so you can graph any measurable metric in realtime, however, there is a small amount of work involved in getting the metrics you are measuring to Boundary for display. To help solve this problem we introduced plugins.</p>
-<p>A plugin is a tiny application that can be written in any language or script which simply reads the metric you are after and reports its value. The plugin is launched using the Plugin Manager which is built in to the meter, so no further installation is required.</p>
-<p>Plugins not only make it very easy to add arbitrary metric monitoring to Boundary but because plugins are kept in a central, public, repository, they can be shared by all.</p>
+<h1 id="meter-plugin-development-tools">Meter Plugin Development Tools</h1>
+<p>The following describes tools that are useful in the development of meter plugins.</p>
+<h3 id="jsonlint">jsonlint</h3>
+<p>Command line tools for validation of JSON. Requires Nodejs. Meter plugin
+<a href="https://www.npmjs.org/package/jsonlint">https://www.npmjs.org/package/jsonlint</a></p>
+<h3 id="boundary-api-cli">Boundary API CLI</h3>
+<p>Command line interface to some of Boundary's public APIs. Commands include definition of metrics, insertion of metric values, staging of a meter plugin, and others. Instructions on installing the Boundary API CLI can be found here:</p>
+<p><a href="https://github.com/boundary/boundary-api-cli">https://github.com/boundary/boundary-api-cli</a></p>
 </div>
             
         </div>
@@ -152,9 +160,9 @@
         
 
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/prettify-1.0.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/prettify-1.0.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
     </body>
 </html>
