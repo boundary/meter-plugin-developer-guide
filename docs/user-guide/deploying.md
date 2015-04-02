@@ -1,0 +1,1 @@
+Plugins are open source and are submitted via a pull request to the Boundary github plugin repository. Once a plugin is accepted into the repository it appears in the Plugins tab of the Settings dialog. After a plugin is installed into your account you will need to go to Relays tab in order to install plugin instances on corresponding host(s).
