@@ -1,14 +1,15 @@
 site_name: Plugin Development
 #theme: bootstrap
+theme: readthedocs
 pages:
 - [index.md, Home]
-- ['user-guide/overview.md', 'Guide', 'Overview']
-- ['user-guide/protocol.md', 'Guide', 'Protocol']
-- ['user-guide/metrics.md', 'Guide', 'Metrics']
-- ['user-guide/manifest.md', 'Guide', 'Manifest']
-- ['user-guide/parameters.md', 'Guide', 'Parameters']
-- ['user-guide/documentation.md', 'Guide', 'Documentation']
-- ['user-guide/testing.md', 'Guide', 'Testing Methods']
-- ['user-guide/checklist.md', 'Guide', 'Testing Checklist']
-- ['user-guide/tools.md', 'Guide', 'Development Tools']
-
+- ['user-guide/overview.md', 'Topics', 'Overview']
+- ['user-guide/getting-started.md', 'Topics', 'Getting Started']
+- ['user-guide/protocol.md', 'Topics', 'Protocol']
+- ['user-guide/metrics.md', 'Topics', 'Metrics']
+- ['user-guide/manifest.md', 'Topics', 'Manifest']
+- ['user-guide/parameters.md', 'Topics', 'Parameters']
+- ['user-guide/testing.md', 'Topics', 'Testing']
+- ['user-guide/documentation.md', 'Topics', 'Documentation']
+- ['user-guide/checklist.md', 'Topics', 'Checklist']
+- ['user-guide/tools.md', 'Topics', 'Tools']
