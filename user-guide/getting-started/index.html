@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview - Plugin Development</title>
+  <title>Getting Started - Plugin Development</title>
   
 
   
@@ -44,26 +44,24 @@
         
         <span>Topics</span>
             
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Overview</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#meter-plugin-development-overview">Meter Plugin Development Overview</a></li>
-                            
-                                <li><a class="toctree-l3" href="#anatomy-of-a-meter-plugin">Anatomy of a Meter Plugin</a></li>
-                            
-                                <li><a class="toctree-l3" href="#programming-languages">Programming Languages</a></li>
-                            
-                                <li><a class="toctree-l3" href="#tools">Tools</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l1 ">
+                    <a class="" href="../overview">Overview</a>
                     
                 </li>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../getting-started">Getting Started</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">Getting Started</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#getting-started">Getting Started</a></li>
+                            
+                                <li><a class="toctree-l3" href="#plugin-development-tasks">Plugin Development Tasks</a></li>
+                            
+                                <li><a class="toctree-l3" href="#example-meter-plugin">Example Meter Plugin</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
@@ -130,7 +128,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Overview</li>
+    <li>Getting Started</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -139,26 +137,49 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="meter-plugin-development-overview">Meter Plugin Development Overview</h1>
-<p>A Boundary Meter Plugin is a small application written in any language that regularly reports arbitrary metrics that may optionally include one or more dashboards.</p>
-<h2 id="anatomy-of-a-meter-plugin">Anatomy of a Meter Plugin</h2>
-<p>The contents of a meter plugin are housed in a GitHub repository so that the can readily versioned and shared with the Boundary service (optional). All plugins are open source so the repository is required to be made public (note: github supports public repositories free of charge).</p>
-<p>A typical plugin consists of:</p>
-<p><strong>README.md</strong>
-Documentation that describes that platforms supported by the plugin, along with any dependent software and/or configuration required for the plugin to run.</p>
-<p><strong>plugin.json</strong>
-Meter plugin manifest that contains metadata about the meter plugin: command to run to start the plugin, inputs to the plugin, metric values created by the plugin, dashboard definitions, as a partial list.</p>
-<p><strong> icon.png </strong>
-Path to an icon to display next to the plugin when browsing plugins in the Boundary settings dialog.</p>
-<p><strong>Your Program or Script</strong>
-User created program or script that collects metric values on regular basis and outputs the values to standard out.</p>
-<p><strong>Other Files</strong>
-Any other files required by your meter plugin to run.</p>
-<p>Details on the plugin contents will be discussed in greater detail later in this guide.</p>
-<h2 id="programming-languages">Programming Languages</h2>
-<p>Meter Plugins can be created in any programming or scripting language that can write output to standard out. Boundary's meter version 4.0 or later includes a <a href="http://en.wikipedia.org/wiki/Lua_(programming_language)">lua</a> interpreter which eliminates the need for installing NodeJS, Python, or other interpreter your plugin depends upon.</p>
-<h2 id="tools">Tools</h2>
-<p>Boundary provides other open source tools that assist in the development of meter plugins see <a href="../tools">Tools</a></p>
+              <h1 id="getting-started">Getting Started</h1>
+<p>This page will provide an introduction to meter plugin development by outlining the development tasks to create a custom plugin. Next you will be walked through an existing plugin and its contents and deploy the meter plugin into your Boundary account.</p>
+<h2 id="plugin-development-tasks">Plugin Development Tasks</h2>
+<p>Development of meter plugin consists of the following tasks:</p>
+<ol>
+<li>Create a public <a href="https://github.com/">GitHub</a> repository.</li>
+<li>Develop a script that polls the entity or system to be monitored and outputs metric values.</li>
+<li>Define the metrics to be used by the plugin in <code>metrics.json</code>.</li>
+<li>Define the dashboards that will display the measurements from the plugin.</li>
+<li>Design an <code>icon.png</code> to be displayed with your plugin.</li>
+<li>Define a  <code>plugin.json</code> file that describes your meter plugin.</li>
+<li>Write a README.md file using the perscribed template.</li>
+<li>Commit all of the plugin content and push to your public GitHub repository.</li>
+<li>Stage your meter plugin into your account.</li>
+<li>Deploy the meter plugin into a meter installed on a server.</li>
+<li>View metric collection on a Boundary dashboard</li>
+</ol>
+<h2 id="example-meter-plugin">Example Meter Plugin</h2>
+<p>To get started we are going to walk through the contents of an existing plugin and deploy a meter plugin into a Boundary account. This will short cut the number of development tasks outlined earlier so you can gain some initial experience when developing your custom meter plugin. The example meter plugin <a href="https://github.com/boundary/boundary-plugin-ticker">boundary-plugin-ticker</a> collects stock price and volume from the user configured <a href="http://en.wikipedia.org/wiki/Ticker_symbol">ticker symbol</a>.</p>
+<p>The steps to run the meter</p>
+<ol>
+<li>Make a copy of an existing plugin repository which contains a complete plugin</li>
+<li>Stage the plugin into a Boundary account</li>
+<li>Add the plugin into a Boundary account.</li>
+<li>Add the plugin to a meter</li>
+<li>View metric values on Dashboard</li>
+</ol>
+<p>Before proceeding with the steps outlined above the following prerequisites must be satisfied:</p>
+<ol>
+<li><a href="https://github.com/">GitHub</a> account</li>
+<li>Command line installation of Git, <a href="">download</a></li>
+<li>Administrative login for a Boundary account. You can create a free account <a href="">here</a></li>
+<li>A meter deployed on a Linux system.</li>
+</ol>
+<h4 id="copying-an-existing-meter-plugin-repository">Copying an Existing Meter Plugin Repository</h4>
+<p>To use an existing plugin we need to clone the existing plugin repository into your user/organization.</p>
+<ol>
+<li>Open a web browser and navigate</li>
+</ol>
+<h4 id="stage-plugin-into-boundary-account">Stage Plugin Into Boundary Account</h4>
+<h4 id="add-plugin-into-a-boundary-account">Add Plugin Into a Boundary Account</h4>
+<h4 id="deploy-the-plugin-into-a-meter">Deploy the Plugin into a Meter</h4>
+<h3 id="observe-metric-values-on-dashboard">Observe Metric Values on Dashboard</h3>
 
             </div>
           </div>
@@ -166,10 +187,10 @@ Any other files required by your meter plugin to run.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../getting-started" class="btn btn-neutral float-right" title="Getting Started"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../protocol" class="btn btn-neutral float-right" title="Protocol"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../overview" class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -195,8 +216,8 @@ Any other files required by your meter plugin to run.</p>
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../getting-started" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../overview" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../protocol" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
