@@ -22,7 +22,7 @@ All of the above fields are not required with suitable defaults being applied fo
 
 - In the case where the `METRIC_SOURCE` and `METRIC_TIMESTAMP` are missing the source defaults to the host where the plugin is running.
 
-- In the unique case where only a `METRIC_VALUE` is provided the `METRIC_IDENTIFIER` is assumed to be the first one in listed in the `metrics` field in the `plugin.json`.
+- In the unique case where only a `METRIC_VALUE` is provided the `METRIC_IDENTIFIER` is assumed to be the first one in listed in the `metrics` field in the `plugin.json` (see the topic [Manifest](manifest.md)).
 
 
 
