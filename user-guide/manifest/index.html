@@ -73,7 +73,9 @@
                             
                                 <li><a class="toctree-l3" href="#example-plugin-manifest">Example Plugin Manifest</a></li>
                             
-                                <li><a class="toctree-l3" href="#json-object-descriptions">JSON Object Descriptions</a></li>
+                                <li><a class="toctree-l3" href="#single-versus-multiple-configuration-items">Single versus Multiple Configuration Items</a></li>
+                            
+                                <li><a class="toctree-l3" href="#json-object-reference">JSON Object Reference</a></li>
                             
                         
                         </ul>
@@ -138,108 +140,198 @@
           <div role="main">
             <div class="section">
               <h1 id="meter-plugin-manifest">Meter Plugin Manifest</h1>
-<p>The <code>plugin.json</code> file includes various pieces of metadata required by the meter plugin.</p>
+<p>The <code>plugin.json</code> file contains metadata used for describing the meter plugin. Information contained within this manifest is used to:</p>
+<ul>
+<li>Name the plugin and provide help information when browsing the available meter plugins.</li>
+<li>Indicate the command or script to execute which implements the meter plugin.</li>
+<li>Define the required fields used to configure the meter plugin.</li>
+</ul>
 <h3 id="example-plugin-manifest">Example Plugin Manifest</h3>
-<p>Below is a sample <code>plugin.json</code> that is an example plugin that can report on stock market price and volume. The complete meter plugin itself can be found <a href="https://github.com/boundary/boundary-plugin-ticker">here</a></p>
-<pre><code>{
-  &quot;description&quot;: &quot;Collects price and volume of a traded stock&quot;,
-  &quot;icon&quot;: &quot;ticker.png&quot;,
-  &quot;command&quot;: &quot;python plugin.py&quot;,
-  &quot;ignore&quot;: &quot;config&quot;,
-  &quot;metrics&quot;: [
-    &quot;BOUNDARY_STOCK_PRICE&quot;,
-    &quot;BOUNDARY_STOCK_VOLUME&quot;
-  ],
-  &quot;dashboards&quot;: [
-    {
-      &quot;name&quot;: &quot;Stocks&quot;,
-      &quot;layout&quot;: &quot;d-w=1&amp;d-h=2&amp;d-pad=15&amp;d-bg=none&amp;d-g-BOUNDARY_STOCK_PRICE=0-0-1-1&amp;d-g-BOUNDARY_STOCK_VOLUME=0-1-1-1&quot;
-    }
-  ],
-  &quot;postExtract&quot;: &quot;python post-extract.py&quot;,
-  &quot;paramArray&quot;: {
-    &quot;itemTitle&quot;: [
-      &quot;ticker&quot;
+<p>Below is a sample <code>plugin.json</code> that is bundled with an example meter plugin that reports measurements on a stock(s) market price and volume. The complete meter plugin for this example is located in the GitHub repository <a href="https://github.com/boundary/boundary-plugin-ticker">here</a>.</p>
+<pre><code>    {
+    &quot;description&quot;: &quot;Collects price and volume of a traded stock&quot;,
+    &quot;icon&quot;: &quot;ticker.png&quot;,
+    &quot;command&quot;: &quot;python plugin.py&quot;,
+    &quot;ignore&quot;: &quot;config&quot;,
+    &quot;metrics&quot;: [
+      &quot;BOUNDARY_STOCK_PRICE&quot;,
+      &quot;BOUNDARY_STOCK_VOLUME&quot;
     ],
-    &quot;schemaTitle&quot;: &quot;Stock&quot;
-  },
-  &quot;paramSchema&quot;: [
-    {
-      &quot;title&quot;: &quot;Ticker&quot;,
-      &quot;name&quot;: &quot;ticker&quot;,
-      &quot;description&quot;: &quot;Stock ticker symbol&quot;,
-      &quot;type&quot;: &quot;string&quot;,
-      &quot;default&quot;: &quot;&quot;,
-      &quot;required&quot;: true
+    &quot;dashboards&quot;: [
+      {
+        &quot;name&quot;: &quot;Stocks&quot;,
+        &quot;layout&quot;: &quot;d-w=1&amp;d-h=2&amp;d-pad=15&amp;d-bg=none&amp;d-g-BOUNDARY_STOCK_PRICE=0-0-1-1&amp;d-g-BOUNDARY_STOCK_VOLUME=0-1-1-1&quot;
+      }
+    ],
+    &quot;postExtract&quot;: &quot;python post-extract.py&quot;,
+    &quot;paramArray&quot;: {
+      &quot;itemTitle&quot;: [
+        &quot;ticker&quot;
+      ],
+      &quot;schemaTitle&quot;: &quot;Stock&quot;
+    },
+    &quot;paramSchema&quot;: [
+        {
+          &quot;title&quot;: &quot;Ticker&quot;,
+          &quot;name&quot;: &quot;ticker&quot;,
+          &quot;description&quot;: &quot;Stock ticker symbol&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;default&quot;: &quot;&quot;,
+          &quot;required&quot;: true
+        }
+      ]
     }
-  ]
-}
-
 </code></pre>
 
-<h3 id="json-object-descriptions">JSON Object Descriptions</h3>
-<p>A description of each of the JSON objects and their function follows.</p>
+<h3 id="single-versus-multiple-configuration-items">Single versus Multiple Configuration Items</h3>
+<p>Meter plugins have either a single or multiple configuration items per plugin. A configuration item is an array of JSON objects that define a database connection, REST API endpoint, or entity or system the meter plugin wishes to extract measurements from.</p>
+<p>In most cases, it is perferred that a plugin have multiple configurations, so that a single plugin installed on meter can collect measurements from multiple instances of a managed system, such as database system, running on the same host. A multiple configuration meter plugin enables proxy measurement of multiple entities external to the meter and plugin where the meter is unable to run, such as networking equipment.</p>
+<h3 id="json-object-reference">JSON Object Reference</h3>
+<p>A description of each of the JSON objects contain within the <code>plugin.json</code> manifest is described in detail in the sections that follow.</p>
+<h4 id="command"><code>command</code></h4>
+<p>A string representing a path to a command or script, along with arguments, to be executed to run the meter plugin. Although a meter plugin may contain other programs and/or scripts, the path and arguments assigned to the <code>command</code> field launches the main process responsible for orchestrating the collection of measurements.</p>
+<p>The <code>command</code> field accepts <em>macros</em> of the form:</p>
+<pre><code>$(macro_name)
+</code></pre>
+
+<p>which are replaced prior to execution of by fields defined in the <code>paramSchema</code> object array described later. Currently there is a single built in value: <code>pollInterval</code>. The meter manager also provides at runtime the same macro values in JSON file <code>param.json</code> that can be parsed by the meter plugin. Further discussion of the param.json file is discussed in <a href="../parameters">parameters</a></p>
+<p><strong>NOTE:</strong> Arguments passed within the <code>command</code> field are visible in process listings and as such sensivity such as user names and passwords should not be passed via macros.</p>
+<p>As mentioned previously in the <a href="../metrics">meter plugin overview</a>, measurement polling by meter plugins is either by <em>looping</em> or <em>non-looping</em> method. With the previous the preferred method, due to overhead caused by invoking a operating system process.</p>
 <h4 id="description"><code>description</code></h4>
-<p>Provides a brief summary of the meter plugin function. When a list of plugins is shown in the Boundary settings dialog the text of the description shows below the name of the plugin as shown here:</p>
+<p>Provides a brief summary of the meter plugin function. When a list of plugins is shown in the Boundary plugin dialog, the text of the description shows below the name of the plugin as shown here:</p>
 <p><img alt="Screenshot" src="../../../img/plugin-dialog.png" /></p>
 <h4 id="icon"><code>icon</code></h4>
-<p>A string with a relative path to an icon in the GitHub repository to be display in any view that lists plugins. Icon should be a 48x48 pixel in <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">Portable Network Graphics (PNG) format</a></p>
-<h4 id="command"><code>command</code></h4>
-<p>A string with a relative path to the command to run to get the metrics from the plugin.</p>
+<p>A string with a relative path to an icon in the GitHub repository to be display in any view that lists meter plugins. Icon should be a 48x48 pixel in <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">Portable Network Graphics (PNG) format</a></p>
+<h4 id="command_lua"><code>command_lua</code></h4>
+<p>Invokes the provide string using the Boundary meter's built in <a href="">lua</a> interpreter as follows:</p>
+<pre><code>$ boundary-meter &lt;string value of command_lua&gt;
+</code></pre>
+
+<h4 id="ignore"><code>ignore</code></h4>
+<p>A string or array of strings that designates a set of files/directories within the plugin directory to ignore when validating. In order to insure the correct version of a plugin is running, the Boundary plugin manager will compare checksums of all plugin files installed to the ones in the repository. If the plugin generates extra files when installing or executing it should list them here otherwise the Boundary plugin manager will attempt to re-install the plugin. Can be a string or an array of strings.</p>
 <h4 id="metrics"><code>metrics</code></h4>
-<p>A string array of the metric identifiers that are created when the plugin is installed. As part of the plugin guidelines these should always be in uppercase with words separated by underscores.</p>
+<p>A string array of the metric identifiers associated and used by the meter plugin (see <a href="../metrics">Metrics</a>) for a complete description of metric identifiers and their definitions). The metric definitions must exist a head of time or an error will ocurr. See <a href="../metrics">Metrics</a> for additional details about metric definitions.</p>
 <h4 id="dashboard"><code>dashboard</code></h4>
-<p>An object array with a name and layout fields. The name field is a string represents the text that is displayed as the title for the dashboard. The layout field is a string that contains url obtained by editing the dashboard and then clicking on the clipboard icon, , which is then copied to your clipboard.</p>
+<p>An object array with a <code>name</code> and <code>layout</code> fields which describe a <em>dashboard</em> definition(s) to be installed into an account when the plugin itself is added to an account.</p>
+<ul>
+<li><code>name</code> a string containg text that is displayed as the title for the dashboard which displays in the dashboard drop down menu.</li>
+<li><code>layout</code> a string that contains the dashboard layout. A layout is obtained using dashboard editor dialog, by clicking on the icon <img alt="Screenshot" src="../../../img/copyclip.png" />, next to the <em>Copy layout</em> . This copies the layout definition to your clipboard, which can the subsequently assigned to the <code>layout</code> field in the dashboard definition.</li>
+</ul>
+<p><strong>Example Dashboard Definition</strong></p>
+<pre><code>    &quot;dashboards&quot; : [
+        {
+          &quot;name&quot;: &quot;Plugin Shell&quot;,
+          &quot;layout&quot;: &quot;d-w=3&amp;d-h=2&amp;d-pad=5&amp;d-bg=none&amp;d-g-BOUNDARY_METRIC_TEST=0-0-3-2&quot;
+        },
+        ...
+    ],
+</code></pre>
+
 <h4 id="postextract"><code>postExtract</code></h4>
-<p>A string with the relative path in the GitHub repository of a script or command that is executed by the plugin manager after the plugins files have been copied to the target system.</p>
+<p>A string representing a path to a command or script, and arguments, to be run after the plugin contents are extracted to the local file system where the plugins are stored (typical <code>/etc/boundary/plugins</code> for Linux/UNIX systems and <code>Program Files\Boundary\plugins</code> for Windows).</p>
+<h4 id="postextract_lua"><code>postExtract_lua</code></h4>
+<p>Same as the <code>postExtract</code> except the value of <code>postExtract_lua</code> is invoked using the Boundary meter's built in <a href="">lua</a> interpreter as follows:</p>
+<pre><code>$ boundary-meter &lt;string value of postExtract_lua&gt;
+</code></pre>
+
 <h4 id="paramarray"><code>paramArray</code></h4>
-<p>An object array with a itemTitle and schemaTitle. The itemTitle is what is displayed to identify multiple configurations</p>
-<p>paramSchema
-An object array with the following:
-title
-name
-description
-type
-default
-required</p>
+<p>An object array with a <code>itemTitle</code> and <code>schemaTitle</code>. The <code>itemTitle</code> identifies the field in the <code>paramSchema</code> that is displayed to identify multiple configuration items.</p>
+<pre><code>    &quot;paramArray&quot;: {
+      &quot;itemTitle&quot;: [ &quot;name&quot; ],
+      &quot;schemaTitle&quot;: &quot;Metric Command&quot;
+    }
+</code></pre>
+
+<h5 id="paramaschema"><code>paramaSchema</code></h5>
+<p>An object array with the following:
+- title
+- name
+- description
+- type
+- default
+- required</p>
 <p>Details on each of the fields follow.</p>
-<p>title
-The title is the label used to describe a plugin configuration. For plugins with multiple configurations it appears in the configuration dialog.
-name
-Unique string identifier that identifies a plugin configuration parameter. The name is used as the field in the param.json file which is discussed in Appendix B - Metric Plugin Runtime Configuration Reference.
-description
-Provides details about the plugin configuration parameter. In the configuration dialog the description appears as tooltip when the mouse is held over the input field.
-type
-Indicated the data type of the configuration field which can one of the following:
-array
-boolean
-enum
-password
-string</p>
-<p>{
-            "title": "Protocol",
-            "name": "protocol",
-            "description": "The protocol of the endpoint",
-            "type" : { "enum" : [["HTTP", "http"], ["HTTPS", "https"]]},
-            "required": true
-        },</p>
-<p>{
-            "title": "Virtual Hosts",
-            "name": "virutalHosts",
-            "description": "Include individual VHosts in your graphs",
-            "type" : "array",
-            "items" : {
-                "type" : "string"
-            }
-        }</p>
-<p>default</p>
-<p>required</p>
-<p>Appendix B - Metric Plugin Runtime Configuration Reference
-This appendix documents the format of the runtime configuration provide to a plugin. At runtime the plugin manager (graphdat relay in the old school, and the 3.0 meter in the new school) provides a file, param.json with the configuration data provided by the user via the plugin configuration dialogs. The name, type, title, and mandatory fields are described by the
-Metric Plugin Manifest as described in Appendix A - Metric Plugin Manifest Reference</p>
-<p>Appendix C - Plugin Testing Score Sheet
-This appendix is guide of testing tasks to ensure a quality experience with your metric plugin.</p>
-<p>Deployed</p>
+<h5 id="title"><code>title</code></h5>
+<p>The title is the label used to describe a plugin configuration. For plugins with multiple configurations it appears in the configuration dialog.</p>
+<h5 id="name"><code>name</code></h5>
+<p>Unique string identifier that identifies a plugin configuration parameter.</p>
+<p>The name defines a macro of the form: <code>$(name)</code> and also defines a field in the param.json file which is discussed in <a href="../parameters">parameters</a>.</p>
+<h5 id="description_1"><code>description</code></h5>
+<p>Provides details about the plugin configuration parameter. In the configuration dialog the description appears as a tooltip when the mouse is held over the input field.</p>
+<h5 id="type"><code>type</code></h5>
+<p>Indicated the data type of the configuration field which can one of the following:</p>
+<ul>
+<li>string</li>
+<li>integer</li>
+<li>boolean</li>
+<li>enum</li>
+<li>password</li>
+<li>array</li>
+</ul>
+<h5 id="default"><code>default</code></h5>
+<p>Initial value to populate the given field.</p>
+<h5 id="required"><code>required</code></h5>
+<p>Boolean indicating that value for this field must be specified. Without a value the configuration cannot be saved to the meter plugin.</p>
+<h5 id="example-field-definitions">Example Field Definitions</h5>
+<p>The following is the <code>paramArray</code> and <code>paramSchema</code> definitions from the example plugin <em>boundary-plugin-dialog</em> which is located in <a href="https://github.com/boundary/boundary-plugin-dialog">this</a> GitHub repository.</p>
+<pre><code>...
+    &quot;paramArray&quot;: { &quot;itemTitle&quot;: [ &quot;string&quot; ], &quot;schemaTitle&quot;: &quot;Example Dialog Configuration&quot; },
+    &quot;paramSchema&quot;: [
+        {
+            &quot;title&quot;: &quot;String Type&quot;,
+            &quot;name&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;A simple text field. Can have a default value and be required.&quot;,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;default&quot;: &quot;hello&quot;,
+            &quot;required&quot;: true
+        },
+        {
+            &quot;title&quot; : &quot;Password Type&quot;,
+            &quot;name&quot; : &quot;password&quot;,
+            &quot;description&quot; : &quot;A simple text field that obsecures the text.&quot;,
+            &quot;type&quot; : &quot;password&quot;
+        },
+        {
+            &quot;title&quot;: &quot;Boolean Type&quot;,
+            &quot;name&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;A checkbox field. Can have a default value and be required&quot;,
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;default&quot;: false,
+            &quot;required&quot;: false
+        },
+        {
+            &quot;title&quot;: &quot;Enum Type&quot;,
+            &quot;name&quot;: &quot;enum&quot;,
+            &quot;description&quot;: &quot;A dropdown list of enumerated values. Can have a default and be required&quot;,
+            &quot;type&quot; : { &quot;enum&quot; : [[&quot;Red&quot;, &quot;red&quot;], [&quot;Green&quot;, &quot;green&quot;], [&quot;Blue&quot;,&quot;blue&quot;]] },
+            &quot;default&quot; : &quot;red&quot;,
+            &quot;required&quot;: true
+        },
+        {
+            &quot;title&quot;: &quot;String Array Type&quot;,
+            &quot;name&quot;: &quot;string_array&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;type&quot; : &quot;array&quot;,
+            &quot;items&quot; : { &quot;type&quot; : &quot;string&quot; }
+        },
+        {
+            &quot;title&quot;: &quot;Boolean Array Type&quot;,
+            &quot;name&quot;: &quot;array&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;type&quot; : &quot;array&quot;,
+            &quot;items&quot; : { &quot;type&quot; : &quot;boolean&quot; }
+        },
+        {
+            &quot;title&quot;: &quot;Enum Array Type&quot;,
+            &quot;name&quot;: &quot;array&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;type&quot; : &quot;array&quot;,
+            &quot;items&quot; : { &quot;type&quot; : &quot;enum&quot; }
+        }
+    ]
+...
+</code></pre>
+
 
             </div>
           </div>
