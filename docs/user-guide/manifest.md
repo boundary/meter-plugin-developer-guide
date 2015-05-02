@@ -76,7 +76,7 @@ As mentioned previously in the [meter plugin overview](metrics.md), measurement 
 #### `description`
 Provides a brief summary of the meter plugin function. When a list of plugins is shown in the Boundary plugin dialog, the text of the description shows below the name of the plugin as shown here:
 
-![Screenshot](../img/plugin-dialog.png)
+![Screenshot](img/plugin-dialog.png)
 
 #### `icon`
 A string with a relative path to an icon in the GitHub repository to be display in any view that lists meter plugins. Icon should be a 48x48 pixel in [Portable Network Graphics (PNG) format](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
@@ -101,7 +101,7 @@ A string array of the metric identifiers associated and used by the meter plugin
 An object array with a `name` and `layout` fields which describe a _dashboard_ definition(s) to be installed into an account when the plugin itself is added to an account.
 
 - `name` a string containg text that is displayed as the title for the dashboard which displays in the dashboard drop down menu.
-- `layout` a string that contains the dashboard layout. A layout is obtained using dashboard editor dialog, by clicking on the icon ![Screenshot](../img/copyclip.png), next to the _Copy layout_ . This copies the layout definition to your clipboard, which can the subsequently assigned to the `layout` field in the dashboard definition.
+- `layout` a string that contains the dashboard layout. A layout is obtained using dashboard editor dialog, by clicking on the icon ![Screenshot](img/copyclip.png), next to the _Copy layout_ . This copies the layout definition to your clipboard, which can the subsequently assigned to the `layout` field in the dashboard definition.
 
 
 __Example Dashboard Definition__
