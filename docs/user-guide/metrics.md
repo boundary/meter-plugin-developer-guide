@@ -1,7 +1,7 @@
 # Metric Definitions
 Metric definitions in Boundary provide metadata about measurements input to the system. This page provides details on metric definitions including: how to define metrics, as well as best practices with respect to their naming.
 
-A metric definition consists of 7 values:
+A _metric definition_ consists of 7 values:
 
 * _Name_ - unique metric identifier
 * _Display Name_ - Label used within the web interface.
@@ -9,11 +9,12 @@ A metric definition consists of 7 values:
 * _Description_ - Text that describes the metric.
 * _Default Aggregate_ - Type of aggregate displayed by default
 * _Unit_ - Quantity measured by this metric
+* _Default Resolution_ - Expected frequency of measurement update
 
 ### Name
 Metric identifiers are globally unique immutable keys within Boundary. Each metric definition is _owned_ by single account. If a metric definition contains a metric identifier already created by another account then an error will occur. Metric identifiers are referenced in the plugin manifest (see [Plugin Manifest](manifest.md)) and when a plugin is deployed in an account other then where the metric definitions were created, they are _copied_ into the new account.
 
-Metric identifiers are case insenstive but by convention they are always in upper case letters (A-Z) with allowance for a underscore (-) or dash between logical words. This convention should be adhered to when defining or referencing a metric.
+Metric identifiers are case insenstive but by convention they are always in upper case letters (A-Z) with allowance for a underscore (_) or dash(-) between logical words. This convention should be adhered to when defining or referencing a metric.
 
 Metric identifiers from the same plugin should have a prefix to group similar metrics (e.g. `AWS_ELB_LATENCY`). Metric names that are prefixed with `BOUNDARY` should be considered reserved for Boundary’s internal use.
 
@@ -29,13 +30,15 @@ Each display name should have a common prefix so that similar metrics are groupe
 ### Short Display Name
 The short display name is used in cases where using there is limited space to use the display name as a label. For example the short display name is used as:
 
-* List of items available metrics when editing a dashboard.
+* List of items available metrics when editing a dashboard (_Settings_ => _Dashboards_).
 * Label when selecting a data point on a dashboard.
 
-### Description
-Should be a concise definition that describes the metric, if the metric is a rate, what are the units of the metric (e.g. x/second),etc.
+The short display name should be limited to 20 characters or less.
 
-When building a dashboard using the dashboard editor (_Settings_ => _Dashboards_), the list of available metrics is displayed on the left hand side of the dialog. Mousing over an item in the list displays the description as a [tool tip](http://en.wikipedia.org/wiki/Tooltip).
+### Description
+Should be a concise definition that describes the metric. The description should indicate if the metric is a rate, what are the units of the metric (e.g. x/second),etc.
+
+When building a dashboard using the dashboard editor, the [tool tip](http://en.wikipedia.org/wiki/Tooltip) associated with each item in the list of available metrics is the description.
 
 ### Default Aggregate
 Default aggregate indicates which type of aggregate is displayed in dashboards by default. The following aggregates are supported:
