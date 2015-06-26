@@ -12,6 +12,9 @@ Below is a sample `plugin.json` that is bundled with an example meter plugin tha
 
 ```
     {
+    "name": "Ticker",
+    "version": "1.0.0",
+    "tags": "meter",
     "description": "Collects price and volume of a traded stock",
     "icon": "ticker.png",
     "command": "python plugin.py",
@@ -96,6 +99,10 @@ A string or array of strings that designates a set of files/directories within t
 #### `metrics`
 
 A string array of the metric identifiers associated and used by the meter plugin (see [Metrics](metrics.md)) for a complete description of metric identifiers and their definitions). The metric definitions must exist a head of time or an error will ocurr. See [Metrics](metrics.md) for additional details about metric definitions.
+
+### `name`
+
+Descriptive title of the meter plugin
 
 #### `dashboard`
 An object array with a `name` and `layout` fields which describe a _dashboard_ definition(s) to be installed into an account when the plugin itself is added to an account.

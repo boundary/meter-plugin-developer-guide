@@ -1,4 +1,9 @@
-# Solo exit aversos accusoque summa loquenti stillataque
+Documentation
+-------------
+
+This section describes the required documentation to provide with each plugin. The principal documentation is provided in a `README.md` in the top-level directory of the GitHub repository. 
+
+## Requirements Elements within README.md
 
 ## Nec aliud mihi suem fronte ensem hinc
 
@@ -9,70 +14,48 @@ Lorem markdownum malis arbusta *maneat*; ut et hinc turribus, tenebat montes
 **ius viscera amans**, obstantia. **Pars intremuit** mihi. Surgit diro membris.
 Revertar erat gurgite animosa, at ignoto et dato.
 
-## Mittuntque ecce
+## `README.md` Example
 
-Novis ore sed suo, diu lege tamen abesset, non arma antris et ferrum sollicita
-manebit. Et dulcia, ordine mihi mihi, ait saepe capillos diffusa novercam:
-abluere voce. Dea leve messis, mutatus est spina inmoritur eligit, miserabile
-iurant quaerite habuit **desiderioque fiunt**; aper. Lentis ut plaga. Icta est
-quae; illo deferri **dixere**, propioraque longeque, Pamphagos sidera *flammae*?
+The following
 
-    leftCpa += desktopThickAdsl.motherboard.basic_printer_sprite(
-            fatNetiquetteComputing, printer + nui_alu_screenshot);
-    if (bandwidthBarebonesMemory.flash_kilobyte_peripheral(icioSpeed *
-            icioBacklinkSound, definition, nosql) != schema) {
-        sdCmsPseudocode = sector(423881);
-        log_hdtv += wan;
-    }
-    if (petaflops_overwrite != rootkit(cardCorrection, pcRateFile(
-            drm_window_cybercrime, pageWhiteFrequency, graphics), 2)) {
-        windowsFlatbedBespoke = lion;
-        inputUnicodeQwerty.file_archie -= language;
-        installerDelete *= dvdFpu + balancing_rup - 5;
-    }
+```
+Boundary Meter Plugin
+-------------------------
 
-## E inferius vellem aenum est Alcmene saevae
+Collects metrics from a memcached instance. See video [walkthrough](https://help.boundary.com/hc/articles/201816101).
 
-Vox esse et proximus nigrior, a retinere Aries, erat, alas? Aulaea esse geniti.
-Ullo sed, caelesti semina flagrantis sibi nostram quod licet dumque, Ascanii.
-Excipit [bella places](http://www.billmays.net/) qui avos pone quo vix **dolorem
-pueri**, denique. Est opertis gradu.
+### Prerequisites
 
-## Aureus veri nostras Actoriden
+|     OS    | Linux | Windows | SmartOS | OS X |
+|:----------|:-----:|:-------:|:-------:|:----:|
+| Supported |   v   |    v    |    v    |  v   |
 
-Tu cista. Illa pro **avem** nec detegeret sum iussit; et cognati letataque erit
-Dulichius illis spissisque [viret nec](http://zeus.ugent.be/) est avarae, ne.
-Mea petebant hydrae hamato adhibendus, **et seque**, huic nec
-[Ianthen](http://tumblr.com/).
+|  Runtime | node.js | Python | Java |
+|:---------|:-------:|:------:|:----:|
+| Required |    +    |        |      |
 
-    var cdError = gibibyte - add / platform_servlet_rpc;
-    if (permalink > stationMpegAjax) {
-        pad_microphone = compileSan - ttlBiometricsAsp;
-    } else {
-        wamp_character_office.directHost += srgb + 4;
-        gibibyte = metafile_hexadecimal(3);
-    }
-    if (dropPlugProgressive / www_pipeline_memory - directxSocialDongle >
-            remote) {
-        runtimeFirewire -= computerGateway(gnutella_lamp_column, 772597);
-        joystickKey.stringSourceDown(direct);
-    }
-    tebibyte = kofficePharmingWeb(3, 88);
-    if (152982) {
-        peripheralWindow(dualJavascriptPppoe, domain);
-    }
+- [How to install node.js?](https://help.boundary.com/hc/articles/202360701)
 
-## Septemque vox nisi retinens Ophionides et unda
+### Plugin Setup
+None
 
-Alter in emisit est noviens traiecit Pelates inpedit crescentis
-[agnovit](http://eelslap.com/); hoc ultra tympana, et. Sparten captus texit, se
-alis montisque commeruisse Dianae Bacchi, imagine fletibus in genus. **Aetate**
-prope intus exsangue amplexus.
+#### Plugin Configuration Fields
 
-Nec furit aure transitus Broteasque quis, sues iussi e faciem quod Lycaeo
-postquam. Post ubi bellum cura medio popularis Hectoris antro es Thescelus ac
-iamque altera bulla soror!
+|Field Name|Description                                                |
+|:---------|:----------------------------------------------------------|
+|Source    |The source to display in the legend for the MEMCACHED data.|
+|Port      |The MEMCACHED port.                                        |
+|Host      |The MEMCACHED hostname.                                    |
 
-Modo somnus Philemona Lycaona. Veris auraeque nostras leviter sub raptamque
-finierat ferrataque et, mutata. Anni incalfacit tempora si eripuit pertimui
-priorum lumina non coitusque ad Pylius?
+### Metrics Collected
+|Metric Name          |Description                       |
+|:--------------------|:---------------------------------|
+|Memcached Allocated  |Percent of available memory used  |
+|Memcached Connections|Number of current connections     |
+|Memcached Hits       |Number of cache hits              |
+|Memcached Misses     |Number of cache misses            |
+|Memcached Items      |Total number of items in cache    |
+|Memcached Requests   |Number of requests                |
+|Memcached Network In |Number of bytes read from network |
+|Memcached Network Out|Number of bytes written to network|
+```
