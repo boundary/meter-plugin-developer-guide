@@ -8,7 +8,7 @@ The pathway for measurements to be sent to Boundary is as follows:
 2. Plugin Manager (`pluginmgr`) reads the standard out from the meter plugin
 3. Plugin Manager writes the measurement to the meter via the Meter(`boundary-meter`) RPC channel
 4. Meter reads the Meter RPC call sent by the Plugin Manager
-4. Meter sends the measurement to Boundary via an HTTPS Rest call
+5. Meter sends the measurement to Boundary via an HTTPS Rest call
 
 The sections that follow provide tools and techniques to trace the above data flow.
 
