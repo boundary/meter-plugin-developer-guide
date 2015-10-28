@@ -1,15 +1,25 @@
 site_name: Plugin Development
-#theme: bootstrap
-theme: readthedocs
+theme: mkdocs
 pages:
 - [index.md, Home]
-- ['user-guide/overview.md', 'Topics', 'Overview']
+- ['user-guide/overview.md', 'Getting Started', 'Overview']
+- ['user-guide/quick-start.md', 'Getting Started', 'Simple Plugin Anatomy']
 - ['user-guide/getting-started.md', 'Topics', 'Getting Started']
-- ['user-guide/protocol.md', 'Topics', 'Protocol']
-- ['user-guide/metrics.md', 'Topics', 'Metrics']
-- ['user-guide/manifest.md', 'Topics', 'Manifest']
-- ['user-guide/parameters.md', 'Topics', 'Parameters']
+- ['user-guide/protocol.md', 'Reference', 'Protocol']
+- ['user-guide/metrics.md', 'Reference', 'Metrics']
+- ['user-guide/manifest.md', 'Reference', 'Manifest']
+- ['user-guide/parameters.md', 'Reference', 'Parameters']
+- ['user-guide/framework.md', 'Topics', 'Framework']
 - ['user-guide/testing.md', 'Topics', 'Testing']
+- ['user-guide/troubleshooting.md', 'Topics', 'Troubleshooting']
 - ['user-guide/documentation.md', 'Topics', 'Documentation']
+- ['user-guide/production.md', 'Topics', 'Production']
+- ['user-guide/examples.md', 'Examples', 'Example Overview']
+- ['user-guide/example-hello-world.md', 'Examples', 'Example - Hello World']
+- ['user-guide/example-hello-world2.md', 'Examples', 'Example - Hello World part duex']
+- ['user-guide/example-hello-world2.md', 'Examples', 'Example - Give it a REST']
+- ['user-guide/example-hello-world2.md', 'Examples', 'Example - The Meter and Me, and the Plugin makes Three']
+- ['user-guide/additional-examples.md', 'Examples', 'Additional Examples']
+- ['user-guide/lua-framework-overview.md', 'Framework', 'Lua Plugin Framework']
 - ['user-guide/checklist.md', 'Topics', 'Checklist']
 - ['user-guide/tools.md', 'Topics', 'Tools']
