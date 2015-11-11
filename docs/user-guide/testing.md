@@ -13,15 +13,14 @@ This section describes tips on testing your plugins to make them production read
 These are the tier 1 platforms and versions that the plugins are required to run on to be certified. These represent the minimum number of platforms that a plugin should be tested against before considering a plugin Generally Available (GA).
 
 #### Linux
-* Centos 5.10
-* Centos 6.5
+* Centos 6.6
+* Centos 7.0
 * Amazon Linux AMI release 2014.03
 * Ubuntu 12.04 LTS
 * Ubuntu 14.04.1 LTS
 
 #### Windows
-* Windows 2012
-* Windows 2008R2
+* Windows 2012 server R2
 
 ## Test Deployment
 
