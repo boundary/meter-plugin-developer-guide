@@ -1,28 +1,31 @@
 site_name: Plugin Development
 theme: united
 pages:
-- Home: index.md
+- Home: 'index.md'
 - Getting Started:
-  - Getting Started: "user-guide/getting-started.md"
-  - Overview: "user-guide/overview.md"
-  - Plugin Anatomy: "user-guide/quick-start.md"
+    - Introduction: 'user-guide/getting-started.md'
+    - Prerequisites: 'user-guide/prerequisites.md'
+    - Plugin Contents: 'user-guide/quick-start.md'
 - Reference:
-  - Protocol: "user-guide/protocol.md"
-  - Metrics: "user-guide/metrics.md"
-  - Manifest: "user-guide/manifest.md"
-  - Documentation: "user-guide/documentation.md"
-  - Parameters: "user-guide/parameters.md"
-  - Production: "user-guide/production.md"
+    - Protocol:
+        - Introduction: 'user-guide/index.md'
+        - Measurements: 'user-guide/protocol/measurements.md'
+        - Events: 'user-guide/protocol/events.md'
+    - Metrics: "user-guide/metrics.md"
+    - Manifest: "user-guide/manifest.md"
+    - Documentation: "user-guide/documentation.md"
+    - Parameters: "user-guide/parameters.md"
+    - Production: "user-guide/production.md"
+    - Tools: "user-guide/tools.md"
 - Topics:
-  - Framework: "user-guide/framework.md"
-  - Lua Plugin Framework: "user-guide/lua-framework-overview.md"
-  - Tools: "user-guide/tools.md"
-  - Testing: "user-guide/testing.md"
-  - Troubleshooting: "user-guide/troubleshooting.md"
-  - Check List: "user-guide/checklist.md"
+    - Framework: "user-guide/framework.md"
+    - Lua Plugin Framework: "user-guide/lua-framework-overview.md"
+    - Testing: "user-guide/testing.md"
+    - Troubleshooting: "user-guide/troubleshooting.md"
+    - Check List: "user-guide/checklist.md"
 - Examples:
-  - Overview: "user-guide/examples.md"
-  - Hello World: "user-guide/example-hello-world.md"
-  - Hello World part deux: "user-guide/example-hello-world2.md"
-  - Give It a Rest: "user-guide/example-hello-world2.md"
-  - Meter and Me and the Plugin makes Three: "user-guide/example-hello-world2.md"
+    - Overview: "user-guide/examples.md"
+    - Hello World: "user-guide/example-hello-world.md"
+    - Hello World part deux: "user-guide/example-hello-world2.md"
+    - Give It a Rest: "user-guide/example-hello-world2.md"
+    - Meter and Me and the Plugin makes Three: "user-guide/example-hello-world2.md"

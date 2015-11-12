@@ -2,6 +2,15 @@
 
 This page will provide an introduction to meter plugin development by outlining the development tasks to create a custom plugin. Next you will be walked through an existing plugin and its contents and deploy the meter plugin into your Boundary account.
 
+## Development Tasks High Level Overview
+
+These steps
+1. Identify the metrics to be collected
+2. Determine how the metrics are collected
+3. Create the Meter Plugin
+4. Deploy and Test
+6. Submit for Inclusion in Product (optional)
+
 ## Plugin Development Tasks
 
 Development of meter plugin consists of the following tasks:
