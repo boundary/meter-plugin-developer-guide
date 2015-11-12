@@ -1,6 +1,11 @@
 # Meter Plugin Protocol
 As mentioned previously meter plugins can be programmed using any language that can write to standard out.
 
+Type types of information are interpreted by the plugin manager:
+
+1. Measurements
+2. Events
+
 The Boundary Meter delegates the management of all meter plugins to the plugin manager.
 
 The plugin manager expects a script or program to send metrics via standard output with the given format:
