@@ -1,5 +1,5 @@
 site_name: Plugin Development
-theme: mkdocs
+theme: united
 pages:
 - Home: index.md
 - Getting Started:
