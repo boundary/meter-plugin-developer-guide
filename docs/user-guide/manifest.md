@@ -14,10 +14,12 @@ Below is a sample `plugin.json` that is bundled with an example meter plugin tha
     {
     "name": "Ticker",
     "version": "1.0.0",
+    "meterVersionRequired": "4.2.0-611",
     "tags": "meter",
     "description": "Collects price and volume of a traded stock",
     "icon": "ticker.png",
-    "command": "python plugin.py",
+    "command": "python init.py",
+    "postExtract": "python post-extract.py",
     "ignore": "config",
     "metrics": [
       "BOUNDARY_STOCK_PRICE",
@@ -29,7 +31,6 @@ Below is a sample `plugin.json` that is bundled with an example meter plugin tha
         "layout": "d-w=1&d-h=2&d-pad=15&d-bg=none&d-g-BOUNDARY_STOCK_PRICE=0-0-1-1&d-g-BOUNDARY_STOCK_VOLUME=0-1-1-1"
       }
     ],
-    "postExtract": "python post-extract.py",
     "paramArray": {
       "itemTitle": [
         "ticker"
@@ -82,7 +83,7 @@ Provides a brief summary of the meter plugin function. When a list of plugins is
 ![Screenshot](img/plugin-dialog.png)
 
 #### `icon`
-A string with a relative path to an icon in the GitHub repository to be display in any view that lists meter plugins. Icon should be a 48x48 pixel in [Portable Network Graphics (PNG) format](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
+A string with a relative path to an icon to be display in any view that lists meter plugins. Icon should be a 48x48 pixel in [Portable Network Graphics (PNG) format](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
 
 #### `command_lua`
 
