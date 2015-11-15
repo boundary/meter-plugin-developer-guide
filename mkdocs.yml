@@ -6,10 +6,12 @@ pages:
     - Introduction: 'user-guide/getting-started/index.md'
     - Prerequisites: 'user-guide/getting-started/prerequisites.md'
     - Meter Plugin Contents: 'user-guide/getting-started/plugin-contents.md'
-    - Framework: 'user-guide/getting-started/lua-framework-overview.md'
     - Framework: 'user-guide/getting-started/framework.md'
 - Tutorial:
     - Overview: 'user-guide/tutorial/index.md'
+    - Define Metrics: 'user-guide/tutorial/define-metrics.md'
+    - Create Manifest: 'user-guide/tutorial/create-manifest.md'
+    - Add Icon: 'user-guide/tutorial/create-manifest.md'
 - Examples:
     - Overview: 'user-guide/examples/index.md'
     - Hello World: 'user-guide/examples/example-hello-world.md'
@@ -27,6 +29,7 @@ pages:
     - Meter Receives RPC Call: 'user-guide/troubleshooting/meter-receives-rpc-call.md'
 - Reference:
     - Deploying: 'user-guide/reference/deploying.md'
+    - Dashboards: 'user-guide/reference/plugin-dashboards.md'
     - Manifest: 'user-guide/reference/manifest.md'
     - Metrics: 'user-guide/reference/metrics.md'
     - Protocol: 'user-guide/reference/protocol.md'
@@ -35,6 +38,9 @@ pages:
     - Documentation: 'user-guide/reference/documentation.md'
     - Parameters: 'user-guide/reference/parameters.md'
     - Production: 'user-guide/reference//production.md'
+    - GitHub Account: 'user-guide/reference/github-account.md'
+    - GitHub Repository: 'user-guide/reference/github-repository.md'
+    - Git Tools: 'user-guide/reference/git-tools.md'
     - Tools: 'user-guide/reference/tools.md'
     - Testing: 'user-guide/reference/testing.md'
     - Check List: 'user-guide/reference/checklist.md'

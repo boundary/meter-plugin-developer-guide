@@ -13,9 +13,12 @@ Plugins not only make it very easy to add arbitrary metric monitoring to Boundar
 Before starting on this tutorial it will be assumed that you have the prerequistes.  See [Prerequisites](../getting-started/prerequisites.md) for information on tools and other items required to start this tutorial.
 
 
-## High-Level Overview
+## Steps To Complete This Tutorial
 
-1. Metrics Definitions
+1. Create Meter Plugin Contents
+2. Install Meter Plugin Into Account
+3.
+
 
 
 
