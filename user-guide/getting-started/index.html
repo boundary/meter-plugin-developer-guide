@@ -9,12 +9,12 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Getting Started - Plugin Development</title>
+	<title>Introduction - Meter Plugin Development</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -32,7 +32,6 @@
 
         <!-- Collapsed navigation -->
         <div class="navbar-header">
-            
             <!-- Expander button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -40,234 +39,229 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            
 
             <!-- Main title -->
-            <a class="navbar-brand" href="../..">Plugin Development</a>
+            <a class="navbar-brand" href="../..">Meter Plugin Development</a>
         </div>
 
         <!-- Expanded navigation -->
         <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
             
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li >
-                        <a href="../..">Home</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../overview/">Overview</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../quick-start/">Simple Plugin Anatomy</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li class="active">
-    <a href="./">Getting Started</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../protocol/">Protocol</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../metrics/">Metrics</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../manifest/">Manifest</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../parameters/">Parameters</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../framework/">Framework</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../testing/">Testing</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../troubleshooting/">Troubleshooting</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../documentation/">Documentation</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../production/">Production</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../examples/">Example Overview</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../example-hello-world/">Example - Hello World</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../example-hello-world2/">Example - Hello World part duex</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../example-hello-world2/">Example - Give it a REST</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../example-hello-world2/">Example - The Meter and Me, and the Plugin makes Three</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../additional-examples/">Additional Examples</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Framework <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../lua-framework-overview/">Lua Plugin Framework</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../checklist/">Checklist</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../tools/">Tools</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                </ul>
             
+                <li >
+                    <a href="../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li class="active">
+                            <a href="./">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="prerequisites/">Prerequisites</a>
+                        </li>
+                    
+                        <li >
+                            <a href="plugin-contents/">Meter Plugin Contents</a>
+                        </li>
+                    
+                        <li >
+                            <a href="framework/">Framework</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../tutorial/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/define-metrics/">Define Metrics</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/create-manifest/">Create Manifest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/create-manifest/">Add Icon</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../examples/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../examples/example-hello-world/">Hello World</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../examples/example-hello-world2/">Hello World part deux</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../examples/example-hello-world2/">Give It a Rest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../examples/example-hello-world2/">Meter and Me and the Plugin makes Three</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Troubleshooting <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../troubleshooting/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../troubleshooting/common-issues/">Common Issues</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../troubleshooting/tracing-measurement-flow/">Tracing Measurement Flow</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../troubleshooting/tracing-tools/">Tracing Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../troubleshooting/plugin-sends-measurement/">Meter Plugin Writes Measurement</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../troubleshooting/plugin-reads-measurement/">Plugin Manager Reads Meter Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../troubleshooting/plugin-writes-to-meter/">Plugin Manager Writes To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../troubleshooting/meter-receives-rpc-call/">Meter Receives RPC Call</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../reference/deploying/">Deploying</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/plugin-dashboards/">Dashboards</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/manifest/">Manifest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/metrics/">Metrics</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/protocol/">Protocol</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/measurements/">Measurements</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/events/">Events</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/documentation/">Documentation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/parameters/">Parameters</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/production/">Production</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/github-account/">GitHub Account</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/github-repository/">GitHub Repository</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/git-tools/">Git Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/tools/">Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/testing/">Testing</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../reference/checklist/">Check List</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
 
+            <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
+                <li >
+                    <a rel="next" href="../..">
+                        <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                
-                    <li >
-                        <a rel="next" href="../quick-start/">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="../protocol/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-                
+                <li >
+                    <a rel="prev" href="prerequisites/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
                 
             </ul>
         </div>
@@ -275,11 +269,12 @@
 </div>
 
         <div class="container">
-            
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
         <li class="main active"><a href="#getting-started">Getting Started</a></li>
+        
+            <li><a href="#development-tasks-high-level-overview">Development Tasks High Level Overview</a></li>
         
             <li><a href="#plugin-development-tasks">Plugin Development Tasks</a></li>
         
@@ -288,10 +283,17 @@
     
     </ul>
 </div></div>
-                <div class="col-md-9" role="main">
+            <div class="col-md-9" role="main">
 
 <h1 id="getting-started">Getting Started</h1>
 <p>This page will provide an introduction to meter plugin development by outlining the development tasks to create a custom plugin. Next you will be walked through an existing plugin and its contents and deploy the meter plugin into your Boundary account.</p>
+<h2 id="development-tasks-high-level-overview">Development Tasks High Level Overview</h2>
+<p>These steps
+1. Identify the metrics to be collected
+2. Determine how the metrics are collected
+3. Create the Meter Plugin
+4. Deploy and Test
+6. Submit for Inclusion in Product (optional)</p>
 <h2 id="plugin-development-tasks">Plugin Development Tasks</h2>
 <p>Development of meter plugin consists of the following tasks:</p>
 <ol>
@@ -333,46 +335,17 @@
 <h4 id="add-plugin-into-a-boundary-account">Add Plugin Into a Boundary Account</h4>
 <h4 id="deploy-the-plugin-into-a-meter">Deploy the Plugin into a Meter</h4>
 <h3 id="observe-metric-values-on-dashboard">Observe Metric Values on Dashboard</h3></div>
-            
         </div>
 
         <footer class="col-md-12">
             <hr>
             
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
 
         <script src="../../js/jquery-1.10.2.min.js"></script>
         <script src="../../js/bootstrap-3.0.3.min.js"></script>
         <script src="../../js/highlight.pack.js"></script>
-        <script>var base_url = '../..';</script>
-        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
         <script src="../../js/base.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            From here you can search these documents. Enter
-                            your search terms below.
-                        </p>
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                            </div>
-                        </form>
-                        <div id="mkdocs-search-results"></div>
-                    </div>
-                    <div class="modal-footer">
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </body>
 </html>

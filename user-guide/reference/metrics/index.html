@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Metrics - Meter Plugin Development</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">Meter Plugin Development</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../getting-started/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/prerequisites/">Prerequisites</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/plugin-contents/">Meter Plugin Contents</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/framework/">Framework</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../tutorial/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/define-metrics/">Define Metrics</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-manifest/">Create Manifest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-manifest/">Add Icon</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../examples/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world/">Hello World</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Hello World part deux</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Give It a Rest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Meter and Me and the Plugin makes Three</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Troubleshooting <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../troubleshooting/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/common-issues/">Common Issues</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/tracing-measurement-flow/">Tracing Measurement Flow</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/tracing-tools/">Tracing Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-sends-measurement/">Meter Plugin Writes Measurement</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-reads-measurement/">Plugin Manager Reads Meter Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-writes-to-meter/">Plugin Manager Writes To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/meter-receives-rpc-call/">Meter Receives RPC Call</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../deploying/">Deploying</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../plugin-dashboards/">Dashboards</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../manifest/">Manifest</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Metrics</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../protocol/">Protocol</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../measurements/">Measurements</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../events/">Events</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../documentation/">Documentation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../parameters/">Parameters</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../production/">Production</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../github-account/">GitHub Account</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../github-repository/">GitHub Repository</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../git-tools/">Git Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tools/">Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../testing/">Testing</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../checklist/">Check List</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../manifest/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../protocol/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#metric-definitions">Metric Definitions</a></li>
+        
+            <li><a href="#name">Name</a></li>
+        
+            <li><a href="#display-name">Display Name</a></li>
+        
+            <li><a href="#short-display-name">Short Display Name</a></li>
+        
+            <li><a href="#description">Description</a></li>
+        
+            <li><a href="#default-aggregate">Default Aggregate</a></li>
+        
+            <li><a href="#unit">Unit</a></li>
+        
+            <li><a href="#default-resolution">Default Resolution</a></li>
+        
+            <li><a href="#defining-metrics">Defining Metrics</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="metric-definitions">Metric Definitions</h1>
+<p>Metric definitions in Boundary provide metadata about measurements input to the Boundary monitoring system. This page provides details on metric definitions including:</p>
+<ul>
+<li>How to define metrics</li>
+<li>Best practices with respect to their naming.</li>
+</ul>
+<p>A <em>metric definition</em> consists of 7 values:</p>
+<ul>
+<li><em>Name</em> - unique metric identifier</li>
+<li><em>Display Name</em> - Label used within the web interface.</li>
+<li><em>Short Display Name</em> - Shortened label used with the web interface.</li>
+<li><em>Description</em> - Text that describes the metric.</li>
+<li><em>Default Aggregate</em> - Type of aggregate displayed by default</li>
+<li><em>Unit</em> - Quantity measured by this metric</li>
+<li><em>Default Resolution</em> - Expected frequency of measurement update</li>
+</ul>
+<h3 id="name">Name</h3>
+<p>Metric identifiers are unique immutable keys within a Boundary account. Metric identifiers are referenced in the plugin manifest (see <a href="../manifest/">Plugin Manifest</a>) and when a plugin is deployed in an account other then where the metric definitions were created, they are <em>copied</em> into the new account.</p>
+<p>Metric identifiers are case insenstive but by convention they are always in upper case letters (A-Z) with allowance for a underscore (_) or dash(-) between logical words. This convention should be adhered to when defining or referencing a metric.</p>
+<p>Metric identifiers from the same plugin should have a prefix to group similar metrics (e.g. <code>AWS_ELB_LATENCY</code>). Metric names that are prefixed with <code>BOUNDARY</code> should be considered reserved for Boundary’s internal use.</p>
+<h3 id="display-name">Display Name</h3>
+<p>Display name is the primary label used by web user interface to reference a metric and/or its measurement. The display name appears in the following locations within the web user interface:</p>
+<ul>
+<li>Headings of graphs in dashboards</li>
+<li>List of items with the <em>metrics settings</em> dialog</li>
+<li>Drop down list when defining an <em>Alarm</em></li>
+</ul>
+<p>Each display name should have a common prefix so that similar metrics are grouped together and provides a hint of the system or identity to be monitored (e.g. <code>APACHE_BYTES_PER_REQUEST</code>).</p>
+<h3 id="short-display-name">Short Display Name</h3>
+<p>The short display name is used in cases where using there is limited space to use the display name as a label. For example the short display name is used as:</p>
+<ul>
+<li>List of items available metrics when editing a dashboard (<em>Settings</em> =&gt; <em>Dashboards</em>).</li>
+<li>Label when selecting a data point on a dashboard.</li>
+</ul>
+<p>The short display name should be limited to 20 characters or less.</p>
+<h3 id="description">Description</h3>
+<p>Should be a concise definition that describes the metric. The description should indicate if the metric is a rate, what are the units of the metric (e.g. x/second),etc.</p>
+<p>When building a dashboard using the dashboard editor, the <a href="http://en.wikipedia.org/wiki/Tooltip">tool tip</a> associated with each item in the list of available metrics is the description.</p>
+<h3 id="default-aggregate">Default Aggregate</h3>
+<p>Default aggregate indicates which type of aggregate is displayed in dashboards by default. The following aggregates are supported:</p>
+<ul>
+<li><em>Average</em></li>
+<li><em>Maximum</em></li>
+<li><em>Minimum</em></li>
+<li><em>Sum</em></li>
+</ul>
+<h3 id="unit">Unit</h3>
+<p>A metric quantity is described by a unit which is one of the following:
+<em> <em>Count Of Bytes</em>
+</em> <em>Duration</em>
+<em> <em>Number</em>
+</em> <em>Percentage</em></p>
+<h3 id="default-resolution">Default Resolution</h3>
+<p>Default resolution describes how often measurements for this metric will be updated. This value is used to extend the line on a dashboard to provide better visualization, instead of drawing single points.</p>
+<h2 id="defining-metrics">Defining Metrics</h2>
+<p>Metric definitions are defined in Boundary using either:</p>
+<ol>
+<li>Web user interface</li>
+<li>REST APIs</li>
+<li>Command line utilities.</li>
+</ol>
+<p>Details on the use of the REST APIs for metric definition can be found <a href="http://premium-documentation.boundary.com/metrics">here</a>. The remaining methods are described in the next sections.</p>
+<h3 id="defining-metrics-using-the-web-user-interface">Defining Metrics Using the Web User Interface</h3>
+<ol>
+<li>Login into Boundary</li>
+<li>
+<p>Display the settings dialog by clicking on the <em>settings icon</em> in the menu: <img alt="" src="../../img/settings_icon.png" /></p>
+</li>
+<li>
+<p>Click on <em>Metrics</em> in the left hand side of the dialog which then displays the <em>Metrics</em> dialog:
+<img alt="" src="../../img/metrics_dialog.png" /></p>
+</li>
+<li>
+<p>Click on the <em>Create Metric</em> button which displays a form to define a new metric. Fill out the form as shown here:
+<img alt="" src="../../img/create_metric.png" /></p>
+</li>
+<li>
+<p>Click on the <em>Save</em> button to create the metric.</p>
+</li>
+<li>
+<p>Click on the <em>Close</em> button to dismiss the dialog.</p>
+</li>
+</ol>
+<h3 id="defining-metrics-using-command-line-utilities">Defining Metrics Using Command Line Utilities</h3>
+<ol>
+<li>Install the Boundary API CLI and configure according to instructions <a href="https://github.com/boundary/boundary-api-cli">here</a></li>
+<li>Create the metric using <code>metric-create</code>:</li>
+</ol>
+<pre><code class="bash">$ metric-create -n BOUNDARY_FOO_METRIC_IN -d &quot;Boundary Foo Metric In&quot; -s &quot;Foo In&quot; -i &quot;Tracks the Boundary Foo Metric&quot; -g AVG -i number -r 1000
+{
+  &quot;result&quot;: {
+    &quot;success&quot;: true
+  }
+}
+</code></pre>
+
+<h3 id="batch-definition-of-metrics-using-command-line-utilities">Batch Definition of Metrics Using Command Line Utilities</h3>
+<ol>
+<li>Install the Boundary API CLI, if not already installed, and configure according to instructions <a href="https://github.com/boundary/boundary-api-cli">here</a></li>
+<li>Define metrics in a JSON file named <code>metrics.json</code>:</li>
+</ol>
+<pre><code class="json">{
+    &quot;BOUNDARY_METRIC_ONE&quot;: {
+        &quot;defaultAggregate&quot;: &quot;AVG&quot;,
+        &quot;defaultResolutionMS&quot;: 2000,
+        &quot;description&quot;: &quot;Example metric one for my meter plugin&quot;,
+        &quot;displayName&quot;: &quot;Metric One&quot;,
+        &quot;displayNameShort&quot;: &quot;Metric #1&quot;,
+        &quot;isDisabled&quot;: 0,
+        &quot;unit&quot;: &quot;number&quot;
+    },
+    &quot;BOUNDARY_METRIC_ONE&quot;: {
+        &quot;defaultAggregate&quot;: &quot;MAX&quot;,
+        &quot;defaultResolutionMS&quot;: 5000,
+        &quot;description&quot;: &quot;Example metric two for my meter plugin&quot;,
+        &quot;displayName&quot;: &quot;Metric Two&quot;,
+        &quot;displayNameShort&quot;: &quot;Metric #2&quot;,
+        &quot;isDisabled&quot;: 0,
+        &quot;unit&quot;: &quot;percent&quot;
+    }
+    ...
+}
+</code></pre>
+
+<ol>
+<li>Create the metric definitions using the <code>metric-create-batch</code>:</li>
+</ol>
+<pre><code class="bash">$ metric-create -f metrics.json
+{
+  &quot;result&quot;: {
+    &quot;success&quot;: true
+  }
+}
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script src="../../../js/base.js"></script>
+    </body>
+</html>

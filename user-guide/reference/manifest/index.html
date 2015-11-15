@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Manifest - Meter Plugin Development</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">Meter Plugin Development</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../getting-started/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/prerequisites/">Prerequisites</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/plugin-contents/">Meter Plugin Contents</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/framework/">Framework</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../tutorial/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/define-metrics/">Define Metrics</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-manifest/">Create Manifest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-manifest/">Add Icon</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../examples/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world/">Hello World</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Hello World part deux</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Give It a Rest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Meter and Me and the Plugin makes Three</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Troubleshooting <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../troubleshooting/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/common-issues/">Common Issues</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/tracing-measurement-flow/">Tracing Measurement Flow</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/tracing-tools/">Tracing Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-sends-measurement/">Meter Plugin Writes Measurement</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-reads-measurement/">Plugin Manager Reads Meter Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-writes-to-meter/">Plugin Manager Writes To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/meter-receives-rpc-call/">Meter Receives RPC Call</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../deploying/">Deploying</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../plugin-dashboards/">Dashboards</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Manifest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../metrics/">Metrics</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../protocol/">Protocol</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../measurements/">Measurements</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../events/">Events</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../documentation/">Documentation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../parameters/">Parameters</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../production/">Production</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../github-account/">GitHub Account</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../github-repository/">GitHub Repository</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../git-tools/">Git Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tools/">Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../testing/">Testing</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../checklist/">Check List</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../plugin-dashboards/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../metrics/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#meter-plugin-manifest">Meter Plugin Manifest</a></li>
+        
+            <li><a href="#example-plugin-manifest">Example Plugin Manifest</a></li>
+        
+            <li><a href="#single-versus-multiple-configuration-items">Single versus Multiple Configuration Items</a></li>
+        
+            <li><a href="#json-object-reference">JSON Object Reference</a></li>
+        
+            <li><a href="#name">name</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="meter-plugin-manifest">Meter Plugin Manifest</h1>
+<p>The <code>plugin.json</code> file contains metadata used for describing the meter plugin. Information contained within this manifest is used to:</p>
+<ul>
+<li>Name the plugin and provide help information when browsing the available meter plugins.</li>
+<li>Indicate the command or script to execute which implements the meter plugin.</li>
+<li>Define the required fields used to configure the meter plugin.</li>
+</ul>
+<h3 id="example-plugin-manifest">Example Plugin Manifest</h3>
+<p>Below is a sample <code>plugin.json</code> that is bundled with an example meter plugin that reports measurements on a stock(s) market price and volume. The complete meter plugin for this example is located in the GitHub repository <a href="https://github.com/boundary/boundary-plugin-ticker">here</a>.</p>
+<pre><code>    {
+    &quot;name&quot;: &quot;Ticker&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;meterVersionRequired&quot;: &quot;4.2.0-611&quot;,
+    &quot;tags&quot;: &quot;meter&quot;,
+    &quot;description&quot;: &quot;Collects price and volume of a traded stock&quot;,
+    &quot;icon&quot;: &quot;ticker.png&quot;,
+    &quot;command&quot;: &quot;python init.py&quot;,
+    &quot;postExtract&quot;: &quot;python post-extract.py&quot;,
+    &quot;ignore&quot;: &quot;config&quot;,
+    &quot;metrics&quot;: [
+      &quot;BOUNDARY_STOCK_PRICE&quot;,
+      &quot;BOUNDARY_STOCK_VOLUME&quot;
+    ],
+    &quot;dashboards&quot;: [
+      {
+        &quot;name&quot;: &quot;Stocks&quot;,
+        &quot;layout&quot;: &quot;d-w=1&amp;d-h=2&amp;d-pad=15&amp;d-bg=none&amp;d-g-BOUNDARY_STOCK_PRICE=0-0-1-1&amp;d-g-BOUNDARY_STOCK_VOLUME=0-1-1-1&quot;
+      }
+    ],
+    &quot;paramArray&quot;: {
+      &quot;itemTitle&quot;: [
+        &quot;ticker&quot;
+      ],
+      &quot;schemaTitle&quot;: &quot;Stock&quot;
+    },
+    &quot;paramSchema&quot;: [
+        {
+          &quot;title&quot;: &quot;Ticker&quot;,
+          &quot;name&quot;: &quot;ticker&quot;,
+          &quot;description&quot;: &quot;Stock ticker symbol&quot;,
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;default&quot;: &quot;&quot;,
+          &quot;required&quot;: true
+        }
+      ]
+    }
+</code></pre>
+
+<h3 id="single-versus-multiple-configuration-items">Single versus Multiple Configuration Items</h3>
+<p>Meter plugins have either a single or multiple configuration items per plugin. A configuration item is an array of JSON objects that define a database connection, REST API endpoint, or entity or system the meter plugin wishes to extract measurements from.</p>
+<p>In most cases, it is perferred that a plugin have multiple configurations, so that a single plugin installed on meter can collect measurements from multiple instances of a managed system, such as database system, running on the same host. A multiple configuration meter plugin enables proxy measurement of multiple entities external to the meter and plugin where the meter is unable to run, such as networking equipment.</p>
+<h3 id="json-object-reference">JSON Object Reference</h3>
+<p>A description of each of the JSON objects contain within the <code>plugin.json</code> manifest is described in detail in the sections that follow.</p>
+<h4 id="command"><code>command</code></h4>
+<p>A string representing a path to a command or script, along with arguments, to be executed to run the meter plugin. Although a meter plugin may contain other programs and/or scripts, the path and arguments assigned to the <code>command</code> field launches the main process responsible for orchestrating the collection of measurements.</p>
+<p>The <code>command</code> field accepts <em>macros</em> of the form:</p>
+<pre><code>$(macro_name)
+</code></pre>
+
+<p>which are replaced prior to execution of by fields defined in the <code>paramSchema</code> object array described later. Currently there is a single built in value: <code>pollInterval</code>. The meter manager also provides at runtime the same macro values in JSON file <code>param.json</code> that can be parsed by the meter plugin. Further discussion of the param.json file is discussed in <a href="../parameters/">parameters</a></p>
+<p><strong>NOTE:</strong> Arguments passed within the <code>command</code> field are visible in process listings and as such sensivity such as user names and passwords should not be passed via macros.</p>
+<p>As mentioned previously in the <a href="../metrics/">meter plugin overview</a>, measurement polling by meter plugins is either by <em>looping</em> or <em>non-looping</em> method. With the previous the preferred method, due to overhead caused by invoking a operating system process.</p>
+<h4 id="description"><code>description</code></h4>
+<p>Provides a brief summary of the meter plugin function. When a list of plugins is shown in the Boundary plugin dialog, the text of the description shows below the name of the plugin as shown here:</p>
+<p><img alt="Screenshot" src="../img/plugin-dialog.png" /></p>
+<h4 id="icon"><code>icon</code></h4>
+<p>A string with a relative path to an icon to be display in any view that lists meter plugins. Icon should be a 48x48 pixel in <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">Portable Network Graphics (PNG) format</a></p>
+<h4 id="command_lua"><code>command_lua</code></h4>
+<p>Invokes the provide string using the Boundary meter's built in <a href="">lua</a> interpreter as follows:</p>
+<pre><code>$ boundary-meter &lt;string value of command_lua&gt;
+</code></pre>
+
+<h4 id="ignore"><code>ignore</code></h4>
+<p>A string or array of strings that designates a set of files/directories within the plugin directory to ignore when validating. In order to insure the correct version of a plugin is running, the Boundary plugin manager will compare checksums of all plugin files installed to the ones in the repository. If the plugin generates extra files when installing or executing it should list them here otherwise the Boundary plugin manager will attempt to re-install the plugin. Can be a string or an array of strings.</p>
+<h4 id="metrics"><code>metrics</code></h4>
+<p>A string array of the metric identifiers associated and used by the meter plugin (see <a href="../metrics/">Metrics</a>) for a complete description of metric identifiers and their definitions). The metric definitions must exist a head of time or an error will ocurr. See <a href="../metrics/">Metrics</a> for additional details about metric definitions.</p>
+<h3 id="name"><code>name</code></h3>
+<p>Descriptive title of the meter plugin</p>
+<h4 id="dashboard"><code>dashboard</code></h4>
+<p>An object array with a <code>name</code> and <code>layout</code> fields which describe a <em>dashboard</em> definition(s) to be installed into an account when the plugin itself is added to an account.</p>
+<ul>
+<li><code>name</code> a string containg text that is displayed as the title for the dashboard which displays in the dashboard drop down menu.</li>
+<li><code>layout</code> a string that contains the dashboard layout. A layout is obtained using dashboard editor dialog, by clicking on the icon <img alt="Screenshot" src="../img/copyclip.png" />, next to the <em>Copy layout</em> . This copies the layout definition to your clipboard, which can the subsequently assigned to the <code>layout</code> field in the dashboard definition.</li>
+</ul>
+<p><strong>Example Dashboard Definition</strong></p>
+<pre><code>    &quot;dashboards&quot; : [
+        {
+          &quot;name&quot;: &quot;Plugin Shell&quot;,
+          &quot;layout&quot;: &quot;d-w=3&amp;d-h=2&amp;d-pad=5&amp;d-bg=none&amp;d-g-BOUNDARY_METRIC_TEST=0-0-3-2&quot;
+        },
+        ...
+    ],
+</code></pre>
+
+<h4 id="postextract"><code>postExtract</code></h4>
+<p>A string representing a path to a command or script, and arguments, to be run after the plugin contents are extracted to the local file system where the plugins are stored (typical <code>/etc/boundary/plugins</code> for Linux/UNIX systems and <code>Program Files\Boundary\plugins</code> for Windows).</p>
+<h4 id="postextract_lua"><code>postExtract_lua</code></h4>
+<p>Same as the <code>postExtract</code> except the value of <code>postExtract_lua</code> is invoked using the Boundary meter's built in <a href="">lua</a> interpreter as follows:</p>
+<pre><code>$ boundary-meter &lt;string value of postExtract_lua&gt;
+</code></pre>
+
+<h4 id="paramarray"><code>paramArray</code></h4>
+<p>An object array with a <code>itemTitle</code> and <code>schemaTitle</code>. The <code>itemTitle</code> identifies the field in the <code>paramSchema</code> that is displayed to identify multiple configuration items.</p>
+<pre><code>    &quot;paramArray&quot;: {
+      &quot;itemTitle&quot;: [ &quot;name&quot; ],
+      &quot;schemaTitle&quot;: &quot;Metric Command&quot;
+    }
+</code></pre>
+
+<h5 id="paramaschema"><code>paramaSchema</code></h5>
+<p>An object array with the following:
+- title
+- name
+- description
+- type
+- default
+- required</p>
+<p>Details on each of the fields follow.</p>
+<h5 id="title"><code>title</code></h5>
+<p>The title is the label used to describe a plugin configuration. For plugins with multiple configurations it appears in the configuration dialog.</p>
+<h5 id="name_1"><code>name</code></h5>
+<p>Unique string identifier that identifies a plugin configuration parameter.</p>
+<p>The name defines a macro of the form: <code>$(name)</code> and also defines a field in the param.json file which is discussed in <a href="../parameters/">parameters</a>.</p>
+<h5 id="description_1"><code>description</code></h5>
+<p>Provides details about the plugin configuration parameter. In the configuration dialog the description appears as a tooltip when the mouse is held over the input field.</p>
+<h5 id="type"><code>type</code></h5>
+<p>Indicated the data type of the configuration field which can one of the following:</p>
+<ul>
+<li>string</li>
+<li>integer</li>
+<li>boolean</li>
+<li>enum</li>
+<li>password</li>
+<li>array</li>
+</ul>
+<h5 id="default"><code>default</code></h5>
+<p>Initial value to populate the given field.</p>
+<h5 id="required"><code>required</code></h5>
+<p>Boolean indicating that value for this field must be specified. Without a value the configuration cannot be saved to the meter plugin.</p>
+<h5 id="example-field-definitions">Example Field Definitions</h5>
+<p>The following is the <code>paramArray</code> and <code>paramSchema</code> definitions from the example plugin <em>boundary-plugin-dialog</em> which is located in <a href="https://github.com/boundary/boundary-plugin-dialog">this</a> GitHub repository.</p>
+<pre><code>...
+    &quot;paramArray&quot;: { &quot;itemTitle&quot;: [ &quot;string&quot; ], &quot;schemaTitle&quot;: &quot;Example Dialog Configuration&quot; },
+    &quot;paramSchema&quot;: [
+        {
+            &quot;title&quot;: &quot;String Type&quot;,
+            &quot;name&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;A simple text field. Can have a default value and be required.&quot;,
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;default&quot;: &quot;hello&quot;,
+            &quot;required&quot;: true
+        },
+        {
+            &quot;title&quot; : &quot;Password Type&quot;,
+            &quot;name&quot; : &quot;password&quot;,
+            &quot;description&quot; : &quot;A simple text field that obsecures the text.&quot;,
+            &quot;type&quot; : &quot;password&quot;
+        },
+        {
+            &quot;title&quot;: &quot;Boolean Type&quot;,
+            &quot;name&quot;: &quot;boolean&quot;,
+            &quot;description&quot;: &quot;A checkbox field. Can have a default value and be required&quot;,
+            &quot;type&quot;: &quot;boolean&quot;,
+            &quot;default&quot;: false,
+            &quot;required&quot;: false
+        },
+        {
+            &quot;title&quot;: &quot;Enum Type&quot;,
+            &quot;name&quot;: &quot;enum&quot;,
+            &quot;description&quot;: &quot;A dropdown list of enumerated values. Can have a default and be required&quot;,
+            &quot;type&quot; : { &quot;enum&quot; : [[&quot;Red&quot;, &quot;red&quot;], [&quot;Green&quot;, &quot;green&quot;], [&quot;Blue&quot;,&quot;blue&quot;]] },
+            &quot;default&quot; : &quot;red&quot;,
+            &quot;required&quot;: true
+        },
+        {
+            &quot;title&quot;: &quot;String Array Type&quot;,
+            &quot;name&quot;: &quot;string_array&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;type&quot; : &quot;array&quot;,
+            &quot;items&quot; : { &quot;type&quot; : &quot;string&quot; }
+        },
+        {
+            &quot;title&quot;: &quot;Boolean Array Type&quot;,
+            &quot;name&quot;: &quot;array&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;type&quot; : &quot;array&quot;,
+            &quot;items&quot; : { &quot;type&quot; : &quot;boolean&quot; }
+        },
+        {
+            &quot;title&quot;: &quot;Enum Array Type&quot;,
+            &quot;name&quot;: &quot;array&quot;,
+            &quot;description&quot;: &quot;&quot;,
+            &quot;type&quot; : &quot;array&quot;,
+            &quot;items&quot; : { &quot;type&quot; : &quot;enum&quot; }
+        }
+    ]
+...
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script src="../../../js/base.js"></script>
+    </body>
+</html>
