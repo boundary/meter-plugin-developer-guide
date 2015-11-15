@@ -12,7 +12,7 @@ You an contrubute TrueSight Plugin Development Guide by cloning the respository,
 ### Prerequisites
 
 - Git version 1.7.x or later
-- Python 2.7.10 or later, Python 3.3 or later
+- Either Python 2.7.10 or later, Python 3.3 or later
 - Python virtual environment package 13.1.2 or later
 - Familiarity with [Markdown](http://daringfireball.net/)
 
