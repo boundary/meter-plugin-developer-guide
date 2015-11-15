@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Troubleshooting - Plugin Development</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Plugin Development</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../overview/">Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../quick-start/">Simple Plugin Anatomy</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../getting-started/">Getting Started</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../protocol/">Protocol</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../metrics/">Metrics</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../manifest/">Manifest</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../parameters/">Parameters</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../framework/">Framework</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../testing/">Testing</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Troubleshooting</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../documentation/">Documentation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../production/">Production</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../examples/">Example Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../example-hello-world/">Example - Hello World</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../example-hello-world2/">Example - Hello World part duex</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../example-hello-world2/">Example - Give it a REST</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../example-hello-world2/">Example - The Meter and Me, and the Plugin makes Three</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../additional-examples/">Additional Examples</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Framework <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../lua-framework-overview/">Lua Plugin Framework</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../checklist/">Checklist</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../tools/">Tools</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../testing/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../documentation/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#troubleshooting-meter-plugins">Troubleshooting Meter Plugins</a></li>
+        
+            <li><a href="#meter-plugin-sends-measurements-to-standard-output">Meter Plugin sends measurements to standard output</a></li>
+        
+            <li><a href="#plugin-manager-reads-meter-plugin">Plugin Manager reads Meter Plugin</a></li>
+        
+            <li><a href="#plugin-manager-writes-to-the-meter">Plugin Manager writes to the Meter</a></li>
+        
+            <li><a href="#meter-reads-the-rpc-call-from-the-plugin-manager">Meter reads the RPC call from the Plugin Manager</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="troubleshooting-meter-plugins">Troubleshooting Meter Plugins</h1>
+<p>We use the voltage meter analogy to trace the flow of measurements from the plugin to Boundary.</p>
+<p>The pathway for measurements to be sent to Boundary is as follows:</p>
+<ol>
+<li>Meter plugin sends measurements to standard output via <a href="">protocol</a></li>
+<li>Plugin Manager (<code>pluginmgr</code>) reads the standard out from the meter plugin</li>
+<li>Plugin Manager writes the measurement to the meter via the Meter(<code>boundary-meter</code>) RPC channel</li>
+<li>Meter reads the Meter RPC call sent by the Plugin Manager</li>
+<li>Meter sends the measurement to Boundary via an HTTPS Rest call</li>
+</ol>
+<p>The sections that follow provide tools and techniques to trace the above data flow.</p>
+<p><strong>NOTE:</strong> These techniques are currently only applicable to UNIX/Linux environments where tools are provide to trace the data flow.</p>
+<h2 id="meter-plugin-sends-measurements-to-standard-output">Meter Plugin sends measurements to standard output</h2>
+<p>Standard output is <em>file descriptor</em> <code>1</code> and using <code>lsof</code> we are able to see the file descriptor. Typical output is the following:</p>
+<pre><code>...
+boundary- 24931 boundary    0r  FIFO                0,8      0t0  94785 pipe
+...
+</code></pre>
+
+<p>To view the output in real time we use <code>strace</code> with the following options:</p>
+<pre><code>$ sudo strace -e write=1 -e trace=write -p &lt;meter plugin pid&gt; -s 256
+</code></pre>
+
+<p>where the <em>meter plugin pid</em> is obtains by running the following:</p>
+<pre><code>[vagrant@centos-6-6 ~]$ pgrep -flu boundary
+24698 /usr/bin/boundary-meter -b /etc/boundary -I boundary-meter -G
+24704 pluginmgr --pluginmgr /usr/bin/boundary-meter --basedir /etc/boundary --extdir /etc/boundary --hostname centos-6-6.hsd1.ca.comcast.net
+24736 httpcheck --lua init.lua
+24931 elasticsearch --lua init.lua
+</code></pre>
+
+<p>The meter plugins are identified by the option <code>--lua init.lua</code> and the number on the left indicates the process id.</p>
+<p>From our example above, we use the process ID to observe the meter plugins output:</p>
+<pre><code>[vagrant@centos-6-6 ~]$ sudo strace -e write=1 -e trace=write -p 24931 -s 128
+Process 24931 attached
+write(22, &quot;GET /_cluster/stats HTTP/1.1\r\nHost: 127.0.0.1:9200\r\nUser-Agent: Boundary Meter &lt;support@boundary.com&gt;\r\nConnection: close\r\n\r\n&quot;, 124) = 124
+write(1, &quot;ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\n&quot;, 76) = 76
+ | 00000  45 4c 41 53 54 49 43 5f  53 45 41 52 43 48 5f 46  ELASTIC_SEARCH_F |
+ | 00010  49 45 4c 44 44 41 54 41  5f 4d 45 4d 4f 52 59 5f  IELDDATA_MEMORY_ |
+ | 00020  53 49 5a 45 20 30 2e 30  30 30 30 30 30 20 54 45  SIZE 0.000000 TE |
+ | 00030  53 54 5f 45 4c 41 53 54  49 43 53 45 41 52 43 48  ST_ELASTICSEARCH |
+ | 00040  5f 43 45 4e 54 4f 53 5f  36 5f 36 0a              _CENTOS_6_6.     |
+ ...
+</code></pre>
+
+<p>where above output is truncated, when running the command the output will be continuous with each write call by the meter plugins being displayed.</p>
+<h2 id="plugin-manager-reads-meter-plugin">Plugin Manager reads Meter Plugin</h2>
+<p>We can use <code>strace</code> similarly to see the Plugin Manager read the output from the Meter Plugin. We obtain the pid the
+Plugin Manager (<code>pluginmgr</code>) process id by :</p>
+<pre><code>[vagrant@centos-6-6 ~]$ pgrep -flu boundary
+24698 /usr/bin/boundary-meter -b /etc/boundary -I boundary-meter -G
+24704 pluginmgr --pluginmgr /usr/bin/boundary-meter --basedir /etc/boundary --extdir /etc/boundary --hostname centos-6-6.hsd1.ca.comcast.net
+24736 httpcheck --lua init.lua
+24931 elasticsearch --lua init.lua
+</code></pre>
+
+<p>And the trace the read system call of the Plugin Manager:</p>
+<pre><code>[vagrant@centos-6-6 ~]$ sudo strace -p 24704 -e trace=read -s 1024
+Process 24704 attached
+read(22, &quot;ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_PRIMARY_SHARDS 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_COMPLETION_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_STATUS 1.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_FILTER_CACHE_EVICTIONS 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_DOCUMENT_COUNT 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_STORE_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_FIELDDATA_EVICTIONS 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_INDEX_COUNT 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_SEGMENT_COUNT 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_TOTAL_SHARDS 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_NODE_COUNT 1.000000 TEST_ELASTICSEARCH_CENTOS_6_6\n&quot;, 1024) = 981
+read(22, 0x7fffed12d370, 1024)          = -1 EAGAIN (Resource temporarily unavailable)
+</code></pre>
+
+<h2 id="plugin-manager-writes-to-the-meter">Plugin Manager writes to the Meter</h2>
+<p>Using the same techniques above we can observe the Meter RPC call:</p>
+<pre><code>[vagrant@centos-6-6 ~]$ pgrep -flu boundary
+24698 /usr/bin/boundary-meter -b /etc/boundary -I boundary-meter -G
+24704 pluginmgr --pluginmgr /usr/bin/boundary-meter --basedir /etc/boundary --extdir /etc/boundary --hostname centos-6-6.hsd1.ca.comcast.net
+24736 httpcheck --lua init.lua
+24931 elasticsearch --lua init.lua
+</code></pre>
+
+<p>And then trace the write call showing the Meter RPC call:</p>
+<pre><code>[vagrant@centos-6-6 ~]$ sudo strace -p 24704 -e trace=write -s 1024
+Process 24704 attached
+write(1, &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}&quot;, 179) = 179
+write(1, &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_PRIMARY_SHARDS\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}&quot;, 172) = 172
+write(1, &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_COMPLETION_SIZE\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}&quot;, 173) = 173
+</code></pre>
+
+<h2 id="meter-reads-the-rpc-call-from-the-plugin-manager">Meter reads the RPC call from the Plugin Manager</h2>
+<pre><code>[vagrant@centos-6-6 ~]$ sudo strace -p 24698 -e trace=read -s 1024 | more
+Process 24698 attached
+read(20, &quot;{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_PRIMARY_SHARDS\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_COMPLETION_SIZE\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_STATUS\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:1.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_DOCUMENT_COUNT\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;v&quot;, 1024) = 1024
+read(20, &quot;alue\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_STORE_SIZE\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_FIELDDATA_EVICTIONS\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_INDEX_COUNT\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_SEGMENT_COUNT\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTIC&quot;, 1024) = 1024
+read(20, &quot;SEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_TOTAL_SHARDS\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:0.000000}}{\&quot;jsonrpc\&quot;:\&quot;2.0\&quot;,\&quot;method\&quot;:\&quot;metric\&quot;,\&quot;params\&quot;:{\&quot;plugin\&quot;:\&quot;elasticsearch\&quot;,\&quot;metric\&quot;:\&quot;ELASTIC_SEARCH_NODE_COUNT\&quot;,\&quot;hostname\&quot;:\&quot;TEST_ELASTICSEARCH_CENTOS_6_6\&quot;,\&quot;value\&quot;:1.000000}}&quot;, 1024) = 375
+read(20, 0x7fff79e5f850, 1024)          = -1 EAGAIN (Resource temporarily unavailable)
+</code></pre></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
