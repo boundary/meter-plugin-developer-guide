@@ -1,0 +1,23 @@
+## Plugin Manager Reads Meter Plugin
+
+Using ___strace___ we can observe the Plugin Manager read the output sent the Meter Plugin. First, we obtain the pid the
+Plugin Manager (`pluginmgr`) process id by :
+
+```
+$ pgrep -flu boundary
+24698 /usr/bin/boundary-meter -b /etc/boundary -I boundary-meter -G
+24704 pluginmgr --pluginmgr /usr/bin/boundary-meter --basedir /etc/boundary --extdir /etc/boundary --hostname centos-6-6.hsd1.ca.comcast.net
+24736 httpcheck --lua init.lua
+24931 elasticsearch --lua init.lua
+```
+
+_TODO_: Simplified output for the ready system call
+
+And the trace the read system call of the Plugin Manager:
+
+```
+[vagrant@centos-6-6 ~]$ sudo strace -p 24704 -e trace=read -s 1024
+Process 24704 attached
+read(22, "ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_PRIMARY_SHARDS 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_COMPLETION_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_STATUS 1.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_FILTER_CACHE_EVICTIONS 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_DOCUMENT_COUNT 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_STORE_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_FIELDDATA_EVICTIONS 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_INDEX_COUNT 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_SEGMENT_COUNT 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_TOTAL_SHARDS 0.000000 TEST_ELASTICSEARCH_CENTOS_6_6\nELASTIC_SEARCH_NODE_COUNT 1.000000 TEST_ELASTICSEARCH_CENTOS_6_6\n", 1024) = 981
+read(22, 0x7fffed12d370, 1024)          = -1 EAGAIN (Resource temporarily unavailable)
+```
