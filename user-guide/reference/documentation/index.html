@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+	<title>Documentation - Meter Plugin Development</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+        <link href="../../../css/base.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../..">Meter Plugin Development</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="../../..">Home</a>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../getting-started/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/prerequisites/">Prerequisites</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/plugin-contents/">Meter Plugin Contents</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../getting-started/framework/">Framework</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../tutorial/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/define-metrics/">Define Metrics</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-manifest/">Create Manifest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-manifest/">Add Icon</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../examples/">Overview</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world/">Hello World</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Hello World part deux</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Give It a Rest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../examples/example-hello-world2/">Meter and Me and the Plugin makes Three</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Troubleshooting <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../../troubleshooting/">Introduction</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/common-issues/">Common Issues</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/tracing-measurement-flow/">Tracing Measurement Flow</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/tracing-tools/">Tracing Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-sends-measurement/">Meter Plugin Writes Measurement</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-reads-measurement/">Plugin Manager Reads Meter Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/plugin-writes-to-meter/">Plugin Manager Writes To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../troubleshooting/meter-receives-rpc-call/">Meter Receives RPC Call</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        <li >
+                            <a href="../deploying/">Deploying</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../plugin-dashboards/">Dashboards</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../manifest/">Manifest</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../metrics/">Metrics</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../protocol/">Protocol</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../measurements/">Measurements</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../events/">Events</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Documentation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../parameters/">Parameters</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../production/">Production</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../github-account/">GitHub Account</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../github-repository/">GitHub Repository</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../git-tools/">Git Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tools/">Tools</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../testing/">Testing</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../checklist/">Check List</a>
+                        </li>
+                    
+                    </ul>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../events/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../parameters/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#documentation">Documentation</a></li>
+        
+    
+        <li class="main "><a href="#requirements-elements-within-readmemd">Requirements Elements within README.md</a></li>
+        
+    
+        <li class="main "><a href="#nec-aliud-mihi-suem-fronte-ensem-hinc">Nec aliud mihi suem fronte ensem hinc</a></li>
+        
+    
+        <li class="main "><a href="#readmemd-example">README.md Example</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h2 id="documentation">Documentation</h2>
+<p>This section describes the required documentation to provide with each plugin. The principal documentation is provided in a <code>README.md</code> in the top-level directory of the GitHub repository. </p>
+<h2 id="requirements-elements-within-readmemd">Requirements Elements within README.md</h2>
+<h2 id="nec-aliud-mihi-suem-fronte-ensem-hinc">Nec aliud mihi suem fronte ensem hinc</h2>
+<p>The contents of the README.md are displayed within the Boundary Settings =&gt; Plugin dialog</p>
+<p>Lorem markdownum malis arbusta <em>maneat</em>; ut et hinc turribus, tenebat montes
+<strong>ius viscera amans</strong>, obstantia. <strong>Pars intremuit</strong> mihi. Surgit diro membris.
+Revertar erat gurgite animosa, at ignoto et dato.</p>
+<h2 id="readmemd-example"><code>README.md</code> Example</h2>
+<p>The following</p>
+<pre><code>Boundary Meter Plugin
+-------------------------
+
+Collects metrics from a memcached instance. See video [walkthrough](https://help.boundary.com/hc/articles/201816101).
+
+### Prerequisites
+
+|     OS    | Linux | Windows | SmartOS | OS X |
+|:----------|:-----:|:-------:|:-------:|:----:|
+| Supported |   v   |    v    |    v    |  v   |
+
+|  Runtime | node.js | Python | Java |
+|:---------|:-------:|:------:|:----:|
+| Required |    +    |        |      |
+
+- [How to install node.js?](https://help.boundary.com/hc/articles/202360701)
+
+### Plugin Setup
+None
+
+#### Plugin Configuration Fields
+
+|Field Name|Description                                                |
+|:---------|:----------------------------------------------------------|
+|Source    |The source to display in the legend for the MEMCACHED data.|
+|Port      |The MEMCACHED port.                                        |
+|Host      |The MEMCACHED hostname.                                    |
+
+### Metrics Collected
+|Metric Name          |Description                       |
+|:--------------------|:---------------------------------|
+|Memcached Allocated  |Percent of available memory used  |
+|Memcached Connections|Number of current connections     |
+|Memcached Hits       |Number of cache hits              |
+|Memcached Misses     |Number of cache misses            |
+|Memcached Items      |Total number of items in cache    |
+|Memcached Requests   |Number of requests                |
+|Memcached Network In |Number of bytes read from network |
+|Memcached Network Out|Number of bytes written to network|
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script src="../../../js/base.js"></script>
+    </body>
+</html>
