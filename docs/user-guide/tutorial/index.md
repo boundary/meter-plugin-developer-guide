@@ -10,8 +10,12 @@ Plugins not only make it very easy to add arbitrary metric monitoring to Boundar
 
 ## Preparation
 
-Before starting we will make a few assumptions regarding the following:
-Before embarking on this tutorial it will be assumed that you have the prerequistes. If not see [prerequistes](prerequisties.md).
+Before starting on this tutorial it will be assumed that you have the prerequistes.  See [Prerequisites](../prerequisites.md) for information on tools and other items required to start this tutorial.
+
+
+## High-Level Overview
+
+1. Metrics Definitions
 
 
 
