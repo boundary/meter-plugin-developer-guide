@@ -11,7 +11,7 @@ The pathway for measurements sent to TrueSight Pulse are:
 
 _Click on the topical link for details_
 
-1. [Meter Plugin Sends A Measurement]() - Meter plugin sends measurements to standard output via [protocol](measurements.md). Runtime observation of the meter plugin sending measurements is described in []().
+1. [Meter Plugin Sends A Measurement]() - Meter plugin sends measurements to standard output via [protocol](../reference/measurements.md). Runtime observation of the meter plugin sending measurements is described in []().
 
 2. [Plugin Manager Receives A Measurement]() - Plugin Manager (___pluginmgr___) reads the standard out from the meter plugin. Receipt of the measurement from a meter plugin is describe in []()
 

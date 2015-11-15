@@ -7,6 +7,7 @@ pages:
     - Prerequisites: 'user-guide/getting-started/prerequisites.md'
     - Meter Plugin Contents: 'user-guide/getting-started/plugin-contents.md'
     - Framework: 'user-guide/getting-started/lua-framework-overview.md'
+    - Framework: 'user-guide/getting-started/framework.md'
 - Tutorial:
     - Overview: 'user-guide/tutorial/index.md'
 - Examples:

@@ -13,13 +13,13 @@ The quinessential example program is the _Hello World_ program that is included 
 
 ## Hello World [part deux](http://en.wikipedia.org/wiki/Hot_Shots!_Part_Deux)
 
-This example is a redux of the example Hello World plugin but uses the [Boundary Lua Plugin Framework](framework.md) for its implementation
+This example is a redux of the example Hello World plugin but uses the [TrueSight Pulse Meter Plugin SDK for Lua](../getting-started/framework.md) for its implementation
 
 [Go To _HelloWorld_](example-hello-world2.md)
 
 ## Give it a REST
 
-This example shows how to collect measurement information from a RESTful interface using the [Boundary Lua Plugin Framework](framework.md)
+This example shows how to collect measurement information from a RESTful interface using the [TrueSight Pulse Meter Plugin SDK for Lua](../getting-started/framework.md)
 
 ## The Meter and Me, and the Plugin makes Three
 
