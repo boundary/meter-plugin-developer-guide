@@ -1,226 +1,405 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Checklist - Plugin Development</title>
-  
-
-  
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script>
-
-  <style>
-    body {font-size: 90%;}
-    pre, code {font-size: 100%;}
-    h3, h4, h5, h6 {color: #2980b9; font-weight: 300}
-  </style> 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Plugin Development</a>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-      <ul class="current">
-    
         
-        <span>Topics</span>
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Checklist - Plugin Development</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../overview">Overview</a>
-                    
-                </li>
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../getting-started">Getting Started</a>
-                    
-                </li>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Plugin Development</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../protocol">Protocol</a>
-                    
-                </li>
-            
-                <li class="toctree-l1 ">
-                    <a class="" href="../metrics">Metrics</a>
-                    
-                </li>
-            
-                <li class="toctree-l1 ">
-                    <a class="" href="../manifest">Manifest</a>
-                    
-                </li>
-            
-                <li class="toctree-l1 ">
-                    <a class="" href="../parameters">Parameters</a>
-                    
-                </li>
-            
-                <li class="toctree-l1 ">
-                    <a class="" href="../testing">Testing</a>
-                    
-                </li>
-            
-                <li class="toctree-l1 ">
-                    <a class="" href="../documentation">Documentation</a>
-                    
-                </li>
-            
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Checklist</a>
-                    
-                        <ul>
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
                         
-                            <li class="toctree-l2"><a href="#cladem-quod-cyane-spiro-dolentis">Cladem quod Cyane spiro dolentis</a></li>
                             
-                                <li><a class="toctree-l3" href="#intravit-amens-formosior-scelerum">Intravit amens formosior scelerum</a></li>
+<li >
+    <a href="../overview/">Overview</a>
+</li>
+
+                        
                             
-                                <li><a class="toctree-l3" href="#iuppiter-amor-gerentem-triptolemo-scylla-verso-est">Iuppiter amor gerentem Triptolemo Scylla verso est</a></li>
-                            
-                                <li><a class="toctree-l3" href="#supernum-illud-brevissimus-ore-polenta-fratremque-belli">Supernum illud brevissimus ore polenta fratremque belli</a></li>
-                            
+<li >
+    <a href="../quick-start/">Simple Plugin Anatomy</a>
+</li>
+
                         
                         </ul>
-                    
-                </li>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../getting-started/">Getting Started</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../protocol/">Protocol</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../metrics/">Metrics</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../manifest/">Manifest</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../parameters/">Parameters</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../framework/">Framework</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../testing/">Testing</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../troubleshooting/">Troubleshooting</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../documentation/">Documentation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../production/">Production</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../examples/">Example Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../example-hello-world/">Example - Hello World</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../example-hello-world2/">Example - Hello World part duex</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../example-hello-world2/">Example - Give it a REST</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../example-hello-world2/">Example - The Meter and Me, and the Plugin makes Three</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../additional-examples/">Additional Examples</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Framework <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../lua-framework-overview/">Lua Plugin Framework</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Checklist</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../tools/">Tools</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../tools">Tools</a>
-                    
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
                 </li>
-            
-        
-
-    
-</ul>
-
-      </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
-        <a href="../.."></a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Checklist</li>
-      <li class="wy-breadcrumbs-aside">
-        
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              <h1 id="cladem-quod-cyane-spiro-dolentis">Cladem quod Cyane spiro dolentis</h1>
-<h2 id="intravit-amens-formosior-scelerum">Intravit amens formosior scelerum</h2>
-<p>Lorem markdownum illuc referens declivibus crinales amores flumina rogantem,
-aquis. Vos captare multa movet magno, prope caligine locutum: nescit Philomela.
-Corpore caelestia, ne vestes; tot <em>ipse</em> axes <em>fraudesque veterum</em>. Iuno <strong>movet
-precibusque</strong> reperire ipsum viscera recenti spatium <strong>in Latio</strong>. Inscribenda
-Arachnes regit sit cum culpa noctis specus, plura inferiaeque videre.</p>
-<ul>
-<li>In nulla producet Iuppiter</li>
-<li>Quod silvasque insula uror cuncta</li>
-<li>Meae quoque</li>
-<li>Tibia auratis fatorum perspicit non consuetas quae</li>
-<li>Erat solis corpus</li>
-<li>In est verum strata ad Nocte</li>
-</ul>
-<h2 id="iuppiter-amor-gerentem-triptolemo-scylla-verso-est">Iuppiter amor gerentem Triptolemo Scylla verso est</h2>
-<p>Hostia draconem verba: atque obvius vitae portare, recanduit nix Boreas tibia.
-Elidunt et mansit altera, Caenis soli <em>magni ferro trabesque</em>: inplacataeque.
-Frementis accipiunt mediis Lunae, est pares munere nympha fratres? Ictu sponte
-turpes ego crinem, adducere et aenum tempora <em>fraterni</em> rediere. Ne meritum
-orbes veluti; suos meruit non auras ullas rapit voce lacrimisque quaeras venire.</p>
-<ul>
-<li>Causatur cavernas tela</li>
-<li>Siculique hausit</li>
-<li>Eum est preme piscosamque Tritona corpus Iovis</li>
-<li>Ebiberant habet</li>
-</ul>
-<h2 id="supernum-illud-brevissimus-ore-polenta-fratremque-belli">Supernum illud brevissimus ore polenta fratremque belli</h2>
-<p>Miserae Calydonius nec Cycni nepotibus plus per miracula haec iunctis. Audire
-aevo frangitur cantus matrum, ex pomo furori, de nec summae frenis Solis,
-revertentes puellae, Pallantidos. Omni resonis <em>mentis exstinctaque mare</em>
-paludem properas, <a href="http://heeeeeeeey.com/">matris</a> in corpus fiducia sacro!</p>
-<blockquote>
-<p>Correptus adiciunt abscessisse cernam. Teneo ab interdum Cancri potens; iamque
-vel quaesitisque dum liquidum sub colebat caeloque est. Sanguine o dixit saeve
-Deianira liquor in tamen, dicta satis. Uni pepercit iuvenemque <em>Ulixem</em>:
-vellet dare falce ad meruit saxo, ossa gladios illa: horrendae ut nomen. In
-spectat vultibus cornua canentis, rapidi, tangit insonuit cepisse.</p>
-</blockquote>
-<p><strong>Sensi</strong> tu Ciris distantibus malum, Thebis, mentem est sed sociasque fores
-Iovisque ducem temporis excussaque. Summisque fibula en rigent, dum et adspicit
-habentem, vinoque, Troades. Toto quae, corpora ut intrat solvit socia sit et per
-esse est.</p>
-
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../tools" class="btn btn-neutral float-right" title="Tools"/>Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../documentation" class="btn btn-neutral" title="Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-    <!-- Copyright etc -->
-    </p>
-  </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-	  
+                
+                    <li >
+                        <a rel="next" href="../lua-framework-overview/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../tools/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
         </div>
-      </div>
-
-    </section>
-
-  </div>
-
-<div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-        
-      <span><a href="../documentation" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../tools" style="color: #fcfcfc">Next &raquo;</a></span>
-    </span>
+    </div>
 </div>
-</body>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#meter-plugin-development-checklist">Meter Plugin Development Checklist</a></li>
+        
+    
+        <li class="main "><a href="#contents">Contents</a></li>
+        
+            <li><a href="#required">Required</a></li>
+        
+    
+        <li class="main "><a href="#documentation">Documentation</a></li>
+        
+    
+        <li class="main "><a href="#testing">Testing</a></li>
+        
+    
+        <li class="main "><a href="#platform">Platform</a></li>
+        
+    
+        <li class="main "><a href="#production">Production</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="meter-plugin-development-checklist">Meter Plugin Development Checklist</h2>
+<p>The following is a master checklist for the development of a Boundary Meter Plug</p>
+<h2 id="contents">Contents</h2>
+<h3 id="required">Required</h3>
+<ul>
+<li>[ ]<a href="../manifest/">plugin.json</a></li>
+<li>[ ]metrics.json</li>
+<li>[ ]<a href="../documentation/">README.md</a></li>
+<li>[ ]LICENSE</li>
+<li>[ ]icon.png</li>
+<li>[ ]Erat solis corpus</li>
+<li>[ ]In est verum strata ad Nocte</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li>[ ]Description of the plugin</li>
+<li>[ ]Setup instructions</li>
+<li>[ ]Field Descriptions</li>
+<li>[ ]Metrics Generated</li>
+<li>[ ]Erat solis corpus</li>
+<li>[ ]In est verum strata ad Nocte</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<ul>
+<li>[ ]Verfied Output on Standard Out</li>
+<li>[ ]Verified</li>
+<li>[ ]Meae quoque</li>
+<li>[ ]Tibia auratis fatorum perspicit non consuetas quae</li>
+<li>[ ]Erat solis corpus</li>
+<li>[ ]In est verum strata ad Nocte</li>
+</ul>
+<h2 id="platform">Platform</h2>
+<p>Tier 1 platform coverage for GA (General Availability)</p>
+<ul>
+<li>[ ]Linux</li>
+<li>[ ]Centos 5.10</li>
+<li>[ ]Centos 6.5</li>
+<li>[ ]Amazon Linux AMI release 2014.03</li>
+<li>[ ]Ubuntu 12.04 LTS</li>
+<li>
+<p>[ ]Ubuntu 14.04.1 LTS</p>
+</li>
+<li>
+<p>[ ]Windows</p>
+</li>
+<li>[ ]Windows 2012</li>
+<li>[ ]Windows 2008R2</li>
+</ul>
+<h2 id="production">Production</h2>
+<ul>
+<li>[ ]In nulla producet Iuppiter</li>
+<li>[ ]Quod silvasque insula uror cuncta</li>
+<li>[ ]Meae quoque</li>
+<li>[ ]Tibia auratis fatorum perspicit non consuetas quae</li>
+<li>[ ]Erat solis corpus</li>
+<li>[ ]In est verum strata ad Nocte</li>
+</ul></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
 </html>
