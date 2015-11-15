@@ -2,7 +2,7 @@ TrueSight Pulse Meter Plugin Development Guide
 ----------------------------------------------
 Documentation on how to develop and deploy TrueSight Pulse meter plugins.
 
-The latest published version of the TrueSight Plugin Development Guide can found [here](http://boundary.github.io/plugin-development-guide)
+The latest published version of the TrueSight Meter Plugin Developer Guide is located at [http://boundary.github.io/meter-plugin-developer-guide](http://boundary.github.io/meter-plugin-developer-guide)
 
 
 ## Contributing To The Documentation
@@ -12,7 +12,7 @@ You an contrubute TrueSight Plugin Development Guide by cloning the respository,
 ### Prerequisites
 
 - Git version 1.7.x or later
-- Python 2.7.10 or later
+- Python 2.7.10 or later, Python 3.3 or later
 - Python virtual environment package 13.1.2 or later
 - Familiarity with [Markdown](http://daringfireball.net/)
 
@@ -60,7 +60,12 @@ $ mkdocs serve
 
 ## Deploying Guide to GitHub Pages
 
+To deploy to GitHub Pages in your own repository run the following:
+
 ```bash
+$ mkdocs gh-deploy
+
+```
 
 
 
