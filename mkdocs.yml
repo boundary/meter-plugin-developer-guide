@@ -26,6 +26,7 @@ pages:
     - Plugin Manager Writes To Meter: 'user-guide/troubleshooting/plugin-writes-to-meter.md'
     - Meter Receives RPC Call: 'user-guide/troubleshooting/meter-receives-rpc-call.md'
 - Reference:
+    - Deploying: 'user-guide/reference/deploying.md'
     - Manifest: "user-guide/reference/manifest.md"
     - Metrics: "user-guide/reference/metrics.md"
     - Protocol: 'user-guide/reference/protocol.md'
