@@ -1,1 +1,33 @@
-Plugins are open source and are submitted via a pull request to the Boundary github plugin repository. Once a plugin is accepted into the repository it appears in the Plugins tab of the Settings dialog. After a plugin is installed into your account you will need to go to Relays tab in order to install plugin instances on corresponding host(s).
+Deploying Meter Plugins
+=======================
+
+Once the contents of the meter plugin have been defined we can deploy the meter plugin into our account. For details
+regarding deploying meter plugins see [Deploying](../reference/deploying.md)
+
+To add add the newly created meter plugin once again we will use the
+[TrueSight Pulse CLIs](http://boundary.github.io/pulse-api-cli/).
+
+## Adding the Tutorial Meter Plugin To Your Account
+
+To run the command to add the plugin we must have your TrueSight Pulse account e-mail and API token from
+Settings => Account. Additionally the name of your GitHub account is required. We then run the following
+command to add the plugin to your account.
+
+```
+$ plugin-add -e <email@example.com> -t <API Token> -n tutorial -o <GitHub User name> -r <repository name>
+```
+
+## Installing the P
+Make the plugin active in your account by running the following command:
+
+```
+$ plugin-install -e <email@example.com> -t <API Token> -n tutorial
+```
+
+
+
+
+
+
+
+

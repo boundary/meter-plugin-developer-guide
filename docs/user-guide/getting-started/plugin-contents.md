@@ -28,7 +28,7 @@ Icon that is used by Pulse Web Interface to graphically represent a meter plugin
 
 ### script or program
 
-Script or program that is responsible for collecting measurements from a service or application.
+Script or program that is responsible for collecting measurements from a service or application and then sends to standard out in the [Measurement](../reference/measurements.md) format.
 
 ### param.json
 
