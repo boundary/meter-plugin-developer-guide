@@ -17,7 +17,7 @@ pages:
     - Add Configuration: 'user-guide/tutorial/add-configuration.md'
     - Add Icon: 'user-guide/tutorial/add-icon.md'
     - Create README: 'user-guide/tutorial/create-readme.md'
-    - Install Plugin: 'user-guide/tutorial/install-plugin.md'
+    - Deploying A Plugin: 'user-guide/tutorial/install-plugin.md'
     - Add Plugin To Meter: 'user-guide/tutorial/add-plugin-to-meter.md'
     - View Measurements: 'user-guide/tutorial/view-measurements.md'
 - Examples:
