@@ -86,7 +86,15 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../tutorial/">Overview</a>
+                            <a href="../../tutorial/">Preparation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/outline/">Outline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li >
@@ -98,7 +106,31 @@
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/create-manifest/">Add Icon</a>
+                            <a href="../../tutorial/write-script/">Write Script</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-configuration/">Add Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-icon/">Add Icon</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-readme/">Create README</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/install-plugin/">Deploying A Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-plugin-to-meter/">Add Plugin To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -221,18 +253,6 @@
                         </li>
                     
                         <li >
-                            <a href="../github-account/">GitHub Account</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../github-repository/">GitHub Repository</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../git-tools/">Git Tools</a>
-                        </li>
-                    
-                        <li >
                             <a href="../tools/">Tools</a>
                         </li>
                     
@@ -296,7 +316,8 @@
             <div class="col-md-9" role="main">
 
 <h1 id="metric-definitions">Metric Definitions</h1>
-<p>Metric definitions in Boundary provide metadata about measurements input to the Boundary monitoring system. This page provides details on metric definitions including:</p>
+<p>Metric definitions in TrueSight Pulse provide metadata about measurements input
+to the TrueSight Pulse monitoring system. This page provides details on metric definitions including:</p>
 <ul>
 <li>How to define metrics</li>
 <li>Best practices with respect to their naming.</li>
@@ -312,11 +333,18 @@
 <li><em>Default Resolution</em> - Expected frequency of measurement update</li>
 </ul>
 <h3 id="name">Name</h3>
-<p>Metric identifiers are unique immutable keys within a Boundary account. Metric identifiers are referenced in the plugin manifest (see <a href="../manifest/">Plugin Manifest</a>) and when a plugin is deployed in an account other then where the metric definitions were created, they are <em>copied</em> into the new account.</p>
-<p>Metric identifiers are case insenstive but by convention they are always in upper case letters (A-Z) with allowance for a underscore (_) or dash(-) between logical words. This convention should be adhered to when defining or referencing a metric.</p>
-<p>Metric identifiers from the same plugin should have a prefix to group similar metrics (e.g. <code>AWS_ELB_LATENCY</code>). Metric names that are prefixed with <code>BOUNDARY</code> should be considered reserved for Boundary’s internal use.</p>
+<p>Metric identifiers are unique immutable keys within a TrueSight Pulse account.
+Metric identifiers are referenced in the plugin manifest (see <a href="../manifest/">Plugin Manifest</a>)
+and when a plugin is deployed in an account other then where the metric definitions were created, they are <em>copied</em> into the new account.</p>
+<p>Metric identifiers are case insensitive but by convention they are always
+in upper case letters (A-Z) with allowance for a underscore (_) or dash(-) between logical words. This convention should be adhered to when defining or referencing a metric.</p>
+<p>Metric identifiers from the same plugin should have a prefix to
+group similar metrics (e.g. <code>AWS_ELB_LATENCY</code>). Metric names that are prefixed with <code>PULSE</code>
+should be considered reserved for TrueSight Pulse’s internal use.</p>
 <h3 id="display-name">Display Name</h3>
-<p>Display name is the primary label used by web user interface to reference a metric and/or its measurement. The display name appears in the following locations within the web user interface:</p>
+<p>Display name is the primary label used by web user interface to reference a metric
+and/or its measurement. The display name appears in the following locations within
+the web user interface:</p>
 <ul>
 <li>Headings of graphs in dashboards</li>
 <li>List of items with the <em>metrics settings</em> dialog</li>
@@ -324,33 +352,42 @@
 </ul>
 <p>Each display name should have a common prefix so that similar metrics are grouped together and provides a hint of the system or identity to be monitored (e.g. <code>APACHE_BYTES_PER_REQUEST</code>).</p>
 <h3 id="short-display-name">Short Display Name</h3>
-<p>The short display name is used in cases where using there is limited space to use the display name as a label. For example the short display name is used as:</p>
+<p>The short display name is used in cases where using there is limited space to
+use the display name as a label. For example the short display name is used as:</p>
 <ul>
 <li>List of items available metrics when editing a dashboard (<em>Settings</em> =&gt; <em>Dashboards</em>).</li>
 <li>Label when selecting a data point on a dashboard.</li>
 </ul>
 <p>The short display name should be limited to 20 characters or less.</p>
 <h3 id="description">Description</h3>
-<p>Should be a concise definition that describes the metric. The description should indicate if the metric is a rate, what are the units of the metric (e.g. x/second),etc.</p>
-<p>When building a dashboard using the dashboard editor, the <a href="http://en.wikipedia.org/wiki/Tooltip">tool tip</a> associated with each item in the list of available metrics is the description.</p>
+<p>Should be a concise definition that describes the metric. The description should
+indicate if the metric is a rate, what are the units of the metric (e.g. x/second),etc.</p>
+<p>When building a dashboard using the dashboard editor,
+the <a href="http://en.wikipedia.org/wiki/Tooltip">tool tip</a> associated with each item
+in the list of available metrics is the description.</p>
 <h3 id="default-aggregate">Default Aggregate</h3>
-<p>Default aggregate indicates which type of aggregate is displayed in dashboards by default. The following aggregates are supported:</p>
+<p>Default aggregate indicates which type of aggregate is displayed in dashboards by default.
+The following aggregates are supported:</p>
 <ul>
-<li><em>Average</em></li>
-<li><em>Maximum</em></li>
-<li><em>Minimum</em></li>
-<li><em>Sum</em></li>
+<li><em>avg</em></li>
+<li><em>max</em></li>
+<li><em>min</em></li>
+<li><em>sum</em></li>
 </ul>
 <h3 id="unit">Unit</h3>
-<p>A metric quantity is described by a unit which is one of the following:
-<em> <em>Count Of Bytes</em>
-</em> <em>Duration</em>
-<em> <em>Number</em>
-</em> <em>Percentage</em></p>
+<p>A metric quantity is described by a unit which is one of the following:</p>
+<ul>
+<li><em>bytecount</em></li>
+<li><em>duration</em></li>
+<li><em>number</em></li>
+<li><em>percentage</em></li>
+</ul>
 <h3 id="default-resolution">Default Resolution</h3>
-<p>Default resolution describes how often measurements for this metric will be updated. This value is used to extend the line on a dashboard to provide better visualization, instead of drawing single points.</p>
+<p>Default resolution describes how often measurements for this metric will be updated.
+This value is used to extend the line on a dashboard to provide better visualization,
+instead of drawing single points.</p>
 <h2 id="defining-metrics">Defining Metrics</h2>
-<p>Metric definitions are defined in Boundary using either:</p>
+<p>Metric definitions are defined in TrueSight Pulse using either:</p>
 <ol>
 <li>Web user interface</li>
 <li>REST APIs</li>
@@ -359,31 +396,23 @@
 <p>Details on the use of the REST APIs for metric definition can be found <a href="http://premium-documentation.boundary.com/metrics">here</a>. The remaining methods are described in the next sections.</p>
 <h3 id="defining-metrics-using-the-web-user-interface">Defining Metrics Using the Web User Interface</h3>
 <ol>
-<li>Login into Boundary</li>
-<li>
-<p>Display the settings dialog by clicking on the <em>settings icon</em> in the menu: <img alt="" src="../../img/settings_icon.png" /></p>
-</li>
-<li>
-<p>Click on <em>Metrics</em> in the left hand side of the dialog which then displays the <em>Metrics</em> dialog:
-<img alt="" src="../../img/metrics_dialog.png" /></p>
-</li>
-<li>
-<p>Click on the <em>Create Metric</em> button which displays a form to define a new metric. Fill out the form as shown here:
-<img alt="" src="../../img/create_metric.png" /></p>
-</li>
-<li>
-<p>Click on the <em>Save</em> button to create the metric.</p>
-</li>
-<li>
-<p>Click on the <em>Close</em> button to dismiss the dialog.</p>
-</li>
+<li>Login into TrueSight Pulse</li>
+<li>Display the settings dialog by clicking on the <em>settings icon</em> in the menu: <img alt="" src="../../../img/settings_icon.png" /></li>
+<li>Click on <em>Metrics</em> in the left hand side of the dialog which then displays
+the <em>Metrics</em> dialog:</li>
 </ol>
+<p><img alt="" src="../../../img/metrics_dialog.png" />
+4. Click on the <em>Create Metric</em> button which displays a form to define a new metric.
+Fill out the form as shown here:</p>
+<p><img alt="" src="../../../img/create_metric.png" />
+5. Click on the <em>Save</em> button to create the metric.
+6. Click on the <em>Close</em> button to dismiss the dialog.</p>
 <h3 id="defining-metrics-using-command-line-utilities">Defining Metrics Using Command Line Utilities</h3>
 <ol>
-<li>Install the Boundary API CLI and configure according to instructions <a href="https://github.com/boundary/boundary-api-cli">here</a></li>
+<li><a href="http://boundary.github.io/pulse-api-cli/install/">Install</a> the TrueSight Pulse API CLI.</li>
 <li>Create the metric using <code>metric-create</code>:</li>
 </ol>
-<pre><code class="bash">$ metric-create -n BOUNDARY_FOO_METRIC_IN -d &quot;Boundary Foo Metric In&quot; -s &quot;Foo In&quot; -i &quot;Tracks the Boundary Foo Metric&quot; -g AVG -i number -r 1000
+<pre><code class="bash">$ metric-create -n PULSE_FOO_METRIC_IN -d &quot;Pulse Foo Metric In&quot; -s &quot;Foo In&quot; -i &quot;Tracks the Pulse Foo Metric&quot; -g AVG -i number -r 1000
 {
   &quot;result&quot;: {
     &quot;success&quot;: true
@@ -393,11 +422,11 @@
 
 <h3 id="batch-definition-of-metrics-using-command-line-utilities">Batch Definition of Metrics Using Command Line Utilities</h3>
 <ol>
-<li>Install the Boundary API CLI, if not already installed, and configure according to instructions <a href="https://github.com/boundary/boundary-api-cli">here</a></li>
+<li><a href="http://boundary.github.io/pulse-api-cli/install/">Install</a> the TrueSight Pulse API CLI, if not already installed, and configure according to instructions <a href="https://github.com/boundary/boundary-api-cli">here</a></li>
 <li>Define metrics in a JSON file named <code>metrics.json</code>:</li>
 </ol>
 <pre><code class="json">{
-    &quot;BOUNDARY_METRIC_ONE&quot;: {
+    &quot;PULSE_METRIC_ONE&quot;: {
         &quot;defaultAggregate&quot;: &quot;AVG&quot;,
         &quot;defaultResolutionMS&quot;: 2000,
         &quot;description&quot;: &quot;Example metric one for my meter plugin&quot;,
@@ -406,7 +435,7 @@
         &quot;isDisabled&quot;: 0,
         &quot;unit&quot;: &quot;number&quot;
     },
-    &quot;BOUNDARY_METRIC_ONE&quot;: {
+    &quot;PULSE_METRIC_TWO&quot;: {
         &quot;defaultAggregate&quot;: &quot;MAX&quot;,
         &quot;defaultResolutionMS&quot;: 5000,
         &quot;description&quot;: &quot;Example metric two for my meter plugin&quot;,
@@ -420,9 +449,9 @@
 </code></pre>
 
 <ol>
-<li>Create the metric definitions using the <code>metric-create-batch</code>:</li>
+<li>Create the metric definitions using <code>metric-create-batch</code> command:</li>
 </ol>
-<pre><code class="bash">$ metric-create -f metrics.json
+<pre><code class="bash">$ metric-create-batch -f metrics.json
 {
   &quot;result&quot;: {
     &quot;success&quot;: true

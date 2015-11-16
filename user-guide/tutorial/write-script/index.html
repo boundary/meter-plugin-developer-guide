@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Measurements - Meter Plugin Development</title>
+	<title>Write Script - Meter Plugin Development</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -81,56 +81,56 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../tutorial/">Preparation</a>
+                            <a href="../">Preparation</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/outline/">Outline</a>
+                            <a href="../outline/">Outline</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/create-plugin-contents/">Create Contents</a>
+                            <a href="../create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/define-metrics/">Define Metrics</a>
+                            <a href="../define-metrics/">Define Metrics</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/create-manifest/">Create Manifest</a>
+                            <a href="../create-manifest/">Create Manifest</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="./">Write Script</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/write-script/">Write Script</a>
+                            <a href="../add-configuration/">Add Configuration</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/add-configuration/">Add Configuration</a>
+                            <a href="../add-icon/">Add Icon</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/add-icon/">Add Icon</a>
+                            <a href="../create-readme/">Create README</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/create-readme/">Create README</a>
+                            <a href="../install-plugin/">Deploying A Plugin</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/install-plugin/">Deploying A Plugin</a>
+                            <a href="../add-plugin-to-meter/">Add Plugin To Meter</a>
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/add-plugin-to-meter/">Add Plugin To Meter</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../tutorial/view-measurements/">View Measurements</a>
+                            <a href="../view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -208,60 +208,60 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../deploying/">Deploying</a>
+                            <a href="../../reference/deploying/">Deploying</a>
                         </li>
                     
                         <li >
-                            <a href="../plugin-dashboards/">Dashboards</a>
+                            <a href="../../reference/plugin-dashboards/">Dashboards</a>
                         </li>
                     
                         <li >
-                            <a href="../manifest/">Manifest</a>
+                            <a href="../../reference/manifest/">Manifest</a>
                         </li>
                     
                         <li >
-                            <a href="../metrics/">Metrics</a>
+                            <a href="../../reference/metrics/">Metrics</a>
                         </li>
                     
                         <li >
-                            <a href="../protocol/">Protocol</a>
-                        </li>
-                    
-                        <li class="active">
-                            <a href="./">Measurements</a>
+                            <a href="../../reference/protocol/">Protocol</a>
                         </li>
                     
                         <li >
-                            <a href="../events/">Events</a>
+                            <a href="../../reference/measurements/">Measurements</a>
                         </li>
                     
                         <li >
-                            <a href="../documentation/">Documentation</a>
+                            <a href="../../reference/events/">Events</a>
                         </li>
                     
                         <li >
-                            <a href="../parameters/">Parameters</a>
+                            <a href="../../reference/documentation/">Documentation</a>
                         </li>
                     
                         <li >
-                            <a href="../production/">Production</a>
+                            <a href="../../reference/parameters/">Parameters</a>
                         </li>
                     
                         <li >
-                            <a href="../tools/">Tools</a>
+                            <a href="../../reference/production/">Production</a>
                         </li>
                     
                         <li >
-                            <a href="../testing/">Testing</a>
+                            <a href="../../reference/tools/">Tools</a>
                         </li>
                     
                         <li >
-                            <a href="../checklist/">Check List</a>
+                            <a href="../../reference/testing/">Testing</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../reference/checklist/">Check List</a>
                         </li>
                     
                     </ul>
@@ -273,12 +273,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../protocol/">
+                    <a rel="next" href="../create-manifest/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../events/">
+                    <a rel="prev" href="../add-configuration/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -292,69 +292,63 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#measurements">Measurements</a></li>
+        <li class="main active"><a href="#write-meter-plugin-script">Write Meter Plugin Script</a></li>
         
-            <li><a href="#metric">Metric</a></li>
+            <li><a href="#adding-python-script-initjson">Adding Python Script init.json</a></li>
         
-            <li><a href="#value">Value</a></li>
-        
-            <li><a href="#source">Source</a></li>
-        
-            <li><a href="#timestamp">Timestamp</a></li>
-        
-            <li><a href="#optional-fields">Optional Fields</a></li>
-        
-            <li><a href="#examples">Examples</a></li>
+            <li><a href="#view-contents-of-initpy">View Contents Of init.py</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="measurements">Measurements</h1>
-<p>A meter plugin communicates measurements to the plugin manager using the following format:</p>
-<pre><code>&lt;Metric&gt; &lt;Value&gt; &lt;Source&gt; &lt;Timestamp&gt;\n
+<h1 id="write-meter-plugin-script">Write Meter Plugin Script</h1>
+<p>The meter plugin script is responsible for collect measurements and outputing the measurement
+values to standard out according to the format defined in <a href="../../reference/measurements/">Measurements</a>.</p>
+<p>For this tutorial we are using the Python scripting language and meter plugin scripts is
+in a file named <strong><em>init.py</em></strong>.</p>
+<h3 id="adding-python-script-initjson">Adding Python Script init.json</h3>
+<p>Add the <em>init.py</em> file to your repository by the running the following:</p>
+<pre><code>$ git checkout step3
 </code></pre>
 
-<p>where each of the fields are described below.</p>
-<h3 id="metric">Metric</h3>
-<p>Name of defined metric (see <a href="../metrics/">Metrics</a>)</p>
-<h3 id="value">Value</h3>
-<p>The value of the measurement from the service, application, etc.</p>
-<h3 id="source">Source</h3>
-<p>String identifying the source of the measurement. <em>NOTE</em>: No spaces are allowed in sources.</p>
-<h3 id="timestamp">Timestamp</h3>
-<p>Time of the measurement ocurrence, in either seconds from epoch or milli-seconds from epoch.</p>
-<h3 id="optional-fields">Optional Fields</h3>
-<p>All of the field are not required to be present suitable defaults being applied for missing values as follows:</p>
-<ul>
-<li>
-<p>In the case where the <code>TIMESTAMP</code> is missing the timestamp is set to the receipt time at the plugin manager.</p>
-</li>
-<li>
-<p>In the case where the <code>SOURCE</code> and <code>METRIC_TIMESTAMP</code> are missing the source defaults to the host where the plugin is running.</p>
-</li>
-<li>
-<p>In the unique case where only a <code>METRIC_VALUE</code> is provided the <code>METRIC_IDENTIFIER</code> is assumed to be the first one in listed in the <code>metrics</code> field in the <code>plugin.json</code> (see the topic <a href="../manifest/">Manifest</a>). <strong>NOTE:</strong> It is not recommended to send measurements in this format, it is only mentioned here for backward compatability.</p>
-</li>
-</ul>
-<h3 id="examples">Examples</h3>
-<ul>
-<li>A measurement with a source <strong><em>myhost</em></strong> on <strong><em>Sat Nov 14 03:30:49 UTC 2015</em></strong> with a metric of <strong><em>CPU</em></strong> a value of 80% percent (assuming the metric unit is <em>percent</em>, See <a href="../metrics/">Metrics</a>):</li>
-</ul>
-<pre><code>CPU 0.80 myhost 1447471849
-</code></pre>
+<h3 id="view-contents-of-initpy">View Contents Of init.py</h3>
+<pre><code class="python">$ cat init.py
+#!/usr/bin/env python
 
-<ul>
-<li>A measurement with a source <strong><em>myhost</em></strong> with a metric of <strong><em>NETRB</em></strong> (Network Inbound) a value of 5,028 bytes with the timestamp assigned upon receipt by the plugin manager.</li>
-</ul>
-<pre><code>NETRB 5028 myhost
-</code></pre>
+# Required for parsing JSON
+import json
+# Use to generate random measurement values
+import random
+# Generate current timestamp values
+import time
 
-<ul>
-<li>A measurement with a source of the <strong><em>hostname</em></strong> where the plugin is running with a metric of <strong><em>DISKW</em></strong> (Disk Writes) a value of 8,197 bytes with a timestamp assigned upon receipt by the plugin manager.</li>
-</ul>
-<pre><code>DISKW 5028
+# Open the param.json file and parse JSON.
+with open(&quot;param.json&quot;) as f:
+    parameters = json.load(f)
+
+# Extract the plugin configuration
+source = parameters[&quot;source&quot;]
+interval = parameters[&quot;interval&quot;]
+
+# Metric identifier
+metric = 'TUTORIAL_METRIC'
+
+# Run in a continuous loop sending measurements to standard out
+while True:
+    # Get the current timestamp
+    timestamp = int(time.time())
+
+    # Generate a random value
+    value = random.randrange(0, 99)
+
+    # Format measurement string and write to standard out
+    print(&quot;{0}, {1}, {2}, {3}&quot;.format(metric, source, value, timestamp))
+
+    # Wait for the next interval
+    time.sleep(interval)
+
 </code></pre></div>
         </div>
 

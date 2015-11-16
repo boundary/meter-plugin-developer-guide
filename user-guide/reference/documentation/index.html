@@ -86,7 +86,15 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../tutorial/">Overview</a>
+                            <a href="../../tutorial/">Preparation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/outline/">Outline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li >
@@ -98,7 +106,31 @@
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/create-manifest/">Add Icon</a>
+                            <a href="../../tutorial/write-script/">Write Script</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-configuration/">Add Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-icon/">Add Icon</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-readme/">Create README</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/install-plugin/">Deploying A Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-plugin-to-meter/">Add Plugin To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -221,18 +253,6 @@
                         </li>
                     
                         <li >
-                            <a href="../github-account/">GitHub Account</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../github-repository/">GitHub Repository</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../git-tools/">Git Tools</a>
-                        </li>
-                    
-                        <li >
                             <a href="../tools/">Tools</a>
                         </li>
                     
@@ -275,13 +295,7 @@
         <li class="main active"><a href="#documentation">Documentation</a></li>
         
     
-        <li class="main "><a href="#requirements-elements-within-readmemd">Requirements Elements within README.md</a></li>
-        
-    
-        <li class="main "><a href="#nec-aliud-mihi-suem-fronte-ensem-hinc">Nec aliud mihi suem fronte ensem hinc</a></li>
-        
-    
-        <li class="main "><a href="#readmemd-example">README.md Example</a></li>
+        <li class="main "><a href="#example-readmemd">Example README.md</a></li>
         
     
     </ul>
@@ -289,19 +303,15 @@
             <div class="col-md-9" role="main">
 
 <h2 id="documentation">Documentation</h2>
-<p>This section describes the required documentation to provide with each plugin. The principal documentation is provided in a <code>README.md</code> in the top-level directory of the GitHub repository. </p>
-<h2 id="requirements-elements-within-readmemd">Requirements Elements within README.md</h2>
-<h2 id="nec-aliud-mihi-suem-fronte-ensem-hinc">Nec aliud mihi suem fronte ensem hinc</h2>
-<p>The contents of the README.md are displayed within the Boundary Settings =&gt; Plugin dialog</p>
-<p>Lorem markdownum malis arbusta <em>maneat</em>; ut et hinc turribus, tenebat montes
-<strong>ius viscera amans</strong>, obstantia. <strong>Pars intremuit</strong> mihi. Surgit diro membris.
-Revertar erat gurgite animosa, at ignoto et dato.</p>
-<h2 id="readmemd-example"><code>README.md</code> Example</h2>
-<p>The following</p>
-<pre><code>Boundary Meter Plugin
--------------------------
+<p>This section describes the required documentation to provide with each plugin.
+The principal documentation is provided in a <strong><em>README.md</em></strong> in the top-level directory of
+the GitHub repository. README.md is written in Markup and is displayed within
+the TrueSight Pulse Settings =&gt; Plugins dialog.</p>
+<h2 id="example-readmemd">Example <em>README.md</em></h2>
+<pre><code>TrueSight Pulse Meter Plugin Hello World in Lua
+===============================================
 
-Collects metrics from a memcached instance. See video [walkthrough](https://help.boundary.com/hc/articles/201816101).
+Simplistic meter plugin in the &quot;Hello World!&quot; fashion using the meter's built in Lua interpreter
 
 ### Prerequisites
 
@@ -309,34 +319,35 @@ Collects metrics from a memcached instance. See video [walkthrough](https://help
 |:----------|:-----:|:-------:|:-------:|:----:|
 | Supported |   v   |    v    |    v    |  v   |
 
-|  Runtime | node.js | Python | Java |
-|:---------|:-------:|:------:|:----:|
-| Required |    +    |        |      |
+#### TrueSight Pulse Meter versions v4.2 or later
 
-- [How to install node.js?](https://help.boundary.com/hc/articles/202360701)
+- To install new meter go to Settings-&gt;Installation or [see instructions](https://help.boundary.com/hc/en-us/sections/200634331-Installation).
+- To upgrade the meter to the latest version - [see instructions](https://help.boundary.com/hc/en-us/articles/201573102-Upgrading-the-Boundary-Meter).
 
 ### Plugin Setup
+
 None
 
-#### Plugin Configuration Fields
+### Plugin Configuration Fields
 
-|Field Name|Description                                                |
-|:---------|:----------------------------------------------------------|
-|Source    |The source to display in the legend for the MEMCACHED data.|
-|Port      |The MEMCACHED port.                                        |
-|Host      |The MEMCACHED hostname.                                    |
+|Field Name   |Description                                  |
+|:------------|:--------------------------------------------|
+|Source       |Name of the source to use for the measurement|
+|Poll Interval|How often to generate a random number        |
 
 ### Metrics Collected
-|Metric Name          |Description                       |
-|:--------------------|:---------------------------------|
-|Memcached Allocated  |Percent of available memory used  |
-|Memcached Connections|Number of current connections     |
-|Memcached Hits       |Number of cache hits              |
-|Memcached Misses     |Number of cache misses            |
-|Memcached Items      |Total number of items in cache    |
-|Memcached Requests   |Number of requests                |
-|Memcached Network In |Number of bytes read from network |
-|Memcached Network Out|Number of bytes written to network|
+
+|Metric Name      |Description                    |
+|:----------------|:------------------------------|
+|LUA\_HELLO\_WORLD| Random number between 0 and 99|
+
+### Dashboards
+
+- Hello Word Lua
+
+### References
+
+None
 </code></pre></div>
         </div>
 

@@ -86,7 +86,15 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../tutorial/">Overview</a>
+                            <a href="../tutorial/">Preparation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/outline/">Outline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li >
@@ -98,7 +106,31 @@
                         </li>
                     
                         <li >
-                            <a href="../tutorial/create-manifest/">Add Icon</a>
+                            <a href="../tutorial/write-script/">Write Script</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/add-configuration/">Add Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/add-icon/">Add Icon</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/create-readme/">Create README</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/install-plugin/">Deploying A Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/add-plugin-to-meter/">Add Plugin To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../tutorial/view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -221,18 +253,6 @@
                         </li>
                     
                         <li >
-                            <a href="../reference/github-account/">GitHub Account</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../reference/github-repository/">GitHub Repository</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../reference/git-tools/">Git Tools</a>
-                        </li>
-                    
-                        <li >
                             <a href="../reference/tools/">Tools</a>
                         </li>
                     
@@ -274,11 +294,7 @@
     
         <li class="main active"><a href="#getting-started">Getting Started</a></li>
         
-            <li><a href="#development-tasks-high-level-overview">Development Tasks High Level Overview</a></li>
-        
-            <li><a href="#plugin-development-tasks">Plugin Development Tasks</a></li>
-        
-            <li><a href="#example-meter-plugin">Example Meter Plugin</a></li>
+            <li><a href="#meter-plugin-development-tasks">Meter Plugin Development Tasks</a></li>
         
     
     </ul>
@@ -286,55 +302,17 @@
             <div class="col-md-9" role="main">
 
 <h1 id="getting-started">Getting Started</h1>
-<p>This page will provide an introduction to meter plugin development by outlining the development tasks to create a custom plugin. Next you will be walked through an existing plugin and its contents and deploy the meter plugin into your Boundary account.</p>
-<h2 id="development-tasks-high-level-overview">Development Tasks High Level Overview</h2>
-<p>These steps
-1. Identify the metrics to be collected
-2. Determine how the metrics are collected
-3. Create the Meter Plugin
-4. Deploy and Test
-6. Submit for Inclusion in Product (optional)</p>
-<h2 id="plugin-development-tasks">Plugin Development Tasks</h2>
-<p>Development of meter plugin consists of the following tasks:</p>
+<p>This page will provide an introduction to meter plugin development by outlining the development
+tasks required to create a meter plugin. Next you will be walked through an existing plugin and
+its contents and deploy the meter plugin into your TrueSight Pulse account.</p>
+<h2 id="meter-plugin-development-tasks">Meter Plugin Development Tasks</h2>
 <ol>
-<li>Create a public <a href="https://github.com/">GitHub</a> repository.</li>
-<li>Develop a script that polls the entity or system to be monitored and outputs metric values.</li>
-<li>Define the metrics to be used by the plugin in <code>metrics.json</code>.</li>
-<li>Define the dashboards that will display the measurements from the plugin.</li>
-<li>Design an <code>icon.png</code> to be displayed with your plugin.</li>
-<li>Define a  <code>plugin.json</code> file that describes your meter plugin.</li>
-<li>Write a README.md file using the perscribed template.</li>
-<li>Commit all of the plugin content and push to your public GitHub repository.</li>
-<li>Stage your meter plugin into your account.</li>
-<li>Deploy the meter plugin into a meter installed on a server.</li>
-<li>View metric collection on a Boundary dashboard</li>
-</ol>
-<h2 id="example-meter-plugin">Example Meter Plugin</h2>
-<p>To get started we are going to walk through the contents of an existing plugin and deploy a meter plugin into a Boundary account. This will short cut the number of development tasks outlined earlier so you can gain some initial experience when developing your custom meter plugin. The example meter plugin <a href="https://github.com/boundary/boundary-plugin-ticker">boundary-plugin-ticker</a> collects stock price and volume from the user configured <a href="http://en.wikipedia.org/wiki/Ticker_symbol">ticker symbol</a>.</p>
-<p>The steps to run the meter</p>
-<ol>
-<li>Make a copy of an existing plugin repository which contains a complete plugin</li>
-<li>Stage the plugin into a Boundary account</li>
-<li>Add the plugin into a Boundary account.</li>
-<li>Add the plugin to a meter</li>
-<li>View metric values on Dashboard</li>
-</ol>
-<p>Before proceeding with the steps outlined above the following prerequisites must be satisfied:</p>
-<ol>
-<li><a href="https://github.com/">GitHub</a> account</li>
-<li>Command line installation of Git, <a href="">download</a></li>
-<li>Administrative login for a Boundary account. You can create a free account <a href="">here</a></li>
-<li>A meter deployed on a Linux system.</li>
-</ol>
-<h4 id="copying-an-existing-meter-plugin-repository">Copying an Existing Meter Plugin Repository</h4>
-<p>To use an existing plugin we need to clone the existing plugin repository into your user/organization.</p>
-<ol>
-<li>Open a web browser and navigate</li>
-</ol>
-<h4 id="stage-plugin-into-boundary-account">Stage Plugin Into Boundary Account</h4>
-<h4 id="add-plugin-into-a-boundary-account">Add Plugin Into a Boundary Account</h4>
-<h4 id="deploy-the-plugin-into-a-meter">Deploy the Plugin into a Meter</h4>
-<h3 id="observe-metric-values-on-dashboard">Observe Metric Values on Dashboard</h3></div>
+<li>Identify the metrics to be collected</li>
+<li>Determine how the metrics are collected</li>
+<li>Create the Meter Plugin</li>
+<li>Deploy and Test</li>
+<li>Submit for Inclusion in Product (optional)</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">

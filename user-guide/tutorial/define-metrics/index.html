@@ -86,7 +86,15 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../">Overview</a>
+                            <a href="../">Preparation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../outline/">Outline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li class="active">
@@ -98,7 +106,31 @@
                         </li>
                     
                         <li >
-                            <a href="../create-manifest/">Add Icon</a>
+                            <a href="../write-script/">Write Script</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../add-configuration/">Add Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../add-icon/">Add Icon</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../create-readme/">Create README</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../install-plugin/">Deploying A Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../add-plugin-to-meter/">Add Plugin To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -221,18 +253,6 @@
                         </li>
                     
                         <li >
-                            <a href="../../reference/github-account/">GitHub Account</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../reference/github-repository/">GitHub Repository</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../reference/git-tools/">Git Tools</a>
-                        </li>
-                    
-                        <li >
                             <a href="../../reference/tools/">Tools</a>
                         </li>
                     
@@ -253,7 +273,7 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../">
+                    <a rel="next" href="../create-plugin-contents/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
@@ -272,11 +292,50 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="main active"><a href="#define-metrics">Define Metrics</a></li>
+        
+            <li><a href="#adding-metricsjson">Adding metrics.json</a></li>
+        
+            <li><a href="#view-contents-of-metricsjson">View Contents Of metrics.json</a></li>
+        
+            <li><a href="#add-metrics-to-pulse-account">Add Metrics To Pulse Account</a></li>
+        
+    
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-</div>
+<h1 id="define-metrics">Define Metrics</h1>
+<p>The tutorial meter plugin has but a single metric that needs to be defined.
+Meter plugin metrics are defined in a file name <strong><em>metrics.json</em></strong>.</p>
+<p>Details on the contents of metrics.json is described in <a href="../../reference/metrics/">Metrics</a></p>
+<h3 id="adding-metricsjson">Adding metrics.json</h3>
+<p>Add the <em>metrics.json</em> file to your repository by the running the following:</p>
+<pre><code>$ git checkout step1
+</code></pre>
+
+<h3 id="view-contents-of-metricsjson">View Contents Of metrics.json</h3>
+<pre><code class="json">$ cat metrics.json
+{
+    &quot;TUTORIAL_METRIC&quot;: {
+        &quot;defaultAggregate&quot;: &quot;AVG&quot;,
+        &quot;defaultResolutionMS&quot;: 1000,
+        &quot;description&quot;: &quot;Metric definition for the tutorial meter plugin&quot;,
+        &quot;displayName&quot;: &quot;Tutorial Metric&quot;,
+        &quot;displayNameShort&quot;: &quot;Tut. Metric&quot;,
+        &quot;isDisabled&quot;: false,
+        &quot;unit&quot;: &quot;number&quot;
+    }
+}
+</code></pre>
+
+<h3 id="add-metrics-to-pulse-account">Add Metrics To Pulse Account</h3>
+<p>Metric definitions can be added to your account in several ways (see <a href="../../reference/metrics/">Metrics</a>)
+in this tutorial we use the <a href="http://boundary.github.io/pulse-api-cli/">TrueSight Pulse CLIs</a>.</p>
+<p>To add the metric definitions we need to first, obtain your TrueSight Pulse account e-mail and API token from
+Settings =&gt; Account. Next we run the following command:</p>
+<pre><code>metric-create-batch -e &lt;your-email@example.com&gt; -t &lt;your API Token&gt; -f metrics.json
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">

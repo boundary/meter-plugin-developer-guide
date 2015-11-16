@@ -86,7 +86,15 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../tutorial/">Overview</a>
+                            <a href="../../tutorial/">Preparation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/outline/">Outline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li >
@@ -98,7 +106,31 @@
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/create-manifest/">Add Icon</a>
+                            <a href="../../tutorial/write-script/">Write Script</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-configuration/">Add Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-icon/">Add Icon</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-readme/">Create README</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/install-plugin/">Deploying A Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-plugin-to-meter/">Add Plugin To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -221,18 +253,6 @@
                         </li>
                     
                         <li >
-                            <a href="../github-account/">GitHub Account</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../github-repository/">GitHub Repository</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../git-tools/">Git Tools</a>
-                        </li>
-                    
-                        <li >
                             <a href="../tools/">Tools</a>
                         </li>
                     
@@ -272,11 +292,33 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="main active"><a href="#deploying-meter-plugins">Deploying Meter Plugins</a></li>
+        
+            <li><a href="#adding-the-tutorial-meter-plugin-to-your-account">Adding the Tutorial Meter Plugin To Your Account</a></li>
+        
+            <li><a href="#installing-the-p">Installing the P</a></li>
+        
+    
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<p>Plugins are open source and are submitted via a pull request to the Boundary github plugin repository. Once a plugin is accepted into the repository it appears in the Plugins tab of the Settings dialog. After a plugin is installed into your account you will need to go to Relays tab in order to install plugin instances on corresponding host(s).</p></div>
+<h1 id="deploying-meter-plugins">Deploying Meter Plugins</h1>
+<p>Once the contents of the meter plugin have been defined we can deploy the meter plugin into our account. For details
+regarding deploying meter plugins see <a href="./">Deploying</a></p>
+<p>To add add the newly created meter plugin once again we will use the
+<a href="http://boundary.github.io/pulse-api-cli/">TrueSight Pulse CLIs</a>.</p>
+<h2 id="adding-the-tutorial-meter-plugin-to-your-account">Adding the Tutorial Meter Plugin To Your Account</h2>
+<p>To run the command to add the plugin we must have your TrueSight Pulse account e-mail and API token from
+Settings =&gt; Account. Additionally the name of your GitHub account is required. We then run the following
+command to add the plugin to your account.</p>
+<pre><code>$ plugin-add -e &lt;email@example.com&gt; -t &lt;API Token&gt; -n tutorial -o &lt;GitHub User name&gt; -r &lt;repository name&gt;
+</code></pre>
+
+<h2 id="installing-the-p">Installing the P</h2>
+<p>Make the plugin active in your account by running the following command:</p>
+<pre><code>$ plugin-install -e &lt;email@example.com&gt; -t &lt;API Token&gt; -n tutorial
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">

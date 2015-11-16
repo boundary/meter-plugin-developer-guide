@@ -86,7 +86,15 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../tutorial/">Overview</a>
+                            <a href="../../tutorial/">Preparation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/outline/">Outline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li >
@@ -98,7 +106,31 @@
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/create-manifest/">Add Icon</a>
+                            <a href="../../tutorial/write-script/">Write Script</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-configuration/">Add Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-icon/">Add Icon</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-readme/">Create README</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/install-plugin/">Deploying A Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-plugin-to-meter/">Add Plugin To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -221,18 +253,6 @@
                         </li>
                     
                         <li >
-                            <a href="../../reference/github-account/">GitHub Account</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../reference/github-repository/">GitHub Repository</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../reference/git-tools/">Git Tools</a>
-                        </li>
-                    
-                        <li >
                             <a href="../../reference/tools/">Tools</a>
                         </li>
                     
@@ -289,7 +309,6 @@ Plugin Manager (<code>pluginmgr</code>) process id by :</p>
 24931 elasticsearch --lua init.lua
 </code></pre>
 
-<p><em>TODO</em>: Simplified output for the ready system call</p>
 <p>And the trace the read system call of the Plugin Manager:</p>
 <pre><code>[vagrant@centos-6-6 ~]$ sudo strace -p 24704 -e trace=read -s 1024
 Process 24704 attached

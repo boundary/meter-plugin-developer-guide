@@ -86,7 +86,15 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../../tutorial/">Overview</a>
+                            <a href="../../tutorial/">Preparation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/outline/">Outline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li >
@@ -98,7 +106,31 @@
                         </li>
                     
                         <li >
-                            <a href="../../tutorial/create-manifest/">Add Icon</a>
+                            <a href="../../tutorial/write-script/">Write Script</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-configuration/">Add Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-icon/">Add Icon</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/create-readme/">Create README</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/install-plugin/">Deploying A Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/add-plugin-to-meter/">Add Plugin To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../../tutorial/view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -221,18 +253,6 @@
                         </li>
                     
                         <li >
-                            <a href="../../reference/github-account/">GitHub Account</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../reference/github-repository/">GitHub Repository</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../reference/git-tools/">Git Tools</a>
-                        </li>
-                    
-                        <li >
                             <a href="../../reference/tools/">Tools</a>
                         </li>
                     
@@ -272,20 +292,38 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#framework">Framework</a></li>
+        <li class="main active"><a href="#meter-plugin-sdks">Meter Plugin SDKs</a></li>
         
-    
-        <li class="main "><a href="#meter-plugin-development-overview">Meter Plugin Development Overview</a></li>
+            <li><a href="#java">Java</a></li>
+        
+            <li><a href="#lua">Lua</a></li>
+        
+            <li><a href="#python">Python</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h2 id="framework">Framework</h2>
-<p>Needs to provide 80% of the plugin</p>
-<h1 id="meter-plugin-development-overview">Meter Plugin Development Overview</h1>
-<p>A Boundary Meter Plugin is a small application written in <a href="https://en.wikipedia.org/wiki/Lua_(programming_language)">lua</a> that regularly reports arbitrary metrics that may optionally include one or more dashboards.</p></div>
+<h1 id="meter-plugin-sdks">Meter Plugin SDKs</h1>
+<p>There exists meter plugin SDKs for developing plugins in the following programming languages:</p>
+<ul>
+<li>Java</li>
+<li>Lua</li>
+<li>Python</li>
+</ul>
+<h2 id="java">Java</h2>
+<p>The existing java SDK is incorporated into a few meter plugins that rely on using JMX
+for collecting measurements.
+See <a href="https://github.com/boundary/meter-plugin-sdk-java">Java Meter Plugin SDK</a> on GitHub.</p>
+<h2 id="lua">Lua</h2>
+<p>The most complete SDK since the boundary-meter itself has a built in Lua interpreter
+that incorporates <a href="https://luvit.io/">Luvit</a>. See
+<a href="https://github.com/boundary/meter-plugin-sdk-lua">Meter Plugin SDK for Lua</a>
+on GitHub for more information.</p>
+<h2 id="python">Python</h2>
+<p>Current under development. This section will be updated with more information when the Python
+Meter Plugin SDK becomes available.</p></div>
         </div>
 
         <footer class="col-md-12">

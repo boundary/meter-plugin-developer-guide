@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Add Icon - Meter Plugin Development</title>
+	<title>Create Manifest - Meter Plugin Development</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -86,19 +86,51 @@
                     <ul class="dropdown-menu">
                     
                         <li >
-                            <a href="../">Overview</a>
+                            <a href="../">Preparation</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../outline/">Outline</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../create-plugin-contents/">Create Contents</a>
                         </li>
                     
                         <li >
                             <a href="../define-metrics/">Define Metrics</a>
                         </li>
                     
-                        <li >
+                        <li class="active">
                             <a href="./">Create Manifest</a>
                         </li>
                     
-                        <li class="active">
-                            <a href="./">Add Icon</a>
+                        <li >
+                            <a href="../write-script/">Write Script</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../add-configuration/">Add Configuration</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../add-icon/">Add Icon</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../create-readme/">Create README</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../install-plugin/">Deploying A Plugin</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../add-plugin-to-meter/">Add Plugin To Meter</a>
+                        </li>
+                    
+                        <li >
+                            <a href="../view-measurements/">View Measurements</a>
                         </li>
                     
                     </ul>
@@ -221,18 +253,6 @@
                         </li>
                     
                         <li >
-                            <a href="../../reference/github-account/">GitHub Account</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../reference/github-repository/">GitHub Repository</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../reference/git-tools/">Git Tools</a>
-                        </li>
-                    
-                        <li >
                             <a href="../../reference/tools/">Tools</a>
                         </li>
                     
@@ -253,12 +273,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="./">
+                    <a rel="next" href="../define-metrics/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../examples/">
+                    <a rel="prev" href="../write-script/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -272,11 +292,68 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="main active"><a href="#create-meter-plugin-manifest">Create Meter Plugin Manifest</a></li>
+        
+            <li><a href="#adding-pluginjson">Adding plugin.json</a></li>
+        
+            <li><a href="#view-contents-of-pluginjson">View Contents Of plugin.json</a></li>
+        
+    
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-</div>
+<h1 id="create-meter-plugin-manifest">Create Meter Plugin Manifest</h1>
+<p>The meter plugin manifest defines metadata about the plugin configuration
+parameters, the script to run to start the plugin, and other items. The Meter plugin manifest is
+defined in a file named <strong><em>plugin.json</em></strong>. Details on the contents of plugin.json is
+described in <a href="../../reference/manifest/">Manifest</a></p>
+<h3 id="adding-pluginjson">Adding plugin.json</h3>
+<p>Add the <em>plugin.json</em> file to your repository by the running the following:</p>
+<pre><code>$ git checkout step2
+</code></pre>
+
+<h3 id="view-contents-of-pluginjson">View Contents Of plugin.json</h3>
+<pre><code class="json">$ cat plugin.json
+{
+   &quot;name&quot;: &quot;Tutorial Meter Plugin&quot;,
+   &quot;version&quot;: &quot;1.0.0&quot;,
+   &quot;meterVersionRequired&quot;: &quot;4.2.0-611&quot;,
+   &quot;unsupportedPlatforms&quot;: [],
+   &quot;tags&quot; : &quot;tutorial&quot;
+   &quot;description&quot;: &quot;Meter Plugin Tutorial&quot;,
+   &quot;icon&quot;: &quot;true-site.png&quot;,
+   &quot;command&quot;: &quot;python init.py&quot;,
+   &quot;postExtract&quot;: &quot;&quot;,
+   &quot;metrics&quot;: [
+       &quot;TUTORIAL_METRIC&quot;
+    ],
+   &quot;dashboards&quot;: [
+      {
+        &quot;name&quot;: &quot;Tutorial&quot;,
+        &quot;layout&quot;: &quot;d-w=1&amp;d-h=1&amp;d-pad=5&amp;d-light=1&amp;d-bg=none&amp;d-g-TUTORIAL_METRIC=0-0-1-1&quot;
+      }
+    ],
+   &quot;paramSchema&quot;: [
+     {
+       &quot;title&quot;: &quot;Source&quot;,
+       &quot;name&quot;: &quot;source&quot;,
+       &quot;description&quot;: &quot;Source to use for measurements&quot;,
+       &quot;type&quot;: &quot;string&quot;,
+       &quot;default&quot;: &quot;Tutorial&quot;,
+       &quot;required&quot;: true
+     },
+     {
+       &quot;title&quot;: &quot;Interval&quot;,
+       &quot;name&quot;: &quot;interval&quot;,
+       &quot;description&quot;: &quot;How often to send measurement in seconds&quot;,
+       &quot;type&quot;: &quot;int&quot;,
+       &quot;default&quot;: &quot;5&quot;,
+       &quot;required&quot;: true
+     }
+   ]
+}
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
