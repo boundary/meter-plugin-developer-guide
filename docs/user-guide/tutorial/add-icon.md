@@ -1,16 +1,15 @@
 Add Icon
 ========
 
-At run time the Plugin Manager provides configuration information defined in Plugin Configuration
-dialog via a file named ___param.json___. We add a param.json file so we can test the plugin stand
-from the command line.
+We add an icon that is used to graphically represent out icon in the web interface. The name of
+icon used is specified in the meter plugin manifiest(_plugin.json_).
 
 Specifics on the format and size of icons is described in
 [Manifest](../reference/manifest.md#icon)
 
 ### Adding metrics.json
 
-Add the _true-sight.png file to your repository by the running the following:
+Add the _true-sight.png_ file to your repository by the running the following:
 
 ```
 $ git checkout step5

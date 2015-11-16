@@ -7,19 +7,19 @@ The contents of the meter plugin have already been pre-defined and can be cloned
 
 ## Cloning the Meter Plugin Contents
 
-1. Clone the GitHub repository with the meter plugin contents
+1. Clone the GitHub repository with the meter plugin contents:
 
     ```
     $ git clone https://github.com/boundary/meter-plugin-tutorial.git
     ```
 
-2. Change directory to the newly cloned repository
+2. Change directory to the newly cloned repository:
 
     ```
     $ cd meter-plugin-tutorial
     ```
 
-3. Initial the repository to the start
+3. Initial the repository to the start:
 
     ```
     $ git checkout start

@@ -1,23 +1,11 @@
 # Troubleshooting Meter Plugins
 
-This section provides insight on diagnosing issues with a plugin that is not providing measurements on a dashboard.
+This section provides insight on diagnosing issues with a plugin that is not providing
+measurements on a dashboard.
 
 - A description of common issues are described [here](common-issues.md).
-
-- A procedure for detail tracing of measuurement flow is discussed in [Tracing Measurement Flow](Tracking Measurement Flow).
-
-
+- A procedure for detail tracing of measurement flow is discussed in
+[Tracing Measurement Flow](Tracking Measurement Flow).
 
 
-
-## Meter reads the RPC call from the Plugin Manager
-
-```
-[vagrant@centos-6-6 ~]$ sudo strace -p 24698 -e trace=read -s 1024 | more
-Process 24698 attached
-read(20, "{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_PRIMARY_SHARDS\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_COMPLETION_SIZE\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_STATUS\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":1.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_DOCUMENT_COUNT\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"v", 1024) = 1024
-read(20, "alue\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_STORE_SIZE\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_FIELDDATA_EVICTIONS\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_INDEX_COUNT\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_SEGMENT_COUNT\",\"hostname\":\"TEST_ELASTIC", 1024) = 1024
-read(20, "SEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_TOTAL_SHARDS\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":0.000000}}{\"jsonrpc\":\"2.0\",\"method\":\"metric\",\"params\":{\"plugin\":\"elasticsearch\",\"metric\":\"ELASTIC_SEARCH_NODE_COUNT\",\"hostname\":\"TEST_ELASTICSEARCH_CENTOS_6_6\",\"value\":1.000000}}", 1024) = 375
-read(20, 0x7fff79e5f850, 1024)          = -1 EAGAIN (Resource temporarily unavailable)
-```
 

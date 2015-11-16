@@ -1,11 +1,13 @@
 Add README
 ==========
 
-Each meter plugin includes a file named __README.md__ that is displayed in the Plugin Configuration
-dialog that provides documentation regarding the plugins requirements, setup instructions, configuration parameters,
-metrics, dashboards, and any other information needed for the operation of the meter plugin.
+Each meter plugin includes a file named __README.md__ that is displayed in the
+Plugin Configuration dialog that provides documentation regarding the plugins
+requirements, setup instructions, configuration parameters, metrics, dashboards,
+etc. needed for the operation of the meter plugin.
 
-Content that needs to be included in a README is discussed in [Documentation](../reference/documentation.md).
+Content that needs to be included in a README is discussed in
+[Documentation](../reference/documentation.md).
 
 ### Adding README.md
 

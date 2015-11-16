@@ -11,8 +11,6 @@ $ pgrep -flu boundary
 24931 elasticsearch --lua init.lua
 ```
 
-_TODO_: Simplified output for the ready system call
-
 And the trace the read system call of the Plugin Manager:
 
 ```

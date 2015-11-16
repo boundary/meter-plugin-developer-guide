@@ -1,8 +1,8 @@
 Create Meter Plugin Manifest
 ============================
 
-The meter plugin manifest defines metadata about the plugin configuration such configuration
-parameters and the script to run to start the plugin. The Meter plugin manifest is
+The meter plugin manifest defines metadata about the plugin configuration
+parameters, the script to run to start the plugin, and other items. The Meter plugin manifest is
 defined in a file named ___plugin.json___. Details on the contents of plugin.json is
 described in [Manifest](../reference/manifest.md)
 
