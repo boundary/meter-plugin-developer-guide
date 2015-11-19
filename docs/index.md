@@ -1,4 +1,4 @@
-BMC TrueSight Pulse Meter Plugin Development Guide
+Meter Plugin Development Guide
 ==================================================
 
 BMC TrueSight Pulse offers an API so you can graph any measurable metric in realtime, however, there is a small amount of work involved in getting the metrics you are measuring to Boundary for display. To help solve this problem we introduced plugins.
