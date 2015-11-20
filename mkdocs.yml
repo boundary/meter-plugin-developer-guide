@@ -1,4 +1,4 @@
-site_name: Meter Plugin Development
+site_name: BMC TrueSight Pulse
 theme: united
 pages:
 - Home: 'index.md'
