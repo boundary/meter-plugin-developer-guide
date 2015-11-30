@@ -46,4 +46,3 @@ pages:
     - Documentation: 'user-guide/reference/documentation.md'
     - Parameters: 'user-guide/reference/parameters.md'
     - Tools: 'user-guide/reference/tools.md'
-    - Testing: 'user-guide/reference/testing.md'
