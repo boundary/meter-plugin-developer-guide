@@ -14,5 +14,5 @@ To add the meter plugin to a meter perform the following:
 6. Take the defaults for the meter plugin configuration and click _Save_.
 
 The meter plugin will then be downloaded to host where the meter is running,
-passed the _param.json_ with the item from the configuration dialog and start
+passed the _param.json_ with the items from the configuration dialog, and start
 the meter plugin script running.
