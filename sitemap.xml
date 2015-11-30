@@ -116,40 +116,6 @@
     
         
     <url>
-     <loc>None/user-guide/examples/</loc>
-     <lastmod>2015-11-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/user-guide/examples/example-hello-world/</loc>
-     <lastmod>2015-11-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/user-guide/examples/example-hello-world2/</loc>
-     <lastmod>2015-11-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/user-guide/examples/example-hello-world2/</loc>
-     <lastmod>2015-11-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/user-guide/examples/example-hello-world2/</loc>
-     <lastmod>2015-11-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
      <loc>None/user-guide/troubleshooting/</loc>
      <lastmod>2015-11-30</lastmod>
      <changefreq>daily</changefreq>
@@ -256,25 +222,7 @@
     </url>
         
     <url>
-     <loc>None/user-guide/reference/production/</loc>
-     <lastmod>2015-11-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>None/user-guide/reference/tools/</loc>
-     <lastmod>2015-11-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/user-guide/reference/testing/</loc>
-     <lastmod>2015-11-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/user-guide/reference/checklist/</loc>
      <lastmod>2015-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>

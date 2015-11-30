@@ -139,35 +139,6 @@
             
             
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    
-                        <li >
-                            <a href="../../examples/">Overview</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../examples/example-hello-world/">Hello World</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../examples/example-hello-world2/">Hello World part deux</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../examples/example-hello-world2/">Give It a Rest</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../../examples/example-hello-world2/">Meter and Me and the Plugin makes Three</a>
-                        </li>
-                    
-                    </ul>
-                </li>
-            
-            
-            
-                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Troubleshooting <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
@@ -249,19 +220,7 @@
                         </li>
                     
                         <li >
-                            <a href="../production/">Production</a>
-                        </li>
-                    
-                        <li >
                             <a href="../tools/">Tools</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../testing/">Testing</a>
-                        </li>
-                    
-                        <li >
-                            <a href="../checklist/">Check List</a>
                         </li>
                     
                     </ul>
@@ -296,7 +255,7 @@
         
             <li><a href="#adding-the-tutorial-meter-plugin-to-your-account">Adding the Tutorial Meter Plugin To Your Account</a></li>
         
-            <li><a href="#installing-the-p">Installing the P</a></li>
+            <li><a href="#installing-the-plugin">Installing the Plugin</a></li>
         
     
     </ul>
@@ -304,9 +263,8 @@
             <div class="col-md-9" role="main">
 
 <h1 id="deploying-meter-plugins">Deploying Meter Plugins</h1>
-<p>Once the contents of the meter plugin have been defined we can deploy the meter plugin into our account. For details
-regarding deploying meter plugins see <a href="./">Deploying</a></p>
-<p>To add add the newly created meter plugin once again we will use the
+<p>Once the contents of the meter plugin have been defined we can deploy the meter plugin into our account.</p>
+<p>To add the newly created meter plugin once again we will use the
 <a href="http://boundary.github.io/pulse-api-cli/">TrueSight Pulse CLIs</a>.</p>
 <h2 id="adding-the-tutorial-meter-plugin-to-your-account">Adding the Tutorial Meter Plugin To Your Account</h2>
 <p>To run the command to add the plugin we must have your TrueSight Pulse account e-mail and API token from
@@ -315,7 +273,7 @@ command to add the plugin to your account.</p>
 <pre><code>$ plugin-add -e &lt;email@example.com&gt; -t &lt;API Token&gt; -n tutorial -o &lt;GitHub User name&gt; -r &lt;repository name&gt;
 </code></pre>
 
-<h2 id="installing-the-p">Installing the P</h2>
+<h2 id="installing-the-plugin">Installing the Plugin</h2>
 <p>Make the plugin active in your account by running the following command:</p>
 <pre><code>$ plugin-install -e &lt;email@example.com&gt; -t &lt;API Token&gt; -n tutorial
 </code></pre></div>

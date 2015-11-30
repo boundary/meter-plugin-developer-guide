@@ -2,22 +2,22 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Meter Plugin Development Guide\n\n\nBMC TrueSight Pulse offers an API so you can graph any measurable metric in realtime, however, there is a small amount of work involved in getting the metrics you are measuring to Boundary for display. To help solve this problem we introduced plugins.\n\n\nA plugin is a tiny application that can be written in any language or script which simply reads the metric you are after and reports its value. The plugin is launched using the Plugin Manager which is built in to the meter, so no further installation is required.\n\n\nPlugins not only make it very easy to add arbitrary metric monitoring to Boundary but because plugins are kept in a central, public, repository, they can be shared by all.", 
+            "text": "Meter Plugin Development Guide\n\n\nBMC TrueSight Pulse offers an API so you can graph any measurable metric in realtime, however,\nthere is a small amount of work involved in getting the metrics you are measuring to TrueSight Pulse for display.\nTo help solve this problem we introduced plugins.\n\n\nA plugin is a tiny application that can be written in any language or script \nwhich simply reads the metric you are after and reports its value.\nThe plugin is launched using the Plugin Manager which is built in to the meter, \nso no further installation is required.\n\n\nPlugins not only make it very easy to add arbitrary metric monitoring to TrueSight Pulse but because plugins are kept in a central public repository, they can be shared by all.", 
             "title": "Home"
         }, 
         {
             "location": "/#meter-plugin-development-guide", 
-            "text": "BMC TrueSight Pulse offers an API so you can graph any measurable metric in realtime, however, there is a small amount of work involved in getting the metrics you are measuring to Boundary for display. To help solve this problem we introduced plugins.  A plugin is a tiny application that can be written in any language or script which simply reads the metric you are after and reports its value. The plugin is launched using the Plugin Manager which is built in to the meter, so no further installation is required.  Plugins not only make it very easy to add arbitrary metric monitoring to Boundary but because plugins are kept in a central, public, repository, they can be shared by all.", 
+            "text": "BMC TrueSight Pulse offers an API so you can graph any measurable metric in realtime, however,\nthere is a small amount of work involved in getting the metrics you are measuring to TrueSight Pulse for display.\nTo help solve this problem we introduced plugins.  A plugin is a tiny application that can be written in any language or script \nwhich simply reads the metric you are after and reports its value.\nThe plugin is launched using the Plugin Manager which is built in to the meter, \nso no further installation is required.  Plugins not only make it very easy to add arbitrary metric monitoring to TrueSight Pulse but because plugins are kept in a central public repository, they can be shared by all.", 
             "title": "Meter Plugin Development Guide"
         }, 
         {
             "location": "/user-guide/getting-started/", 
-            "text": "Getting Started\n\n\nThis page will provide an introduction to meter plugin development by outlining the development\ntasks required to create a meter plugin. Next you will be walked through an existing plugin and\nits contents and deploy the meter plugin into your TrueSight Pulse account.\n\n\nMeter Plugin Development Tasks\n\n\n\n\nIdentify the metrics to be collected\n\n\nDetermine how the metrics are collected\n\n\nCreate the Meter Plugin\n\n\nDeploy and Test\n\n\nSubmit for Inclusion in Product (optional)", 
+            "text": "Getting Started\n\n\nThis page will provide an introduction to meter plugin development by outlining the development\ntasks required to create a meter plugin.\n\n\nNext you will be walked through an existing plugin and\nits contents and deploy the meter plugin into your TrueSight Pulse account.\n\n\nMeter Plugin Development Tasks\n\n\n\n\nIdentify the metrics to be collected\n\n\nDetermine how the metrics are collected\n\n\nCreate the Meter Plugin\n\n\nDeploy and Test\n\n\nSubmit for Inclusion in Product (optional)", 
             "title": "Introduction"
         }, 
         {
             "location": "/user-guide/getting-started/#getting-started", 
-            "text": "This page will provide an introduction to meter plugin development by outlining the development\ntasks required to create a meter plugin. Next you will be walked through an existing plugin and\nits contents and deploy the meter plugin into your TrueSight Pulse account.", 
+            "text": "This page will provide an introduction to meter plugin development by outlining the development\ntasks required to create a meter plugin.  Next you will be walked through an existing plugin and\nits contents and deploy the meter plugin into your TrueSight Pulse account.", 
             "title": "Getting Started"
         }, 
         {
@@ -37,17 +37,17 @@
         }, 
         {
             "location": "/user-guide/getting-started/plugin-contents/", 
-            "text": "Meter Plugin Contents\n\n\nA meter plugin consists of the following artifacts in a (GitHub)[github.md] repository:\n\n\n\n\nplugin.json\n\n\nmetrics.json\n\n\nREADME.md\n\n\nicon.png\n\n\ncollection script or program\n\n\nparam.json\n\n\n\n\nplugin.json\n\n\nMeter plugin manifest that contains metadata and configuration information about the plugin. See \nManifest\n for details.\n\n\nmetrics.json\n\n\nMetric definitions used by the meter plugin. Details on the contents of the \nmeterics.json\n How to configure plugin metrics  are described in \nMetrics\n\n\nREADME.md\n\n\nContains a description and configuration information about the meter plugin. Recommendations on what to include in the read me is in \nDocumentation\n.\n\n\nicon.png\n\n\nIcon that is used by Pulse Web Interface to graphically represent a meter plugin in the user interface. See\nManifest\n.\n\n\nscript or program\n\n\nScript or program that is responsible for collecting measurements from a service or application and then sends to standard out in the \nMeasurement\n format.\n\n\nparam.json\n\n\nRuntime configuration provided by the plugin manager to meter plugin.", 
+            "text": "Meter Plugin Contents\n\n\nA meter plugin consists of the following artifacts in a (GitHub)[github.md] repository:\n\n\n\n\nplugin.json\n\n\nmetrics.json\n\n\nREADME.md\n\n\nicon.png\n\n\ncollection script or program\n\n\nparam.json\n\n\n\n\nplugin.json\n\n\nMeter plugin manifest that contains metadata and configuration information about the plugin. \nSee \nManifest\n for details.\n\n\nmetrics.json\n\n\nMetric definitions used by the meter plugin. Details on the contents and how to configure plugin metrics \nare described in \nMetrics\n\n\nREADME.md\n\n\nContains a description and configuration information about the meter plugin. \nRecommendations on what to include in the read me is in \nDocumentation\n.\n\n\nicon.png\n\n\nIcon that is used by Pulse Web Interface to graphically represent a meter plugin in the user interface. \nSee \nManifest\n.\n\n\nscript or program\n\n\nScript or program that is responsible for collecting measurements from a service \nor application and then sends to standard out in the \nMeasurement\n format.\n\n\nparam.json\n\n\nRuntime configuration provided by the plugin manager to meter plugin.", 
             "title": "Meter Plugin Contents"
         }, 
         {
             "location": "/user-guide/getting-started/plugin-contents/#meter-plugin-contents", 
-            "text": "A meter plugin consists of the following artifacts in a (GitHub)[github.md] repository:   plugin.json  metrics.json  README.md  icon.png  collection script or program  param.json   plugin.json  Meter plugin manifest that contains metadata and configuration information about the plugin. See  Manifest  for details.  metrics.json  Metric definitions used by the meter plugin. Details on the contents of the  meterics.json  How to configure plugin metrics  are described in  Metrics  README.md  Contains a description and configuration information about the meter plugin. Recommendations on what to include in the read me is in  Documentation .  icon.png  Icon that is used by Pulse Web Interface to graphically represent a meter plugin in the user interface. See Manifest .  script or program  Script or program that is responsible for collecting measurements from a service or application and then sends to standard out in the  Measurement  format.  param.json  Runtime configuration provided by the plugin manager to meter plugin.", 
+            "text": "A meter plugin consists of the following artifacts in a (GitHub)[github.md] repository:   plugin.json  metrics.json  README.md  icon.png  collection script or program  param.json   plugin.json  Meter plugin manifest that contains metadata and configuration information about the plugin. \nSee  Manifest  for details.  metrics.json  Metric definitions used by the meter plugin. Details on the contents and how to configure plugin metrics \nare described in  Metrics  README.md  Contains a description and configuration information about the meter plugin. \nRecommendations on what to include in the read me is in  Documentation .  icon.png  Icon that is used by Pulse Web Interface to graphically represent a meter plugin in the user interface. \nSee  Manifest .  script or program  Script or program that is responsible for collecting measurements from a service \nor application and then sends to standard out in the  Measurement  format.  param.json  Runtime configuration provided by the plugin manager to meter plugin.", 
             "title": "Meter Plugin Contents"
         }, 
         {
             "location": "/user-guide/getting-started/framework/", 
-            "text": "Meter Plugin SDKs\n\n\nThere exists meter plugin SDKs for developing plugins in the following programming languages:\n\n\n\n\nJava\n\n\nLua\n\n\nPython\n\n\n\n\nJava\n\n\nThe existing java SDK is incorporated into a few meter plugins that rely on using JMX\nfor collecting measurements.\nSee \nJava Meter Plugin SDK\n on GitHub.\n\n\nLua\n\n\nThe most complete SDK since the boundary-meter itself has a built in Lua interpreter\nthat incorporates \nLuvit\n. See\n\nMeter Plugin SDK for Lua\n\non GitHub for more information.\n\n\nPython\n\n\nCurrent under development. This section will be updated with more information when the Python\nMeter Plugin SDK becomes available.", 
+            "text": "Meter Plugin SDKs\n\n\nThere exists meter plugin SDKs for developing plugins in the following programming languages:\n\n\n\n\nJava\n\n\nLua\n\n\nPython\n\n\n\n\nJava\n\n\nThe existing java SDK is incorporated into a few meter plugins that rely on using JMX\nfor collecting measurements.\nSee \nJava Meter Plugin SDK\n on GitHub.\n\n\nLua\n\n\nThe most complete SDK since the TrueSight Pulse meter itself has a built in Lua interpreter\nthat incorporates \nLuvit\n. See\n\nMeter Plugin SDK for Lua\n\non GitHub for more information.\n\n\nPython\n\n\nCurrently under development. This section will be updated with more information when the Python\nMeter Plugin SDK becomes available.", 
             "title": "Framework"
         }, 
         {
@@ -62,22 +62,22 @@
         }, 
         {
             "location": "/user-guide/getting-started/framework/#lua", 
-            "text": "The most complete SDK since the boundary-meter itself has a built in Lua interpreter\nthat incorporates  Luvit . See Meter Plugin SDK for Lua \non GitHub for more information.", 
+            "text": "The most complete SDK since the TrueSight Pulse meter itself has a built in Lua interpreter\nthat incorporates  Luvit . See Meter Plugin SDK for Lua \non GitHub for more information.", 
             "title": "Lua"
         }, 
         {
             "location": "/user-guide/getting-started/framework/#python", 
-            "text": "Current under development. This section will be updated with more information when the Python\nMeter Plugin SDK becomes available.", 
+            "text": "Currently under development. This section will be updated with more information when the Python\nMeter Plugin SDK becomes available.", 
             "title": "Python"
         }, 
         {
             "location": "/user-guide/tutorial/", 
-            "text": "Preparation\n\n\nBefore starting on this tutorial it will be assumed that you have the prerequisites.\nSee \nPrerequisites\n for information on tools\nand other items required to develop meter plugins.\n\n\nIn addition to complete the tutorial you need to have:\n\n\n\n\nPython\n - Either: Python 2.7.10 or later,\nPython 3.3 or later", 
+            "text": "Preparation\n\n\nBefore starting on this tutorial it will be assumed that you have the prerequisites.\n\n\nSee \nPrerequisites\n for information on tools\nand other items required to develop meter plugins.\n\n\nIn addition to complete the tutorial you need to have:\n\n\n\n\nPython\n - Either: Python 2.7.10 or later,\nPython 3.3 or later", 
             "title": "Preparation"
         }, 
         {
             "location": "/user-guide/tutorial/#preparation", 
-            "text": "Before starting on this tutorial it will be assumed that you have the prerequisites.\nSee  Prerequisites  for information on tools\nand other items required to develop meter plugins.  In addition to complete the tutorial you need to have:   Python  - Either: Python 2.7.10 or later,\nPython 3.3 or later", 
+            "text": "Before starting on this tutorial it will be assumed that you have the prerequisites.  See  Prerequisites  for information on tools\nand other items required to develop meter plugins.  In addition to complete the tutorial you need to have:   Python  - Either: Python 2.7.10 or later,\nPython 3.3 or later", 
             "title": "Preparation"
         }, 
         {
@@ -92,7 +92,7 @@
         }, 
         {
             "location": "/user-guide/tutorial/create-plugin-contents/", 
-            "text": "Create Plugin Contents\n\n\nFor this tutorial the meter plugin will generate a random number between 0 and 99.\n\n\nThe contents of the meter plugin have already been pre-defined and can be cloned from GitHub.\n\n\nCloning the Meter Plugin Contents\n\n\n\n\n\n\nClone the GitHub repository with the meter plugin contents:\n\n\n$ git clone https://github.com/boundary/meter-plugin-tutorial.git\n\n\n\n\n\n\nChange directory to the newly cloned repository:\n\n\n$ cd meter-plugin-tutorial\n\n\n\n\n\n\nInitial the repository to the start:\n\n\n$ git checkout start\n\n\n\n\n\n\nMeter Plugin Contents\n\n\nFor this tutorial we walk through each of the meter plugins in the following order:\n\n\n\n\nDefine Metrics\n\n\nCreate Manifest\n\n\nWrite Script\n\n\nAdd Configuration\n\n\nAdd Icon\n\n\nCreate README\n\n\n\n\nClick on each of the steps for details of the meter file components.", 
+            "text": "Create Plugin Contents\n\n\nFor this tutorial the meter plugin will generate a random number between 0 and 99.\n\n\nThe contents of the meter plugin have already been pre-defined and can be cloned from GitHub.\n\n\nCloning the Meter Plugin Contents\n\n\n\n\n\n\nClone the GitHub repository with the meter plugin contents:\n\n\n$ git clone https://github.com/boundary/meter-plugin-tutorial.git\n\n\n\n\n\n\nChange directory to the newly cloned repository:\n\n\n$ cd meter-plugin-tutorial\n\n\n\n\n\n\nMeter Plugin Contents\n\n\nFor this tutorial we walk through each of the meter plugins in the following order:\n\n\n\n\nDefine Metrics\n\n\nCreate Manifest\n\n\nWrite Script\n\n\nAdd Configuration\n\n\nAdd Icon\n\n\nCreate README\n\n\n\n\nClick on each of the steps for details of the meter file components.", 
             "title": "Create Contents"
         }, 
         {
@@ -102,7 +102,7 @@
         }, 
         {
             "location": "/user-guide/tutorial/create-plugin-contents/#cloning-the-meter-plugin-contents", 
-            "text": "Clone the GitHub repository with the meter plugin contents:  $ git clone https://github.com/boundary/meter-plugin-tutorial.git    Change directory to the newly cloned repository:  $ cd meter-plugin-tutorial    Initial the repository to the start:  $ git checkout start", 
+            "text": "Clone the GitHub repository with the meter plugin contents:  $ git clone https://github.com/boundary/meter-plugin-tutorial.git    Change directory to the newly cloned repository:  $ cd meter-plugin-tutorial", 
             "title": "Cloning the Meter Plugin Contents"
         }, 
         {
@@ -142,12 +142,12 @@
         }, 
         {
             "location": "/user-guide/tutorial/add-configuration/", 
-            "text": "Add Configuration\n\n\nWhen the meter plugin is deployed, the Plugin Manager provides plugin configuration information that\nwas defined in the Plugin Configuration dialog in a file named \nparam.json\n. We add a\nparam.json file so we can test the plugin from the command line.\n\n\nDetails on the contents of param.json is described in \nParameters\n\n\nAdding metrics.json\n\n\nAdd the \nparam.json\n file to your repository by the running the following:\n\n\n$ git checkout step4\n\n\n\n\nView Contents Of param.json\n\n\n$ cat metrics.json\n{\n  \nsource\n: \nMeterPluginTutorial\n,\n  \ninterval\n: 10\n}", 
+            "text": "Add Configuration\n\n\nWhen the meter plugin is deployed, the Plugin Manager provides plugin configuration information that\nwas defined in the Plugin Configuration dialog in a file named \nparam.json\n. We add a\nparam.json file so we can test the plugin from the command line.\n\n\nDetails on the contents of param.json is described in \nParameters\n\n\nAdding metrics.json\n\n\nAdd the \nparam.json\n file to your repository by the running the following:\n\n\n$ git checkout step4\n\n\n\n\nView Contents Of param.json\n\n\n$ cat param.json\n{\n  \nsource\n: \nMeterPluginTutorial\n,\n  \ninterval\n: 10\n}", 
             "title": "Add Configuration"
         }, 
         {
             "location": "/user-guide/tutorial/add-configuration/#add-configuration", 
-            "text": "When the meter plugin is deployed, the Plugin Manager provides plugin configuration information that\nwas defined in the Plugin Configuration dialog in a file named  param.json . We add a\nparam.json file so we can test the plugin from the command line.  Details on the contents of param.json is described in  Parameters  Adding metrics.json  Add the  param.json  file to your repository by the running the following:  $ git checkout step4  View Contents Of param.json  $ cat metrics.json\n{\n   source :  MeterPluginTutorial ,\n   interval : 10\n}", 
+            "text": "When the meter plugin is deployed, the Plugin Manager provides plugin configuration information that\nwas defined in the Plugin Configuration dialog in a file named  param.json . We add a\nparam.json file so we can test the plugin from the command line.  Details on the contents of param.json is described in  Parameters  Adding metrics.json  Add the  param.json  file to your repository by the running the following:  $ git checkout step4  View Contents Of param.json  $ cat param.json\n{\n   source :  MeterPluginTutorial ,\n   interval : 10\n}", 
             "title": "Add Configuration"
         }, 
         {
@@ -182,12 +182,12 @@
         }, 
         {
             "location": "/user-guide/tutorial/add-plugin-to-meter/", 
-            "text": "Add Meter Plugin To A Meter\n\n\nOnce a the tutorial meter plugin has been added to your account, you are now able to deploy it to a meter.\n\n\nTo add the meter plugin to a meter perform the following:\n\n\n\n\nLogin into your TrueSight Pulse Account\n\n\nNavigate to Settings =\n Meters\n\n\nSelect a meter by clicking on the name in the list.\n\n\nFrom the \nAdd a plugin\n drop down menu select the tutorial meter plugin.\n\n\nClick next to view the meter plugin configuration screen.\n\n\nTake the defaults for the meter plugin configuration and click \nSave\n.\n\n\n\n\nThe meter plugin will then be downloaded to host where the meter is running,\npassed the \nparam.json\n with the item from the configuration dialog and start\nthe meter plugin script running.", 
+            "text": "Add Meter Plugin To A Meter\n\n\nOnce a the tutorial meter plugin has been added to your account, you are now able to deploy it to a meter.\n\n\nTo add the meter plugin to a meter perform the following:\n\n\n\n\nLogin into your TrueSight Pulse Account\n\n\nNavigate to Settings =\n Meters\n\n\nSelect a meter by clicking on the name in the list.\n\n\nFrom the \nAdd a plugin\n drop down menu select the tutorial meter plugin.\n\n\nClick next to view the meter plugin configuration screen.\n\n\nTake the defaults for the meter plugin configuration and click \nSave\n.\n\n\n\n\nThe meter plugin will then be downloaded to the host where the meter is running,\npassed the \nparam.json\n with the items from the configuration dialog, and start\nthe meter plugin script running.", 
             "title": "Add Plugin To Meter"
         }, 
         {
             "location": "/user-guide/tutorial/add-plugin-to-meter/#add-meter-plugin-to-a-meter", 
-            "text": "Once a the tutorial meter plugin has been added to your account, you are now able to deploy it to a meter.  To add the meter plugin to a meter perform the following:   Login into your TrueSight Pulse Account  Navigate to Settings =  Meters  Select a meter by clicking on the name in the list.  From the  Add a plugin  drop down menu select the tutorial meter plugin.  Click next to view the meter plugin configuration screen.  Take the defaults for the meter plugin configuration and click  Save .   The meter plugin will then be downloaded to host where the meter is running,\npassed the  param.json  with the item from the configuration dialog and start\nthe meter plugin script running.", 
+            "text": "Once a the tutorial meter plugin has been added to your account, you are now able to deploy it to a meter.  To add the meter plugin to a meter perform the following:   Login into your TrueSight Pulse Account  Navigate to Settings =  Meters  Select a meter by clicking on the name in the list.  From the  Add a plugin  drop down menu select the tutorial meter plugin.  Click next to view the meter plugin configuration screen.  Take the defaults for the meter plugin configuration and click  Save .   The meter plugin will then be downloaded to the host where the meter is running,\npassed the  param.json  with the items from the configuration dialog, and start\nthe meter plugin script running.", 
             "title": "Add Meter Plugin To A Meter"
         }, 
         {
@@ -209,81 +209,6 @@
             "location": "/user-guide/tutorial/view-measurements/#tutorial-dashboard", 
             "text": "", 
             "title": "Tutorial Dashboard"
-        }, 
-        {
-            "location": "/user-guide/examples/", 
-            "text": "Examples\n\n\nThis section provides a discussion of example plugins created in lua. Although, meter plugins can be created in other languages, lua is considered the lingua franca of meter plugins due to a lua interpreter built into the meter itself. Additionally, the built in lua interperter includes luvit which provides a rich API for integrating and collect metrics from foreign sources using HTTP(S) protocol, log files, etc.\n\n\nAn overview of each of the examples is described below.\n\n\nHello World\n\n\nThe quinessential example program is the \nHello World\n program that is included in nearly every programming language, examples of said programs are listed \nhere\n. This initial examples demonstrates the mechanics of developing and deploying a meter plugin.\n\n\nGo To \nHelloWorld\n\n\nHello World \npart deux\n\n\nThis example is a redux of the example Hello World plugin but uses the \nTrueSight Pulse Meter Plugin SDK for Lua\n for its implementation\n\n\nGo To \nHelloWorld\n\n\nGive it a REST\n\n\nThis example shows how to collect measurement information from a RESTful interface using the \nTrueSight Pulse Meter Plugin SDK for Lua\n\n\nThe Meter and Me, and the Plugin makes Three\n\n\nDemonstrates a plugin that use the meter \nJSON RPC\n interface to extract measurements collected by the meter into a meter plugin.\n\n\n\"Yes Log, all kids love log\"\n\n\nPlugin that monitors a log (Syslog or other application) and uses regular expressions to parse measurements from the content.", 
-            "title": "Overview"
-        }, 
-        {
-            "location": "/user-guide/examples/#examples", 
-            "text": "This section provides a discussion of example plugins created in lua. Although, meter plugins can be created in other languages, lua is considered the lingua franca of meter plugins due to a lua interpreter built into the meter itself. Additionally, the built in lua interperter includes luvit which provides a rich API for integrating and collect metrics from foreign sources using HTTP(S) protocol, log files, etc.  An overview of each of the examples is described below.", 
-            "title": "Examples"
-        }, 
-        {
-            "location": "/user-guide/examples/#hello-world", 
-            "text": "The quinessential example program is the  Hello World  program that is included in nearly every programming language, examples of said programs are listed  here . This initial examples demonstrates the mechanics of developing and deploying a meter plugin.  Go To  HelloWorld", 
-            "title": "Hello World"
-        }, 
-        {
-            "location": "/user-guide/examples/#hello-world-part-deux", 
-            "text": "This example is a redux of the example Hello World plugin but uses the  TrueSight Pulse Meter Plugin SDK for Lua  for its implementation  Go To  HelloWorld", 
-            "title": "Hello World part deux"
-        }, 
-        {
-            "location": "/user-guide/examples/#give-it-a-rest", 
-            "text": "This example shows how to collect measurement information from a RESTful interface using the  TrueSight Pulse Meter Plugin SDK for Lua", 
-            "title": "Give it a REST"
-        }, 
-        {
-            "location": "/user-guide/examples/#the-meter-and-me-and-the-plugin-makes-three", 
-            "text": "Demonstrates a plugin that use the meter  JSON RPC  interface to extract measurements collected by the meter into a meter plugin.", 
-            "title": "The Meter and Me, and the Plugin makes Three"
-        }, 
-        {
-            "location": "/user-guide/examples/#yes-log-all-kids-love-log", 
-            "text": "Plugin that monitors a log (Syslog or other application) and uses regular expressions to parse measurements from the content.", 
-            "title": "\"Yes Log, all kids love log\""
-        }, 
-        {
-            "location": "/user-guide/examples/example-hello-world/", 
-            "text": "Example - Hello World\n\n\nIn the classic Hello World fashion", 
-            "title": "Hello World"
-        }, 
-        {
-            "location": "/user-guide/examples/example-hello-world/#example-hello-world", 
-            "text": "In the classic Hello World fashion", 
-            "title": "Example - Hello World"
-        }, 
-        {
-            "location": "/user-guide/examples/example-hello-world2/", 
-            "text": "Example #1 - Give It a REST", 
-            "title": "Hello World part deux"
-        }, 
-        {
-            "location": "/user-guide/examples/example-hello-world2/#example-1-give-it-a-rest", 
-            "text": "", 
-            "title": "Example #1 - Give It a REST"
-        }, 
-        {
-            "location": "/user-guide/examples/example-hello-world2/", 
-            "text": "Example #1 - Give It a REST", 
-            "title": "Give It a Rest"
-        }, 
-        {
-            "location": "/user-guide/examples/example-hello-world2/#example-1-give-it-a-rest", 
-            "text": "", 
-            "title": "Example #1 - Give It a REST"
-        }, 
-        {
-            "location": "/user-guide/examples/example-hello-world2/", 
-            "text": "Example #1 - Give It a REST", 
-            "title": "Meter and Me and the Plugin makes Three"
-        }, 
-        {
-            "location": "/user-guide/examples/example-hello-world2/#example-1-give-it-a-rest", 
-            "text": "", 
-            "title": "Example #1 - Give It a REST"
         }, 
         {
             "location": "/user-guide/troubleshooting/", 
@@ -392,12 +317,12 @@
         }, 
         {
             "location": "/user-guide/reference/deploying/", 
-            "text": "Deploying Meter Plugins\n\n\nOnce the contents of the meter plugin have been defined we can deploy the meter plugin into our account. For details\nregarding deploying meter plugins see \nDeploying\n\n\nTo add add the newly created meter plugin once again we will use the\n\nTrueSight Pulse CLIs\n.\n\n\nAdding the Tutorial Meter Plugin To Your Account\n\n\nTo run the command to add the plugin we must have your TrueSight Pulse account e-mail and API token from\nSettings =\n Account. Additionally the name of your GitHub account is required. We then run the following\ncommand to add the plugin to your account.\n\n\n$ plugin-add -e \nemail@example.com\n -t \nAPI Token\n -n tutorial -o \nGitHub User name\n -r \nrepository name\n\n\n\n\n\nInstalling the P\n\n\nMake the plugin active in your account by running the following command:\n\n\n$ plugin-install -e \nemail@example.com\n -t \nAPI Token\n -n tutorial", 
+            "text": "Deploying Meter Plugins\n\n\nOnce the contents of the meter plugin have been defined we can deploy the meter plugin into our account.\n\n\nTo add the newly created meter plugin once again we will use the\n\nTrueSight Pulse CLIs\n.\n\n\nAdding the Tutorial Meter Plugin To Your Account\n\n\nTo run the command to add the plugin we must have your TrueSight Pulse account e-mail and API token from\nSettings =\n Account. Additionally the name of your GitHub account is required. We then run the following\ncommand to add the plugin to your account.\n\n\n$ plugin-add -e \nemail@example.com\n -t \nAPI Token\n -n tutorial -o \nGitHub User name\n -r \nrepository name\n\n\n\n\n\nInstalling the Plugin\n\n\nMake the plugin active in your account by running the following command:\n\n\n$ plugin-install -e \nemail@example.com\n -t \nAPI Token\n -n tutorial", 
             "title": "Deploying"
         }, 
         {
             "location": "/user-guide/reference/deploying/#deploying-meter-plugins", 
-            "text": "Once the contents of the meter plugin have been defined we can deploy the meter plugin into our account. For details\nregarding deploying meter plugins see  Deploying  To add add the newly created meter plugin once again we will use the TrueSight Pulse CLIs .", 
+            "text": "Once the contents of the meter plugin have been defined we can deploy the meter plugin into our account.  To add the newly created meter plugin once again we will use the TrueSight Pulse CLIs .", 
             "title": "Deploying Meter Plugins"
         }, 
         {
@@ -406,9 +331,9 @@
             "title": "Adding the Tutorial Meter Plugin To Your Account"
         }, 
         {
-            "location": "/user-guide/reference/deploying/#installing-the-p", 
+            "location": "/user-guide/reference/deploying/#installing-the-plugin", 
             "text": "Make the plugin active in your account by running the following command:  $ plugin-install -e  email@example.com  -t  API Token  -n tutorial", 
-            "title": "Installing the P"
+            "title": "Installing the Plugin"
         }, 
         {
             "location": "/user-guide/reference/plugin-dashboards/", 
@@ -521,16 +446,6 @@
             "title": "Multiple Configuration"
         }, 
         {
-            "location": "/user-guide/reference/production/", 
-            "text": "Production Meter Plugin\n\n\nWhen you are happy with your meter plugin and are ready to submit it to TrueSight Pulse\nfor inclusion in the public repository just follow the steps outlined in the plugin\ndocumentation to create a GitHub pull request. Once submitted, we'll review your\nplugin quickly and soon everyone will be able to enjoy your shiny new\nTrueSight Pulse Meter plugin!", 
-            "title": "Production"
-        }, 
-        {
-            "location": "/user-guide/reference/production/#production-meter-plugin", 
-            "text": "When you are happy with your meter plugin and are ready to submit it to TrueSight Pulse\nfor inclusion in the public repository just follow the steps outlined in the plugin\ndocumentation to create a GitHub pull request. Once submitted, we'll review your\nplugin quickly and soon everyone will be able to enjoy your shiny new\nTrueSight Pulse Meter plugin!", 
-            "title": "Production Meter Plugin"
-        }, 
-        {
             "location": "/user-guide/reference/tools/", 
             "text": "Meter Plugin Development Tools\n\n\nThe following describes tools that are useful in the development of TrueSight Pulse Meter Plugins.\n\n\njsonlint\n\n\nCommand line tools for validation of JSON such as \nplugin.json\n, \nmetrics.json\n, \nparam.json\n\n\nhttps://www.npmjs.org/package/jsonlint\n\n\nTrueSight Pulse Command Line Interface (CLI)\n\n\nCommand line interface to some of Boundary's public APIs. Commands include definition of metrics, insertion of metric values, staging of a meter plugin, and others. Instructions on installing the TrueSight Pulse CLI can be found here:\n\n\nhttps://github.com/boundary/boundary-api-cli\n\n\nHaroopad\n\n\nEditor that provides realtime rendering of markdown.\n\n\nhttp://pad.haroopress.com/user.html\n\n\nGrip\n\n\nPreview README.md or other \nMarkdown\n files before committing to \nGitHub\n\n\nhttps://github.com/joeyespo/grip\n\n\nMkdocs\n\n\nExcellent tool for authoring extensive documentation, in Markdown, beyond a simple README.md for your meter plugin. Allows seamless publishing to \nGitHub Pages\n. Mkdocs were used to create this meter plugin development guide.\n\n\nhttp://www.mkdocs.org/", 
             "title": "Tools"
@@ -539,61 +454,6 @@
             "location": "/user-guide/reference/tools/#meter-plugin-development-tools", 
             "text": "The following describes tools that are useful in the development of TrueSight Pulse Meter Plugins.  jsonlint  Command line tools for validation of JSON such as  plugin.json ,  metrics.json ,  param.json  https://www.npmjs.org/package/jsonlint  TrueSight Pulse Command Line Interface (CLI)  Command line interface to some of Boundary's public APIs. Commands include definition of metrics, insertion of metric values, staging of a meter plugin, and others. Instructions on installing the TrueSight Pulse CLI can be found here:  https://github.com/boundary/boundary-api-cli  Haroopad  Editor that provides realtime rendering of markdown.  http://pad.haroopress.com/user.html  Grip  Preview README.md or other  Markdown  files before committing to  GitHub  https://github.com/joeyespo/grip  Mkdocs  Excellent tool for authoring extensive documentation, in Markdown, beyond a simple README.md for your meter plugin. Allows seamless publishing to  GitHub Pages . Mkdocs were used to create this meter plugin development guide.  http://www.mkdocs.org/", 
             "title": "Meter Plugin Development Tools"
-        }, 
-        {
-            "location": "/user-guide/reference/testing/", 
-            "text": "Testing Methods\n\n\nThis section describes tips on testing your plugins to make them production ready, including:\n\n\n\n\nPlatform Support\n\n\nTest Deployment\n\n\nDebugging\n\n\nTroubleshooting\n\n\n\n\nPlatform Support\n\n\nThese are the tier 1 platforms and versions that the plugins are required to run on to be certified. These represent the minimum number of platforms that a plugin should be tested against before considering a plugin Generally Available (GA).\n\n\nLinux\n\n\n\n\nCentos 6.6\n\n\nCentos 7.0\n\n\nAmazon Linux AMI release 2014.03\n\n\nUbuntu 12.04 LTS\n\n\nUbuntu 14.04.1 LTS\n\n\n\n\nWindows\n\n\n\n\nWindows 2012 server R2\n\n\n\n\nTest Deployment\n\n\nPlugins are able to be deployed in a sandbox account which allows end to end testing. It is highly recommended that a plugin be end to end tested so to ensure correct operation and deployment of a plugin in a production environment.\n\n\nPrerequisites\n\n\n\n\nTrial or Paid account (Free accounts are not able to use plugins)\n\n\nA test meter for the target platform\n\n\nExisting GitHub repository with a plugin to be tested\n\n\nBoundary CLI tools installed (see \nTools\n)\n\n\n\n\nDeploying a Plugin for Testing\n\n\nDeploying a plugin for testing consists of:\n\n\n\n\nExposing the plugin to an account\n\n\nInstalling the plugin into the account\n\n\nDeploying to a test meter\n\n\n\n\nPlugin Debugging\n\n\nPlugin Troubleshooting\n\n\nOn the linux platforms\n\n\nUsing \nstrace", 
-            "title": "Testing"
-        }, 
-        {
-            "location": "/user-guide/reference/testing/#testing-methods", 
-            "text": "This section describes tips on testing your plugins to make them production ready, including:   Platform Support  Test Deployment  Debugging  Troubleshooting", 
-            "title": "Testing Methods"
-        }, 
-        {
-            "location": "/user-guide/reference/testing/#platform-support", 
-            "text": "These are the tier 1 platforms and versions that the plugins are required to run on to be certified. These represent the minimum number of platforms that a plugin should be tested against before considering a plugin Generally Available (GA).  Linux   Centos 6.6  Centos 7.0  Amazon Linux AMI release 2014.03  Ubuntu 12.04 LTS  Ubuntu 14.04.1 LTS   Windows   Windows 2012 server R2", 
-            "title": "Platform Support"
-        }, 
-        {
-            "location": "/user-guide/reference/testing/#test-deployment", 
-            "text": "Plugins are able to be deployed in a sandbox account which allows end to end testing. It is highly recommended that a plugin be end to end tested so to ensure correct operation and deployment of a plugin in a production environment.  Prerequisites   Trial or Paid account (Free accounts are not able to use plugins)  A test meter for the target platform  Existing GitHub repository with a plugin to be tested  Boundary CLI tools installed (see  Tools )   Deploying a Plugin for Testing  Deploying a plugin for testing consists of:   Exposing the plugin to an account  Installing the plugin into the account  Deploying to a test meter   Plugin Debugging  Plugin Troubleshooting  On the linux platforms  Using  strace", 
-            "title": "Test Deployment"
-        }, 
-        {
-            "location": "/user-guide/reference/checklist/", 
-            "text": "Meter Plugin Development Checklist\n\n\nThe following is a master checklist for the development of a Boundary Meter Plug\n\n\nContents\n\n\nRequired\n\n\n\n\n[ ]\nplugin.json\n\n\n[ ]metrics.json\n\n\n[ ]\nREADME.md\n\n\n[ ]LICENSE\n\n\n[ ]icon.png\n\n\n[ ]Erat solis corpus\n\n\n[ ]In est verum strata ad Nocte\n\n\n\n\nDocumentation\n\n\n\n\n[ ]Description of the plugin\n\n\n[ ]Setup instructions\n\n\n[ ]Field Descriptions\n\n\n[ ]Metrics Generated\n\n\n[ ]Erat solis corpus\n\n\n[ ]In est verum strata ad Nocte\n\n\n\n\nTesting\n\n\n\n\n[ ]Verfied Output on Standard Out\n\n\n[ ]Verified\n\n\n[ ]Meae quoque\n\n\n[ ]Tibia auratis fatorum perspicit non consuetas quae\n\n\n[ ]Erat solis corpus\n\n\n[ ]In est verum strata ad Nocte\n\n\n\n\nPlatform\n\n\nTier 1 platform coverage for GA (General Availability)\n\n\n\n\n[ ]Linux\n\n\n[ ]Centos 5.10\n\n\n[ ]Centos 6.5\n\n\n[ ]Amazon Linux AMI release 2014.03\n\n\n[ ]Ubuntu 12.04 LTS\n\n\n\n\n[ ]Ubuntu 14.04.1 LTS\n\n\n\n\n\n\n[ ]Windows\n\n\n\n\n[ ]Windows 2012\n\n\n[ ]Windows 2008R2\n\n\n\n\nProduction\n\n\n\n\n[ ]In nulla producet Iuppiter\n\n\n[ ]Quod silvasque insula uror cuncta\n\n\n[ ]Meae quoque\n\n\n[ ]Tibia auratis fatorum perspicit non consuetas quae\n\n\n[ ]Erat solis corpus\n\n\n[ ]In est verum strata ad Nocte", 
-            "title": "Check List"
-        }, 
-        {
-            "location": "/user-guide/reference/checklist/#meter-plugin-development-checklist", 
-            "text": "The following is a master checklist for the development of a Boundary Meter Plug", 
-            "title": "Meter Plugin Development Checklist"
-        }, 
-        {
-            "location": "/user-guide/reference/checklist/#contents", 
-            "text": "Required   [ ] plugin.json  [ ]metrics.json  [ ] README.md  [ ]LICENSE  [ ]icon.png  [ ]Erat solis corpus  [ ]In est verum strata ad Nocte", 
-            "title": "Contents"
-        }, 
-        {
-            "location": "/user-guide/reference/checklist/#documentation", 
-            "text": "[ ]Description of the plugin  [ ]Setup instructions  [ ]Field Descriptions  [ ]Metrics Generated  [ ]Erat solis corpus  [ ]In est verum strata ad Nocte", 
-            "title": "Documentation"
-        }, 
-        {
-            "location": "/user-guide/reference/checklist/#testing", 
-            "text": "[ ]Verfied Output on Standard Out  [ ]Verified  [ ]Meae quoque  [ ]Tibia auratis fatorum perspicit non consuetas quae  [ ]Erat solis corpus  [ ]In est verum strata ad Nocte", 
-            "title": "Testing"
-        }, 
-        {
-            "location": "/user-guide/reference/checklist/#platform", 
-            "text": "Tier 1 platform coverage for GA (General Availability)   [ ]Linux  [ ]Centos 5.10  [ ]Centos 6.5  [ ]Amazon Linux AMI release 2014.03  [ ]Ubuntu 12.04 LTS   [ ]Ubuntu 14.04.1 LTS    [ ]Windows   [ ]Windows 2012  [ ]Windows 2008R2", 
-            "title": "Platform"
-        }, 
-        {
-            "location": "/user-guide/reference/checklist/#production", 
-            "text": "[ ]In nulla producet Iuppiter  [ ]Quod silvasque insula uror cuncta  [ ]Meae quoque  [ ]Tibia auratis fatorum perspicit non consuetas quae  [ ]Erat solis corpus  [ ]In est verum strata ad Nocte", 
-            "title": "Production"
         }
     ]
 }
