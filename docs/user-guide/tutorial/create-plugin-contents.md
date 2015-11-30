@@ -19,12 +19,6 @@ The contents of the meter plugin have already been pre-defined and can be cloned
     $ cd meter-plugin-tutorial
     ```
 
-3. Initialize the repository to the __start__:
-
-    ```
-    $ git checkout start
-    ```
-
 ## Meter Plugin Contents
 
 For this tutorial we walk through each of the meter plugins in the following order:
