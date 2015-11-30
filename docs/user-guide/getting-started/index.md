@@ -1,7 +1,9 @@
 # Getting Started
 
 This page will provide an introduction to meter plugin development by outlining the development
-tasks required to create a meter plugin. Next you will be walked through an existing plugin and
+tasks required to create a meter plugin.
+
+Next you will be walked through an existing plugin and
 its contents and deploy the meter plugin into your TrueSight Pulse account.
 
 ## Meter Plugin Development Tasks

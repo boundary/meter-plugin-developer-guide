@@ -18,7 +18,7 @@ $ git checkout step4
 ### View Contents Of param.json
 
 ```json
-$ cat metrics.json
+$ cat param.json
 {
   "source": "MeterPluginTutorial",
   "interval": 10

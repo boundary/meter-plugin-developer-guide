@@ -2,6 +2,7 @@ Preparation
 ===========
 
 Before starting on this tutorial it will be assumed that you have the prerequisites.
+
 See [Prerequisites](../getting-started/prerequisites.md) for information on tools
 and other items required to develop meter plugins.
 

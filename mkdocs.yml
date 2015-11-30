@@ -20,12 +20,12 @@ pages:
     - Deploying A Plugin: 'user-guide/tutorial/install-plugin.md'
     - Add Plugin To Meter: 'user-guide/tutorial/add-plugin-to-meter.md'
     - View Measurements: 'user-guide/tutorial/view-measurements.md'
-- Examples:
-    - Overview: 'user-guide/examples/index.md'
-    - Hello World: 'user-guide/examples/example-hello-world.md'
-    - Hello World part deux: 'user-guide/examples/example-hello-world2.md'
-    - Give It a Rest: 'user-guide/examples/example-hello-world2.md'
-    - Meter and Me and the Plugin makes Three: 'user-guide/examples/example-hello-world2.md'
+# - Examples:
+#     - Overview: 'user-guide/examples/index.md'
+#     - Hello World: 'user-guide/examples/example-hello-world.md'
+#     - Hello World part deux: 'user-guide/examples/example-hello-world2.md'
+#     - Give It a Rest: 'user-guide/examples/example-hello-world2.md'
+#     - Meter and Me and the Plugin makes Three: 'user-guide/examples/example-hello-world2.md'
 - Troubleshooting:
     - Introduction: 'user-guide/troubleshooting/index.md'
     - Common Issues: 'user-guide/troubleshooting/common-issues.md'
@@ -45,7 +45,4 @@ pages:
     - Events: 'user-guide/reference/events.md'
     - Documentation: 'user-guide/reference/documentation.md'
     - Parameters: 'user-guide/reference/parameters.md'
-    - Production: 'user-guide/reference//production.md'
     - Tools: 'user-guide/reference/tools.md'
-    - Testing: 'user-guide/reference/testing.md'
-    - Check List: 'user-guide/reference/checklist.md'
