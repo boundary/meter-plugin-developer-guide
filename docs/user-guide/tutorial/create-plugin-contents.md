@@ -19,7 +19,7 @@ The contents of the meter plugin have already been pre-defined and can be cloned
     $ cd meter-plugin-tutorial
     ```
 
-3. Initial the repository to the start:
+3. Initialize the repository to the __start__:
 
     ```
     $ git checkout start
