@@ -45,7 +45,5 @@ pages:
     - Events: 'user-guide/reference/events.md'
     - Documentation: 'user-guide/reference/documentation.md'
     - Parameters: 'user-guide/reference/parameters.md'
-    - Production: 'user-guide/reference//production.md'
     - Tools: 'user-guide/reference/tools.md'
     - Testing: 'user-guide/reference/testing.md'
-    - Check List: 'user-guide/reference/checklist.md'
